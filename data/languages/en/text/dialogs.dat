@@ -1,0 +1,5850 @@
+dialog{
+  id = "__using_colors",
+  text = [[
+$bBlue: Places
+$rRed: Items
+$gGreen: People
+$cCyan: Book of Mudora
+$mMagenta: Dark Tribe/Darkness
+$wYellow: Ordona/Light
+]]
+}
+
+dialog{
+  id = "_credits",
+  question = "1",
+  text = [[
+Thanks again for playing! Now what?
+Save and Continue
+Quit (Don't Save)
+]]
+}
+
+dialog{
+  id = "_credits.complete",
+  text = [[
+Your completion percentage is
+$v%.
+]]
+}
+
+dialog{
+  id = "_credits.died",
+  text = [[
+You have died $v times.
+]]
+}
+
+dialog{
+  id = "_credits.time",
+  text = [[
+Your total play time has been
+$v.
+]]
+}
+
+dialog{
+  id = "_info.cannot_lift_should_cut",
+  skip = "current",
+  text = [[
+This would be difficult to lift, why
+not find something to cut it?
+]]
+}
+
+dialog{
+  id = "_info.cannot_lift_still_too_heavy",
+  skip = "current",
+  text = [[
+It's still too heavy to lift even with
+your increased strength!
+]]
+}
+
+dialog{
+  id = "_info.cannot_lift_too_heavy",
+  skip = "current",
+  text = [[
+It's too heavy to lift with just your
+bare hands!
+]]
+}
+
+dialog{
+  id = "_info.cannot_see_need_lamp",
+  skip = "current",
+  text = [[
+You can't see a thing! Maybe you should
+find a source of light...
+]]
+}
+
+dialog{
+  id = "_info.cannot_see_need_magic",
+  skip = "current",
+  text = [[
+You ran out of magic, now you can't see
+a thing!$0 Find more magic!
+]]
+}
+
+dialog{
+  id = "_info.crystal_switch",
+  skip = "current",
+  text = [[
+It's a crystal switch.
+Try to hit it with something...
+]]
+}
+
+dialog{
+  id = "_info.dungeons.1",
+  skip = "current",
+  text = [[
+Eldin Volcano
+Fire Element
+(Goron Sapphire)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.2",
+  skip = "current",
+  text = [[
+Subrosia
+Earth Element
+(Subrosian Amethyst)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.3",
+  skip = "current",
+  text = [[
+Skyview Temple
+Wind Element
+(Rito Diamond)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.4",
+  skip = "current",
+  text = [[
+Hylian Garrion
+Forest Element
+(Korok Emerald)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.5",
+  skip = "current",
+  text = [[
+Lake Floria
+Water Element
+(Zora Sapphire)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.6",
+  skip = "current",
+  text = [[
+Shadow Temple
+Shadow Element
+(Sheikah Opal)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.7",
+  skip = "current",
+  text = [[
+Temple of Time
+Spirit Element
+(Gerudo Topaz)
+]]
+}
+
+dialog{
+  id = "_info.dungeons.8",
+  skip = "current",
+  text = [[
+Statue of the Goddess
+Light Element
+(Hylian Amber)
+]]
+}
+
+dialog{
+  id = "_info.empty_chest",
+  skip = "current",
+  text = [[
+This chest is empty!
+Tough luck...
+]]
+}
+
+dialog{
+  id = "_info.found.fairy",
+  icon = "81",
+  question = "1",
+  skip = "current",
+  text = [[
+You found a Fairy!
+She looks marvelous!
+
+What now?
+Fill up hearts
+Keep in bottle
+]]
+}
+
+dialog{
+  id = "_info.found.fairy.no_empty_bottle",
+  icon = "81",
+  skip = "current",
+  text = [[
+You don't have any empty Bottles!
+]]
+}
+
+dialog{
+  id = "_info.found.piece_of_heart.first",
+  icon = "75",
+  skip = "current",
+  text = [[
+Find three more to make a new
+Heart Container.
+]]
+}
+
+dialog{
+  id = "_info.found.piece_of_heart.fourth",
+  icon = "78",
+  skip = "current",
+  text = [[
+You found four Pieces of Heart
+to make a new Heart Container!
+]]
+}
+
+dialog{
+  id = "_info.found.piece_of_heart.second",
+  icon = "76",
+  skip = "current",
+  text = [[
+Just two more to make a new
+Heart Container!
+]]
+}
+
+dialog{
+  id = "_info.found.piece_of_heart.third",
+  icon = "77",
+  skip = "current",
+  text = [[
+Only one more to make a new
+Heart Container!
+]]
+}
+
+dialog{
+  id = "_info.found.potion.no_bottle",
+  skip = "current",
+  text = [[
+You don't have any empty Bottles
+to keep this in!
+]]
+}
+
+dialog{
+  id = "_info.found.water",
+  icon = "8",
+  question = "1",
+  skip = "current",
+  text = [[
+Fill an empty Bottle with water?
+Fill
+Don't
+]]
+}
+
+dialog{
+  id = "_info.found.water.no_bottle",
+  icon = "8",
+  skip = "current",
+  text = [[
+There's water here, but
+you don't have anything
+to keep it in...
+]]
+}
+
+dialog{
+  id = "_info.found.water.no_empty_bottle",
+  icon = "8",
+  skip = "current",
+  text = [[
+There's water here, but
+you don't have any empty
+Bottles!
+]]
+}
+
+dialog{
+  id = "_info.key_required.big",
+  icon = "73",
+  skip = "current",
+  text = [[
+This is locked with a giant lock.$0
+Go find a big key!
+]]
+}
+
+dialog{
+  id = "_info.key_required.boss",
+  icon = "74",
+  skip = "current",
+  text = [[
+The door that leads to the Boss's lair
+is locked with a giant lock.
+Find the Big key to open it!
+]]
+}
+
+dialog{
+  id = "_info.key_required.small",
+  icon = "72",
+  skip = "current",
+  text = [[
+It looks like this door is locked -
+better find a$rkey$w!
+]]
+}
+
+dialog{
+  id = "_info.shop.amount_full",
+  skip = "current",
+  text = [[
+You can't hold any more!
+]]
+}
+
+dialog{
+  id = "_info.shop.not_enough_money",
+  skip = "current",
+  text = [[
+It seems like you don't have enough!
+]]
+}
+
+dialog{
+  id = "_info.shop.question",
+  question = "1",
+  skip = "current",
+  text = [[
+Price: $v rupees.
+Buy
+Don't Buy
+]]
+}
+
+dialog{
+  id = "_info.shop.question_ore",
+  question = "1",
+  skip = "current",
+  text = [[
+Price: $v ore chunks.
+Buy
+Don't Buy
+]]
+}
+
+dialog{
+  id = "_info.sleep_bed",
+  question = "1",
+  skip = "current",
+  text = [[
+Would you like to sleep?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "_info.status.confusion",
+  icon = "99",
+  skip = "current",
+  text = [[
+You're confused!
+You won't know which direction
+to go for a short time.
+]]
+}
+
+dialog{
+  id = "_info.status.cursed",
+  icon = "96",
+  skip = "current",
+  text = [[
+You've been cursed!
+You won't be able to draw your
+sword for a short time.
+]]
+}
+
+dialog{
+  id = "_info.status.exhausted",
+  icon = "98",
+  skip = "current",
+  text = [[
+You're exhausted!$0 You won't be
+able to continue much farther until
+you sleep or eat something!
+]]
+}
+
+dialog{
+  id = "_info.status.exhausted_sleep",
+  icon = "98",
+  skip = "current",
+  text = [[
+Food is having less and less of an
+effect on your exhaustion. Try
+sleeping for a night instead.
+]]
+}
+
+dialog{
+  id = "_info.status.poison",
+  icon = "97",
+  skip = "current",
+  text = [[
+You've been poisoned!
+You'll slowly lose life for a
+period of time.
+]]
+}
+
+dialog{
+  id = "_info.too_heavy",
+  skip = "current",
+  text = [[
+Wow, this looks pretty heavy!
+You won't be able to lift it with just
+your bare hands.
+]]
+}
+
+dialog{
+  id = "_info.warning_magic",
+  skip = "current",
+  text = [[
+Watch your$gMagic Meter$w!
+]]
+}
+
+dialog{
+  id = "_item_description.airship_part.1",
+  skip = "current",
+  text = [[
+A large chunk of Magnetite -
+a rare metal ore.
+]]
+}
+
+dialog{
+  id = "_item_description.airship_part.2",
+  skip = "current",
+  text = [[
+A huge metal propeller.
+Not sure what this is for?
+]]
+}
+
+dialog{
+  id = "_item_description.airship_part.3",
+  skip = "current",
+  text = [[
+Din's Pearl is a magical artifact which
+should help speed repair work.
+]]
+}
+
+dialog{
+  id = "_item_description.airship_part.4",
+  icon = "29",
+  skip = "current",
+  text = [[
+Master Ore is rare and useful for
+things like sword smithing.
+]]
+}
+
+dialog{
+  id = "_item_description.airship_part.5",
+  text = [[
+This sequence is complete!
+]]
+}
+
+dialog{
+  id = "_item_description.alchemy_counter.1",
+  skip = "current",
+  text = [[
+Desired by many, this artifact is said
+to bring riches to its owner.
+]]
+}
+
+dialog{
+  id = "_item_description.amber_counter.1",
+  skip = "current",
+  text = [[
+This tasty Goron treat is valuable
+because it contains a bug!
+]]
+}
+
+dialog{
+  id = "_item_description.apple.1",
+  icon = "16",
+  skip = "current",
+  text = [[
+Crisp, red apples can be found
+throughout Hyrule. Eat one to
+restore some of your energy!
+]]
+}
+
+dialog{
+  id = "_item_description.apple_counter.1",
+  icon = "16",
+  skip = "current",
+  text = [[
+Crisp, red apples can be found
+throughout Hyrule. Eat one to
+restore some of your energy!
+]]
+}
+
+dialog{
+  id = "_item_description.bomb_counter.1",
+  icon = "1",
+  skip = "current",
+  text = [[
+Use Bombs against enemies or to
+blow up obstacles!
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.1",
+  skip = "current",
+  text = [[
+It's a musty piece of paper found
+in a musty dungeon.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.2",
+  skip = "current",
+  text = [[
+A couple pages which belong to a
+much larger$cbook$w.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.3",
+  skip = "current",
+  text = [[
+A collection of pages from the
+legendary$cBook of Mudora$w.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.4",
+  skip = "current",
+  text = [[
+A collection of pages from the
+legendary$cBook of Mudora$w.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.5",
+  skip = "current",
+  text = [[
+A collection of pages from the
+legendary$cBook of Mudora$w.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.6",
+  skip = "current",
+  text = [[
+A collection of pages from the
+legendary$cBook of Mudora$w.
+]]
+}
+
+dialog{
+  id = "_item_description.book_mudora.7",
+  skip = "current",
+  text = [[
+The legendary and enchanted
+$cBook of Mudora$w.
+]]
+}
+
+dialog{
+  id = "_item_description.boomerang.1",
+  icon = "4",
+  skip = "current",
+  text = [[
+Use the Boomerang to immobilize
+enemies or to catch objects in
+remote locations.
+]]
+}
+
+dialog{
+  id = "_item_description.boomerang.2",
+  icon = "37",
+  skip = "current",
+  text = [[
+Use the Magical Boomerang to
+immobilize enemies or to catch
+objects in very remote places.
+]]
+}
+
+dialog{
+  id = "_item_description.boots.1",
+  icon = "28",
+  skip = "current",
+  text = [[
+Slip on the Pegasus Boots to dash!
+Crash into things or simply get
+where you're going faster!
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+An empty bottle can hold all
+kinds of things...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+This bottle contains some water.
+Empty it somewhere appropriate.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+This bottle contains Heart Potion.
+It's used to restore life.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+This bottle contains Magic Potion.
+It's used to replenish your
+magic meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+This bottle contains Stamina Potion.
+It restores your stamina meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+This bottle has Revitalizing Potion.
+It restores life, magic and stamina!
+Great!
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+This bottle contains a Fairy.
+It will come to your aide when
+times are difficult...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_1.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+This bottle contains a Poe Soul.
+Some say they have useful
+knowledge...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+An empty bottle can hold all
+kinds of things...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+This bottle contains some water.
+Empty it somewhere appropriate.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+This bottle contains Heart Potion.
+It's used to restore life.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+This bottle contains Magic Potion.
+It's used to replenish your
+magic meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+This bottle contains Stamina Potion.
+It restores your stamina meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+This bottle has Revitalizing Potion.
+It restores life, magic and stamina!
+Great!
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+This bottle contains a Fairy.
+It will come to your aide when
+times are difficult...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_2.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+This bottle contains a Poe Soul.
+Some say they have useful
+knowledge...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+An empty bottle can hold all
+kinds of things...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+This bottle contains some water.
+Empty it somewhere appropriate.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+This bottle contains Heart Potion.
+It's used to restore life.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+This bottle contains Magic Potion.
+It's used to replenish your
+magic meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+This bottle contains Stamina Potion.
+It restores your stamina meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+This bottle has Revitalizing Potion.
+It restores life, magic and stamina!
+Great!
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+This bottle contains a Fairy.
+It will come to your aide when
+times are difficult...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_3.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+This bottle contains a Poe Soul.
+Some say they have useful
+knowledge...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+An empty bottle can hold all
+kinds of things...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+This bottle contains some water.
+Empty it somewhere appropriate.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+This bottle contains Heart Potion.
+It's used to restore life.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+This bottle contains Magic Potion.
+It's used to replenish your
+magic meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+This bottle contains Stamina Potion.
+It restores your stamina meter.
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+This bottle has Revitalizing Potion.
+It restores life, magic and stamina!
+Great!
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+This bottle contains a Fairy.
+It will come to your aide when
+times are difficult...
+]]
+}
+
+dialog{
+  id = "_item_description.bottle_4.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+This bottle contains a Poe Soul.
+Some say they have useful
+knowledge...
+]]
+}
+
+dialog{
+  id = "_item_description.bow.1",
+  icon = "2",
+  skip = "current",
+  text = [[
+You are out of arrows!
+]]
+}
+
+dialog{
+  id = "_item_description.bow.2",
+  icon = "3",
+  skip = "current",
+  text = [[
+Shoot arrows to conquer some
+tougher enemies.
+]]
+}
+
+dialog{
+  id = "_item_description.cane.1",
+  icon = "15",
+  skip = "current",
+  text = [[
+Hebra's Cane emits a strange,
+chilling glow and can create
+ice blocks on a whim! 
+]]
+}
+
+dialog{
+  id = "_item_description.carrot.1",
+  icon = "18",
+  skip = "current",
+  text = [[
+Deep orange carrots can be found
+in the ground throughout Hyrule.
+Eat one to revitalize yourself!
+]]
+}
+
+dialog{
+  id = "_item_description.carrot_counter.1",
+  icon = "18",
+  skip = "current",
+  text = [[
+Deep orange carrots can be found in
+the ground throughout Hyrule. Eat
+one to revitalize yourself!
+]]
+}
+
+dialog{
+  id = "_item_description.crystal_counter.1",
+  skip = "current",
+  text = [[
+No one knows how this solid chunk of
+pure, crystallized magic came to be...
+]]
+}
+
+dialog{
+  id = "_item_description.feather.1",
+  icon = "0",
+  skip = "current",
+  text = [[
+Use a Rito's Feather to jump
+and get across obstacles.
+]]
+}
+
+dialog{
+  id = "_item_description.flippers.1",
+  icon = "18",
+  skip = "current",
+  text = [[
+Flippers let you swim in deep
+water without fear!
+]]
+}
+
+dialog{
+  id = "_item_description.glove.1",
+  icon = "32",
+  skip = "current",
+  text = [[
+This special Iron Bracelet enables
+you to lift boulders.
+]]
+}
+
+dialog{
+  id = "_item_description.glove.2",
+  icon = "33",
+  skip = "current",
+  text = [[
+This magical Golden Bracelet enables
+you to lift most anything!
+]]
+}
+
+dialog{
+  id = "_item_description.hammer.1",
+  icon = "27",
+  skip = "current",
+  text = [[
+This powerful hammer can pound
+wooden stakes into the ground.
+]]
+}
+
+dialog{
+  id = "_item_description.hookshot.1",
+  icon = "6",
+  skip = "current",
+  text = [[
+The hookshot's long chain can
+propel you to far away places!
+]]
+}
+
+dialog{
+  id = "_item_description.jade_counter.1",
+  skip = "current",
+  text = [[
+Mystic Jade is captivating and very
+valuable because of its beautiful
+form and color.
+]]
+}
+
+dialog{
+  id = "_item_description.lamp.1",
+  icon = "5",
+  skip = "current",
+  text = [[
+A lantern to light torches and
+give off light in dark places.
+]]
+}
+
+dialog{
+  id = "_item_description.meat.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+Hunks of meat may be left when you
+kill enemies. It may not look very
+appetizing, but it's nutritious!
+]]
+}
+
+dialog{
+  id = "_item_description.meat_counter.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+Hunks of meat may be left when you
+kill enemies. It may not look very
+appetizing, but it's nutritious!
+]]
+}
+
+dialog{
+  id = "_item_description.ocarina.1",
+  icon = "34",
+  skip = "current",
+  text = [[
+The magical musical instrument
+will take you where you need
+to go!
+]]
+}
+
+dialog{
+  id = "_item_description.ore_counter.1",
+  skip = "current",
+  text = [[
+This strong metallic compound is
+found only in the deepest depths
+of the earth.
+]]
+}
+
+dialog{
+  id = "_item_description.plume_counter.1",
+  skip = "current",
+  text = [[
+Rumors say this item was dropped by the
+goddess in a long-forgotten era. It's a
+legendary treasure few will ever behold!
+]]
+}
+
+dialog{
+  id = "_item_description.pumpkin.1",
+  icon = "17",
+  skip = "current",
+  text = [[
+Bright orange pumpkins grow only
+in the south of Hyrule. Eat one
+to revitalize yourself!
+]]
+}
+
+dialog{
+  id = "_item_description.pumpkin_counter.1",
+  icon = "17",
+  skip = "current",
+  text = [[
+Bright orange pumpkins grow only
+in the south of Hyrule. Eat one
+to revitalize yourself!
+]]
+}
+
+dialog{
+  id = "_item_description.shovel.1",
+  skip = "current",
+  text = [[
+This sturdy shovel is able to dig up
+any buried treasure!
+]]
+}
+
+dialog{
+  id = "_item_description.stick_counter.1",
+  skip = "current",
+  text = [[
+Deku sticks are found in forrested
+areas and can be used to create
+powerful potions.
+]]
+}
+
+dialog{
+  id = "_item_description.trading.1",
+  icon = "40",
+  skip = "current",
+  text = [[
+It's an Odd Mushroom with a very
+pungent aroma. Take it to a potion
+maker, probably.
+]]
+}
+
+dialog{
+  id = "_item_description.trading.10",
+  icon = "49",
+  skip = "current",
+  text = [[
+It's a scale from one of the Zora
+people. How will this be useful?
+]]
+}
+
+dialog{
+  id = "_item_description.trading.11",
+  icon = "50",
+  skip = "current",
+  text = [[
+It's a frozen fish. Not so sure this
+was trading up...
+]]
+}
+
+dialog{
+  id = "_item_description.trading.12",
+  icon = "51",
+  skip = "current",
+  text = [[
+It's the most famous cookbook in
+all Hyrule!
+This could be valuable!
+]]
+}
+
+dialog{
+  id = "_item_description.trading.13",
+  text = [[
+You finished the trading sequence!
+Now go use your Rito Feather!
+]]
+}
+
+dialog{
+  id = "_item_description.trading.2",
+  icon = "41",
+  skip = "current",
+  text = [[
+It's an Odd Potion. What do you
+think you should do with it?
+]]
+}
+
+dialog{
+  id = "_item_description.trading.3",
+  icon = "42",
+  skip = "current",
+  text = [[
+It's a mask in the form of a Deku.
+Maybe someone will like it?
+]]
+}
+
+dialog{
+  id = "_item_description.trading.4",
+  icon = "43",
+  skip = "current",
+  text = [[
+It's said to be a tear from the
+moon itself.$0 It glistens!
+]]
+}
+
+dialog{
+  id = "_item_description.trading.5",
+  icon = "44",
+  skip = "current",
+  text = [[
+It's a shining ball made from
+pure crystal.
+]]
+}
+
+dialog{
+  id = "_item_description.trading.6",
+  icon = "45",
+  skip = "current",
+  text = [[
+It's supposed to be tasty meat.$0
+Not sure it's actually edible.
+]]
+}
+
+dialog{
+  id = "_item_description.trading.7",
+  icon = "46",
+  skip = "current",
+  text = [[
+It's some interesing looking dog
+food. Maybe someone other than a
+dog will like it?
+]]
+}
+
+dialog{
+  id = "_item_description.trading.8",
+  icon = "47",
+  skip = "current",
+  text = [[
+It's a bunch of delicious looking
+bananas!
+]]
+}
+
+dialog{
+  id = "_item_description.trading.9",
+  icon = "48",
+  skip = "current",
+  text = [[
+It's a beautiful vase fashioned by
+the Goron people.
+]]
+}
+
+dialog{
+  id = "_quests.i1027.1",
+  text = [[
+Ordon Festival:
+Tristan has set up a race in honor of
+Ordona. Head to the north area of town
+to compete.
+]]
+}
+
+dialog{
+  id = "_quests.i1027.2",
+  text = [[
+Ordon Festival:
+Tristan has set up a race in honor of
+Ordona. Head to the north area of town
+to compete.
+]]
+}
+
+dialog{
+  id = "_quests.i1027.3",
+  text = [[
+Ordon Festival:
+Tristan has set up a race in honor of
+Ordona. Congratulations on winning,
+enjoy the rest of the festival!
+]]
+}
+
+dialog{
+  id = "_quests.i1027.4",
+  text = [[
+Ordon Festival:
+The Festival continues! But now that
+the race has been won, one of the town
+members, Julita, could use your help.
+]]
+}
+
+dialog{
+  id = "_quests.i1027.5",
+  text = [[
+Ordon Festival:
+The Festival is over and Crista is
+back home. Maybe it's time to venture
+out into the world?
+]]
+}
+
+dialog{
+  id = "_quests.i1029.1",
+  text = [[
+Goron Sickness:
+Dargor has asked for help with his
+sick child, but he's not the only
+Goron who's sick. Talk to Galen in
+the northern area of town.
+]]
+}
+
+dialog{
+  id = "_quests.i1029.2",
+  text = [[
+Goron Sickness:
+Galen has agreed to see the child.
+Return to Dargor's house to get the
+prognosis.
+]]
+}
+
+dialog{
+  id = "_quests.i1029.3",
+  text = [[
+Goron Sickness:
+Sadly, Galen isn't able to help the
+child. Leave Dargor to mourn for now.
+]]
+}
+
+dialog{
+  id = "_quests.i1029.4",
+  text = [[
+Goron Sickness:
+Leave Dargor to mourn for now.$0
+
+The Gorons are known for their bombs,
+why not check out their shop in
+the mean time?
+]]
+}
+
+dialog{
+  id = "_quests.i1029.5",
+  text = [[
+Goron Sickness:
+Osgor has returned as a ghost! Where
+do ghosts belong? Check our the
+Mausoleum that's east of town.
+]]
+}
+
+dialog{
+  id = "_quests.i1030.1",
+  text = [[
+Drain Lake Hylia:
+A few people have spoken of a way to
+drain the entirety of Lake Hylia. Look
+for the switch house near Hyrule Castle.
+]]
+}
+
+dialog{
+  id = "_quests.i1032.1",
+  text = [[
+Ancient Library:
+Now that you know Isan's story of
+Kasuto and the Book of Mudora, seek
+out Elder Zelda at Hyrule Castle.
+]]
+}
+
+dialog{
+  id = "_quests.i1032.2",
+  text = [[
+Ancient Library:
+Now that you know Isan's story of
+Kasuto and the Book of Mudora, seek
+out Elder Zelda at Hyrule Castle.
+]]
+}
+
+dialog{
+  id = "_quests.i1032.3",
+  text = [[
+Ancient Library:
+Zelda has been taken by the Dark
+Tribe! Now you must seek them out and
+return her to the castle.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.1",
+  text = [[
+Forest Conflicts:
+The Deku and the Tokay are battling
+for space, but what caused it in the
+first place? Head toward the Tokay's
+home at the beach for answers.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.2",
+  text = [[
+Forest Conflicts:
+The Monkey has stolen the page you
+found! You saw him jump north, so
+head that way and see if you can
+find him.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.3",
+  text = [[
+Forest Conflicts:
+The Gerudo, who are shipwreaked on the
+beach, asked for your help in repairing
+their ship. The desert is expansive,
+so just keep going north.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.4",
+  text = [[
+Forest Conflicts:
+You found the parts the Gerudo needed
+in the pyramid, so return to the beach.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.5",
+  text = [[
+Forest Conflicts:
+The Gerudo are repairing their ship,
+so they recommend you speak with a
+man they found in a cave nearby to the
+east.
+]]
+}
+
+dialog{
+  id = "_quests.i1068.6",
+  text = [[
+Forest Conflicts:
+The Gerudo have left the beach to
+return to pirating, so the Tokay can
+have their beach back. Go tell the
+Deku!
+]]
+}
+
+dialog{
+  id = "_quests.i1068.7",
+  text = [[
+Forest Conflicts:
+The Gerudo have left the beach to
+return to pirating, so the Tokay can
+have their beach back. Go tell the
+Deku!
+]]
+}
+
+dialog{
+  id = "_quests.i1068.8",
+  text = [[
+Forest Conflicts:
+The Monkeys have stolen your
+paper - better get it back!
+]]
+}
+
+dialog{
+  id = "_quests.i1068.9",
+  text = [[
+Forest Conflicts:
+The Deku recommend investigating an
+Ancient Library that's on the other
+side of the world. Get there via the
+Sewers accessed near an old Ruin in
+the east.
+]]
+}
+
+dialog{
+  id = "_quests.i1601.1",
+  text = [[
+Blacksmith's Request:
+Rudy the Blacksmith needs water for
+his basin, and the closest source is
+the beach west of his cave.
+]]
+}
+
+dialog{
+  id = "_quests.i1602.1",
+  text = [[
+Lumberjack Love:
+Gaira the Groundskeeper is concerned
+about some nearby poisoned trees. Meet
+her in the poisoned meadow so she can
+see them for herself.
+]]
+}
+
+dialog{
+  id = "_quests.i1602.2",
+  text = [[
+Lumberjack Love:
+Deacon the Lumberjack has seen some
+poisoned trees nearby and would like
+someone to investigate.
+]]
+}
+
+dialog{
+  id = "_quests.i1602.3",
+  text = [[
+Lumberjack Love:
+Gaira has seen the trees and is now
+convinced that the lumberjack who
+lives nearby is to blame. Meet her at
+his house to face him in person!
+]]
+}
+
+dialog{
+  id = "_quests.i1602.4",
+  text = [[
+Lumberjack Love:
+Gaira and Deacon meet for the first
+time and are instantly smitten. Looks
+like someone may have inadvertantly
+played matchmaker!
+]]
+}
+
+dialog{
+  id = "_quests.i1602.5",
+  text = [[
+Lumberjack Love:
+Gaira and Deacon meet for the first
+time and are instantly smitten. Looks
+like someone may have inadvertantly
+played matchmaker!
+]]
+}
+
+dialog{
+  id = "_quests.i1603.1",
+  text = [[
+Great Fairy of Courage:
+The Forest Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Mystic Jade.
+]]
+}
+
+dialog{
+  id = "_quests.i1603.2",
+  text = [[
+Great Fairy of Courage:
+The Forest Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Mystic Jade.
+]]
+}
+
+dialog{
+  id = "_quests.i1603.3",
+  text = [[
+Great Fairy of Courage:
+The Forest Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Mystic Jade.
+]]
+}
+
+dialog{
+  id = "_quests.i1603.4",
+  text = [[
+Great Fairy of Courage:
+The Forest Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Mystic Jade.
+]]
+}
+
+dialog{
+  id = "_quests.i1603.5",
+  text = [[
+Great Fairy of Courage:
+The Forest Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Mystic Jade.
+]]
+}
+
+dialog{
+  id = "_quests.i1604.1",
+  text = [[
+Great Fairy of Power:
+The Mountain Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Goron Amber.
+]]
+}
+
+dialog{
+  id = "_quests.i1604.2",
+  text = [[
+Great Fairy of Power:
+The Mountain Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Goron Amber.
+]]
+}
+
+dialog{
+  id = "_quests.i1604.3",
+  text = [[
+Great Fairy of Power:
+The Mountain Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goron Amber.
+]]
+}
+
+dialog{
+  id = "_quests.i1604.4",
+  text = [[
+Great Fairy of Power:
+The Mountain Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goron Amber.
+]]
+}
+
+dialog{
+  id = "_quests.i1604.5",
+  text = [[
+Great Fairy of Power:
+The Mountain Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goron Amber.
+]]
+}
+
+dialog{
+  id = "_quests.i1605.1",
+  text = [[
+Great Fairy of Wisdom:
+The Snowpeak Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Alchemy Stone.
+]]
+}
+
+dialog{
+  id = "_quests.i1605.2",
+  text = [[
+Great Fairy of Wisdom:
+The Snowpeak Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Alchemy Stone.
+]]
+}
+
+dialog{
+  id = "_quests.i1605.3",
+  text = [[
+Great Fairy of Wisdom:
+The Snowpeak Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Alchemy Stone.
+]]
+}
+
+dialog{
+  id = "_quests.i1605.4",
+  text = [[
+Great Fairy of Wisdom:
+The Snowpeak Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Alchemy Stone.
+]]
+}
+
+dialog{
+  id = "_quests.i1605.5",
+  text = [[
+Great Fairy of Wisdom:
+The Snowpeak Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Alchemy Stone.
+]]
+}
+
+dialog{
+  id = "_quests.i1606.1",
+  text = [[
+Great Fairy of Kindness:
+The Lake Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goddess Plume.
+]]
+}
+
+dialog{
+  id = "_quests.i1606.2",
+  text = [[
+Great Fairy of Kindness:
+The Lake Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goddess Plume.
+]]
+}
+
+dialog{
+  id = "_quests.i1606.3",
+  text = [[
+Great Fairy of Kindness:
+The Lake Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goddess Plume.
+]]
+}
+
+dialog{
+  id = "_quests.i1606.4",
+  text = [[
+Great Fairy of Kindness:
+The Lake Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goddess Plume.
+]]
+}
+
+dialog{
+  id = "_quests.i1606.5",
+  text = [[
+Great Fairy of Kindness:
+The Lake Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Goddess Plume.
+]]
+}
+
+dialog{
+  id = "_quests.i1607.1",
+  text = [[
+Great Fairy of Magic:
+The Subrosia Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Subrosian Ore.
+]]
+}
+
+dialog{
+  id = "_quests.i1607.2",
+  text = [[
+Great Fairy of Magic:
+The Subrosia Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Subrosian Ore.
+]]
+}
+
+dialog{
+  id = "_quests.i1607.3",
+  text = [[
+Great Fairy of Magic:
+The Subrosia Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Subrosian Ore.
+]]
+}
+
+dialog{
+  id = "_quests.i1607.4",
+  text = [[
+Great Fairy of Magic:
+The Subrosia Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Subrosian Ore.
+]]
+}
+
+dialog{
+  id = "_quests.i1607.5",
+  text = [[
+Great Fairy of Magic:
+The Subrosia Great Fairy has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Subrosian Ore.
+]]
+}
+
+dialog{
+  id = "_quests.i1608.1",
+  text = [[
+Great Fairy Queen:
+The Great Fairy Queen has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Magic Crystal.
+]]
+}
+
+dialog{
+  id = "_quests.i1608.2",
+  text = [[
+Great Fairy Queen:
+The Great Fairy Queen has asked for
+your help in ridding her lands of
+trouble. It will require at least
+20 Magic Crystal.
+]]
+}
+
+dialog{
+  id = "_quests.i1608.3",
+  text = [[
+Great Fairy Queen:
+The Great Fairy Queen has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Magic Crystal.
+]]
+}
+
+dialog{
+  id = "_quests.i1608.4",
+  text = [[
+Great Fairy Queen:
+The Great Fairy Queen has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Magic Crystal.
+]]
+}
+
+dialog{
+  id = "_quests.i1608.5",
+  text = [[
+Great Fairy Queen:
+The Great Fairy Queen has asked for
+your help in ridding her lands of
+trouble. It will require at least
+50 Magic Crystal.
+]]
+}
+
+dialog{
+  id = "_quests.i1612.1",
+  text = [[
+Bottle Thief:
+Strap, the shopkeeper at Kakariko,
+has had his prized bottle stolen. He
+thinks he saw the thief run toward
+the Kakariko graveyard in the west.
+]]
+}
+
+dialog{
+  id = "_quests.i1615.1",
+  text = [[
+Book Fetching:
+Isan has asked you to search out
+books lost throughout North Hyrule.
+]]
+}
+
+dialog{
+  id = "_quests.i1631.1",
+  text = [[
+Plant Fetching:
+There are plants scattered throughout
+Hyrule that need to be collected and
+catalogued.
+]]
+}
+
+dialog{
+  id = "_quests.i1651.1",
+  text = [[
+The Great Architect:
+An Architect in Kakariko is looking
+for someone to pass his knowledge on
+to. Seek out a student for him!
+]]
+}
+
+dialog{
+  id = "_quests.i1651.2",
+  text = [[
+The Great Architect:
+An Architect student in Rito is
+interested in learning! Go tell the
+Architect in Kakariko.
+]]
+}
+
+dialog{
+  id = "_quests.i1651.3",
+  text = [[
+The Great Architect:
+The Rito student, Horwin, has agreed
+to go to Kakariko to learn from the
+architect.
+]]
+}
+
+dialog{
+  id = "_quests.i1651.4",
+  text = [[
+The Great Architect:
+Horwin is happily in Kakariko learning
+his craft. Good work, now just give
+him some time to learn!
+]]
+}
+
+dialog{
+  id = "_quests.i1652.1",
+  text = [[
+Master Ore:
+Somewhere under Hyrule is a vast land
+that may contain the rumored$rMaster Ore$w.
+If you find it, bring it back to$gRudy$w.
+]]
+}
+
+dialog{
+  id = "_quests.i1652.2",
+  text = [[
+Master Ore:
+The$gShaman$wof$bSubrosia$wmay be able to
+help you in your quest for$rMaster Ore.$w
+]]
+}
+
+dialog{
+  id = "_quests.i1652.3",
+  text = [[
+Master Ore:
+Retrieve 50$rSubrosian Ore$wfor the
+$gShaman$w and hopefully you'll get
+what you want.
+]]
+}
+
+dialog{
+  id = "_quests.i1652.4",
+  text = [[
+Master Ore:
+You've found the$rMaster Ore$w! Bring it
+to$gRudy$wto see what he can do with it.
+]]
+}
+
+dialog{
+  id = "_quests.i1807.1",
+  text = [[
+Book of Mudora:
+Maybe this page is important
+for something...
+]]
+}
+
+dialog{
+  id = "_quests.i1807.2",
+  text = [[
+Book of Mudora:
+Maybe this page is important
+for something...
+]]
+}
+
+dialog{
+  id = "_quests.i1807.3",
+  text = [[
+Book of Mudora:
+It's currently just a collection
+of pages, but you can already feel
+power emanating from it.
+]]
+}
+
+dialog{
+  id = "_quests.i1807.4",
+  text = [[
+Book of Mudora:
+It's beginning to form a book shape
+on its own, and its power is growing.
+]]
+}
+
+dialog{
+  id = "_quests.i1807.5",
+  text = [[
+Book of Mudora:
+The book is nearly complete and you
+can feel its power growing.
+]]
+}
+
+dialog{
+  id = "_quests.i1807.6",
+  text = [[
+Book of Mudora:
+The complete book of Mudora has a faint
+glow that represents its power.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.1",
+  text = [[
+Trading Sequence:
+You have an Odd Mushroom. It's almost
+certain that Crista would know what
+to do with this.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.10",
+  text = [[
+Trading Sequence:
+You have a Zora Scale. These are rare
+outside of the Zora race, so it should
+probably be taken to another member
+of the race.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.11",
+  text = [[
+Trading Sequence:
+You have a Frozen Fish. This would make
+an excellent ingredient for cooking,
+if you can find someone who enjoys
+that kind of thing.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.12",
+  text = [[
+Trading Sequence:
+You have a Cookbook. Take it to some-
+one who would like to learn to cook.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.2",
+  text = [[
+Trading Sequence:
+You have an Odd Potion. It has an
+almost floral aroma that may be
+popular with creatures of the forest.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.3",
+  text = [[
+Trading Sequence:
+You have a Deku Mask. It's rumored
+these are popular among an ancient
+desert race known as the Zuna, if any
+of them still exist that is.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.4",
+  text = [[
+Trading Sequence:
+You have a Moon Tear. It's a powerful
+relic with many uses, especially 
+among those who are magically inclined.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.5",
+  text = [[
+Trading Sequence:
+You have a Crystal Ball. These relics
+enable people to see the future, but
+one must know how to use it. Possibly
+someone from the ancient Shiekah race?
+]]
+}
+
+dialog{
+  id = "_quests.i1840.6",
+  text = [[
+Trading Sequence:
+You have some Tasty Meat. Possibly
+this could be given to an animal or
+monster of some sort?
+]]
+}
+
+dialog{
+  id = "_quests.i1840.7",
+  text = [[
+Trading Sequence:
+You have some Dog Food. There are some
+races that will eat anything, so seek
+one out!
+]]
+}
+
+dialog{
+  id = "_quests.i1840.8",
+  text = [[
+Trading Sequence:
+You have some Bananas. Seek out
+someone who needs some variety in
+their diet.
+]]
+}
+
+dialog{
+  id = "_quests.i1840.9",
+  text = [[
+Trading Sequence:
+You have a Goron Vase. Sometimes these
+race specific items are popular among
+members of other races.
+]]
+}
+
+dialog{
+  id = "_signs.deep_water",
+  skip = "current",
+  text = [[
+Beware deep water!
+$0
+
+Do not enter without permission
+of the Zora. Inquire with Elder
+Juba in Castle Town.
+]]
+}
+
+dialog{
+  id = "_signs.hylian_village",
+  skip = "current",
+  text = [[
+           Welcome to
+         Hylian Village
+
+]]
+}
+
+dialog{
+  id = "_signs.hylian_village.inn",
+  skip = "current",
+  text = [[
+
+        Hylian Village Inn
+]]
+}
+
+dialog{
+  id = "_signs.hylian_village.ranch",
+  skip = "current",
+  text = [[
+
+         Lonnie's Ranch
+
+]]
+}
+
+dialog{
+  id = "_signs.mailbox",
+  skip = "current",
+  text = [[
+Gentlemen don't read others' mail.
+You are a gentleman, right?
+]]
+}
+
+dialog{
+  id = "_signs.mailbox.link",
+  skip = "current",
+  text = [[
+This is your mailbox, but it appears
+to be empty.
+]]
+}
+
+dialog{
+  id = "_signs.mailbox.mr_write",
+  skip = "current",
+  text = [[
+This mailbox is stuffed full of
+outgoing letters. Apparently the
+mailman doesn't make it up here often!
+]]
+}
+
+dialog{
+  id = "_signs.mailbox.office",
+  skip = "current",
+  text = [[
+Mailbox is for official use only!
+]]
+}
+
+dialog{
+  id = "_signs.mailbox.relic_collector",
+  skip = "current",
+  text = [[
+This is completely full - this guy
+hasn't been home for a while!
+]]
+}
+
+dialog{
+  id = "_treasure.airship_part.1",
+  skip = "current",
+  text = [[
+You found a chunk of$rMagnetite$w!$0
+It's a sturdy construction material
+with a variey of uses.
+]]
+}
+
+dialog{
+  id = "_treasure.airship_part.2",
+  skip = "current",
+  text = [[
+You found a$rPropeller$w!$0
+What could the Gerudo need with this?
+]]
+}
+
+dialog{
+  id = "_treasure.airship_part.3",
+  skip = "current",
+  text = [[
+You found$rDin's Pearl$w!$0
+The magic from this artifact should
+speed the Gerudo's repairs considerably!
+Get back as soon as you can.
+]]
+}
+
+dialog{
+  id = "_treasure.airship_part.4",
+  icon = "29",
+  skip = "current",
+  text = [[
+You got some$rMaster Ore$w!$0
+The blacksmith can use it to
+improve your sword!
+]]
+}
+
+dialog{
+  id = "_treasure.alchemy.1",
+  icon = "25",
+  skip = "current",
+  text = [[
+You got an$rAlchemy Stone$w!
+This artifact is said to bring
+riches to its owner.
+]]
+}
+
+dialog{
+  id = "_treasure.amber.1",
+  icon = "22",
+  skip = "current",
+  text = [[
+You got$rGoron Amber$w!
+This tasty Goron treat is valuable
+because it contains a bug!
+]]
+}
+
+dialog{
+  id = "_treasure.apple.1",
+  icon = "16",
+  skip = "current",
+  text = [[
+You got an$rApple$w!$0
+Eat it to regain some stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.apple.2",
+  icon = "16",
+  skip = "current",
+  text = [[
+You got some$rApples$w!$0
+Eat them to regain some stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.arrow.1",
+  icon = "83",
+  skip = "current",
+  text = [[
+You got some$rArrows$w!$0
+Use them in your bow to hit things
+at a distance.
+]]
+}
+
+dialog{
+  id = "_treasure.arrow.2",
+  icon = "83",
+  skip = "current",
+  text = [[
+You got some$rArrows$w!$0
+Use them in your bow to hit things
+at a distance.
+]]
+}
+
+dialog{
+  id = "_treasure.arrow.3",
+  icon = "83",
+  skip = "current",
+  text = [[
+You got some$rArrows$w!$0
+Use them in your bow to hit things
+at a distance.
+]]
+}
+
+dialog{
+  id = "_treasure.big_key.1",
+  icon = "73",
+  skip = "current",
+  text = [[
+You found a$rBig Key$w!$0
+Now just find a big keyhole to
+put it in!
+]]
+}
+
+dialog{
+  id = "_treasure.bomb.1",
+  icon = "1",
+  skip = "current",
+  text = [[
+You got a$rBomb$w!$0
+Use it to blow something up!$0
+Ka$0 BOOM!
+]]
+}
+
+dialog{
+  id = "_treasure.bomb.2",
+  icon = "1",
+  skip = "current",
+  text = [[
+You got a pack of$rBombs$w!$0
+Use them to blow something up!$0
+Ka $0 BOOM!
+]]
+}
+
+dialog{
+  id = "_treasure.bomb.3",
+  icon = "1",
+  skip = "current",
+  text = [[
+You got a pack of$rBombs$w!$0
+Use them to blow something up!$0
+Ka $0 BOOM!
+]]
+}
+
+dialog{
+  id = "_treasure.bomb_bag.1",
+  icon = "54",
+  skip = "current",
+  text = [[
+You received a$rBomb Bag$w!$0
+It can hold 10 Bombs.
+]]
+}
+
+dialog{
+  id = "_treasure.bomb_bag.2",
+  icon = "55",
+  skip = "current",
+  text = [[
+You got a$rLarge Bomb Bag$w!$0
+It holds 30 Bombs.
+]]
+}
+
+dialog{
+  id = "_treasure.bomb_bag.3",
+  icon = "56",
+  skip = "current",
+  text = [[
+You got a$rHuge Bomb Bag$w!$0
+It holds 60 Bombs!
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.1",
+  icon = "20",
+  skip = "current",
+  text = [[
+You got a page to a$cbook$w!
+This seems like an awfully
+paltry prize after all this
+trouble. Maybe it'll be
+useful in some way?
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.2",
+  icon = "20",
+  skip = "current",
+  text = [[
+You got a page to a$cbook$w!
+This seems like an awfully
+paltry prize after all this
+trouble. Maybe it'll be
+useful in some way?
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.3",
+  icon = "20",
+  skip = "current",
+  text = [[
+You got a page to the
+$cBook of Mudora!$w
+It's coming together!
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.4",
+  icon = "20",
+  skip = "current",
+  text = [[
+You got another page to the
+$cBook of Mudora!$w
+
+It's starting to look like
+a real book!
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.5",
+  icon = "20",
+  skip = "current",
+  text = [[
+It's yet another page of the
+$cBook of Mudora!$w
+
+You have almost a complete
+book now!
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.6",
+  icon = "20",
+  skip = "current",
+  text = [[
+It's the final page of the
+$cBook of Mudora!$w
+
+The book is complete, now
+it just needs its magic
+restored!
+]]
+}
+
+dialog{
+  id = "_treasure.book_mudora.7",
+  icon = "20",
+  skip = "current",
+  text = [[
+The$cBook of Mudora$w has been
+enchanted! Finally the book
+is back to its full power!
+]]
+}
+
+dialog{
+  id = "_treasure.boomerang.1",
+  icon = "4",
+  skip = "current",
+  text = [[
+You got a$rBoomerang$w!$0
+Use it to immobilize enemies
+and reach distant objects.
+]]
+}
+
+dialog{
+  id = "_treasure.boomerang.2",
+  icon = "37",
+  skip = "current",
+  text = [[
+You got a$rMagical Boomerang$w!$0
+It can immobilize enemies and reach
+objects at even futher distances!
+]]
+}
+
+dialog{
+  id = "_treasure.boots.1",
+  icon = "28",
+  skip = "current",
+  text = [[
+You found the$rPegasus Boots$w!
+Slip them on and dash about!
+]]
+}
+
+dialog{
+  id = "_treasure.boss_key.1",
+  icon = "74",
+  skip = "current",
+  text = [[
+You found the$rBoss Key$w!$0
+Now you can open the door to
+the boss's lair!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+You found an empty Bottle!$0
+It can hold a variety of things!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+You put some Water in a Bottle.
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+You got some Heart Potion!$0
+Use it to recover your life!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+You got some Magic Potion!$0
+Use it to fill up that
+magic meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+You got some Stamina Potion!$0
+It restores your Stamina
+meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+You got Revitalizing Potion!$0
+It recovers life, magic and
+stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+You captured a Fairy in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_1.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+You captured a Poe Soul in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+You found an empty Bottle!$0
+It can hold a variety of things!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+You put some Water in a Bottle.
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+You got some Heart Potion!$0
+Use it to recover your life!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+You got some Magic Potion!$0
+Use it to fill up that
+magic meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+You got some Stamina Potion!$0
+It restores your Stamina
+meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+You got Revitalizing Potion!$0
+It recovers life, magic and
+stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+You captured a Fairy in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_2.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+You captured a Poe Soul in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+You found an empty Bottle!$0
+It can hold a variety of things!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+You put some Water in a Bottle.
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+You got some Heart Potion!$0
+Use it to recover your life!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+You got some Magic Potion!$0
+Use it to fill up that
+magic meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+You got some Stamina Potion!$0
+It restores your Stamina
+meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+You got Revitalizing Potion!$0
+It recovers life, magic and
+stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+You captured a Fairy in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_3.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+You captured a Poe Soul in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.1",
+  icon = "7",
+  skip = "current",
+  text = [[
+You found an empty Bottle!$0
+It can hold a variety of things!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.2",
+  icon = "8",
+  skip = "current",
+  text = [[
+You put some Water in a Bottle.
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.3",
+  icon = "9",
+  skip = "current",
+  text = [[
+You got some Heart Potion!$0
+Use it to recover your life!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.4",
+  icon = "10",
+  skip = "current",
+  text = [[
+You got some Magic Potion!$0
+Use it to fill up that
+magic meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.5",
+  icon = "11",
+  skip = "current",
+  text = [[
+You got some Stamina Potion!$0
+It restores your Stamina
+meter!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.6",
+  icon = "12",
+  skip = "current",
+  text = [[
+You got Revitalizing Potion!$0
+It recovers life, magic and
+stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.7",
+  icon = "13",
+  skip = "current",
+  text = [[
+You captured a Fairy in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bottle_4.8",
+  icon = "14",
+  skip = "current",
+  text = [[
+You captured a Poe Soul in
+a Bottle!
+]]
+}
+
+dialog{
+  id = "_treasure.bow.1",
+  icon = "2",
+  skip = "current",
+  text = [[
+You found the$rHero's Bow$w!$0
+This is said to have been
+wielded by a legendary hero
+long ago.
+]]
+}
+
+dialog{
+  id = "_treasure.bow_light.1",
+  icon = "2",
+  skip = "current",
+  text = [[
+You found the$rLight Bow$w!$0
+This is a powerful weapon which
+allows you to shoot pure arrows
+of light!
+]]
+}
+
+dialog{
+  id = "_treasure.cane.1",
+  icon = "15",
+  next = "_warning_magic",
+  skip = "current",
+  text = [[
+You found$rHebra's Cane$w!$0
+Use it to create ice blocks
+on a whim.
+]]
+}
+
+dialog{
+  id = "_treasure.carrot.1",
+  icon = "18",
+  skip = "current",
+  text = [[
+You got a$rCarrot$w!$0
+Eat it to regain some stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.compass.1",
+  icon = "71",
+  skip = "current",
+  text = [[
+You found a$rCompass$w! It
+indicates your position on a Map,
+but only works in this dungeon.
+This one has a special feature -
+when you enter a room with hidden
+treasure, a sound will play!
+]]
+}
+
+dialog{
+  id = "_treasure.crystal.1",
+  icon = "23",
+  skip = "current",
+  text = [[
+You got a$rMagic Crystal$w!$0
+No one knows how this solid
+chunk of pure, crystallized
+magic came to be...
+]]
+}
+
+dialog{
+  id = "_treasure.feather.1",
+  icon = "0",
+  skip = "current",
+  text = [[
+You got a$rRito Feather$w!$0
+Use it to jump across
+obstacles safely. You'll be
+light as air!
+]]
+}
+
+dialog{
+  id = "_treasure.flippers.1",
+  icon = "50",
+  skip = "current",
+  text = [[
+You got the$rFlippers$w!$0
+Now you'll be able to swim
+like a pro!
+]]
+}
+
+dialog{
+  id = "_treasure.food_meat.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rMeat$w!$0
+Eat it to regain some stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.glove.1",
+  icon = "32",
+  skip = "current",
+  text = [[
+You found the$rIron Bracelet$w!$0
+Its power allows you to lift
+heavy things!
+]]
+}
+
+dialog{
+  id = "_treasure.glove.2",
+  icon = "33",
+  skip = "current",
+  text = [[
+You got the$rGold Bracelet$w!$0
+Its magic allows you to lift
+just about anything!
+]]
+}
+
+dialog{
+  id = "_treasure.hammer.1",
+  icon = "27",
+  skip = "current",
+  text = [[
+You got the$rGoron Hammer!$w
+This powerful weapon can pound
+stakes into the ground.
+]]
+}
+
+dialog{
+  id = "_treasure.heart.1",
+  icon = "84",
+  skip = "current",
+  text = [[
+You found a$rHeart$w!$0
+Some life has been
+replenished.
+]]
+}
+
+dialog{
+  id = "_treasure.heart_container.1",
+  icon = "80",
+  skip = "current",
+  text = [[
+You found a$rHeart Container$w!$0
+Your life has been increased
+by one. Congratulations!
+]]
+}
+
+dialog{
+  id = "_treasure.heart_piece.1",
+  icon = "79",
+  skip = "current",
+  text = [[
+You found a$rPiece of Heart$w!
+]]
+}
+
+dialog{
+  id = "_treasure.hookshot.1",
+  icon = "6",
+  skip = "current",
+  text = [[
+You found a$rHookshot$w!$0
+Immobilize enemies and travel
+across distances previously
+unreachable!
+]]
+}
+
+dialog{
+  id = "_treasure.jade.1",
+  icon = "21",
+  skip = "current",
+  text = [[
+You got some$rMystic Jade$w!
+It's such a beautiful color!
+]]
+}
+
+dialog{
+  id = "_treasure.lamp.1",
+  icon = "5",
+  next = "_warning_magic",
+  skip = "current",
+  text = [[
+You found a$rLantern$w!$0
+Light the way and travel in
+safety!
+]]
+}
+
+dialog{
+  id = "_treasure.magic_bar.2",
+  skip = "current",
+  text = [[
+You've had your magic bar upgraded!
+You now have room for twice as
+much magic!
+]]
+}
+
+dialog{
+  id = "_treasure.magic_flask.1",
+  icon = "85",
+  skip = "current",
+  text = [[
+You found a small jar of
+Magic Potion!$0
+Some magic is renewed!
+]]
+}
+
+dialog{
+  id = "_treasure.magic_flask.2",
+  icon = "86",
+  skip = "current",
+  text = [[
+You found a large jar of
+Magic Potion!$0
+Some magic is renewed!
+]]
+}
+
+dialog{
+  id = "_treasure.map.1",
+  icon = "70",
+  skip = "current",
+  text = [[
+You found a$rDungeon Map$w!
+Use it to navigate difficult areas
+and explore new places!
+]]
+}
+
+dialog{
+  id = "_treasure.monster_jelly.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got$rMonster Jelly$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_jelly.2",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got$rRed Monster Jelly$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_jelly.3",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got$rBlue Monster Jelly$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_jelly.4",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got$rYellow Monster Jelly$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_parts.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rMonster Part$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_tails.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rMonster Tail$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_tails.2",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rRed Monster Tail$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_tails.3",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rBlue Monster Tail$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_tails.4",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rYellow Monster Tail$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_wings.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rRed Monster Wing$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_wings.2",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rBlue Monster Wing$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_wings.3",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rYellow Monster Wing$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.monster_wings.4",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rBlack Monster Wing$w!$0
+Make it into an elixir to restore
+your life.
+]]
+}
+
+dialog{
+  id = "_treasure.ocarina.1",
+  icon = "34",
+  skip = "current",
+  text = [[
+You got the$rOcarina of Wind$w!$0
+Use this magical instrument
+to get where you need to go!
+]]
+}
+
+dialog{
+  id = "_treasure.ore.1",
+  icon = "30",
+  skip = "current",
+  text = [[
+You found$rSubrosian Ore$w! It's a
+strong metallic compound from
+the deepest depths of the earth!
+]]
+}
+
+dialog{
+  id = "_treasure.ore.2",
+  icon = "30",
+  skip = "current",
+  text = [[
+You found$rSubrosian Ore$w! It's a
+strong metallic compound from
+the deepest depths of the earth!
+]]
+}
+
+dialog{
+  id = "_treasure.plume.1",
+  icon = "24",
+  skip = "current",
+  text = [[
+You found a$rGoddess Plume$w!
+This is a legendary treasure
+few will ever behold!
+]]
+}
+
+dialog{
+  id = "_treasure.potion.1",
+  icon = "9",
+  skip = "current",
+  text = [[
+You got some$rHeart Potion$w!$0
+Use it to restore your life.
+]]
+}
+
+dialog{
+  id = "_treasure.potion.2",
+  icon = "10",
+  skip = "current",
+  text = [[
+You got some$rMagic Potion$w!$0
+Use it to refill your
+magic meter.
+]]
+}
+
+dialog{
+  id = "_treasure.potion.3",
+  icon = "11",
+  skip = "current",
+  text = [[
+You got$rStamina Potion$w!$0
+It restores your stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.potion.4",
+  icon = "12",
+  skip = "current",
+  text = [[
+You got$rRevitalizing Potion$w!$0
+It restores life, magic
+and stamina!
+]]
+}
+
+dialog{
+  id = "_treasure.pumpkin.1",
+  icon = "17",
+  skip = "current",
+  text = [[
+You got a$rPumpkin$w!
+It looks quite nutritious.
+]]
+}
+
+dialog{
+  id = "_treasure.quiver.1",
+  icon = "57",
+  skip = "current",
+  text = [[
+You received a$rSmall Quiver$W!$0
+It holds your arrows, but only
+10 at once.
+]]
+}
+
+dialog{
+  id = "_treasure.quiver.2",
+  icon = "58",
+  skip = "current",
+  text = [[
+You received a$rLarge Quiver$w!$0
+It can hold 30 arrows at a time!
+]]
+}
+
+dialog{
+  id = "_treasure.quiver.3",
+  icon = "59",
+  skip = "current",
+  text = [[
+You received a$rHuge Quiver$w!$0
+It can hold up to 60 arrows!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.1",
+  icon = "90",
+  skip = "current",
+  text = [[
+You found a$gGreen Rupee$w!$0
+That's worth 1 Rupee, so you'd
+better get lots!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.2",
+  icon = "91",
+  skip = "current",
+  text = [[
+You found a$bBlue Rupee$w!$0
+That's worth 5 Rupees.
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.3",
+  icon = "92",
+  skip = "current",
+  text = [[
+You found a$rRed Rupee$w!$0
+That's worth 20 Rupees!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.4",
+  icon = "93",
+  skip = "current",
+  text = [[
+You found a$pPurple Rupee$w!$0
+This one's worth 50 Rupees!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.5",
+  icon = "94",
+  skip = "current",
+  text = [[
+You found a$sSilver Rupee$w!$0
+It's worth 100 Rupees!
+Lucky!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee.6",
+  icon = "95",
+  skip = "current",
+  text = [[
+You found a$yGold Rupee$w!$0
+It's worth 300 Rupees!
+Amazing!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee_bag.2",
+  icon = "52",
+  skip = "current",
+  text = [[
+You got the$rLarge Rupee Bag$w!$0
+It holds 1000 rupees!
+]]
+}
+
+dialog{
+  id = "_treasure.rupee_bag.3",
+  icon = "53",
+  skip = "current",
+  text = [[
+You got the$rHuge Rupee Bag$w!$0
+It holds a whopping 5000 rupees!
+]]
+}
+
+dialog{
+  id = "_treasure.shield.1",
+  icon = "63",
+  skip = "current",
+  text = [[
+You were awarded a trusty$rwooden
+shield of Ordon origins$w.Be
+careful, it's only made of wood.
+]]
+}
+
+dialog{
+  id = "_treasure.shield.2",
+  icon = "64",
+  skip = "current",
+  text = [[
+You received a strong$rHylian
+Shield$w!$0 It's made of nearly
+impenetrable Hylian metal.
+]]
+}
+
+dialog{
+  id = "_treasure.shield.3",
+  icon = "65",
+  skip = "current",
+  text = [[
+You found the magical$rLight
+Shield$w!$0 Made of polished metal
+and infused with purity of light,
+this shield will protect its
+wielder from most anything!
+]]
+}
+
+dialog{
+  id = "_treasure.shovel.1",
+  skip = "current",
+  text = [[
+You got a sturdy$rShovel$w! Use
+it to dig up any buried treasue
+you can find!
+]]
+}
+
+dialog{
+  id = "_treasure.small_key.1",
+  icon = "72",
+  skip = "current",
+  text = [[
+You found a$rSmall Key$w!$0
+Use it to open doors, but only
+in this area.
+]]
+}
+
+dialog{
+  id = "_treasure.stick.1",
+  icon = "26",
+  skip = "current",
+  text = [[
+You found a$rDeku stick$w!
+Maybe someone will be able
+to make something of it...
+]]
+}
+
+dialog{
+  id = "_treasure.sword.1",
+  icon = "66",
+  skip = "current",
+  text = [[
+You found a sturdy$rOrdon Sword$w!$0
+It is a lightweight but durable
+blade which has been passed down
+by the Ordon people for many
+generations.
+]]
+}
+
+dialog{
+  id = "_treasure.sword.2",
+  icon = "67",
+  skip = "current",
+  text = [[
+You received the$rForged Blade$w!$0
+Its edge is a force to be
+reckoned with!
+]]
+}
+
+dialog{
+  id = "_treasure.sword.3",
+  icon = "68",
+  skip = "current",
+  text = [[
+You received the$rLight Sword$w!$0
+Its shining edge can destroy
+most anything!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.1",
+  icon = "40",
+  skip = "current",
+  text = [[
+You found an$rOdd Mushroom$w!
+The scent is quite...
+interesting.
+]]
+}
+
+dialog{
+  id = "_treasure.trading.10",
+  icon = "49",
+  skip = "current",
+  text = [[
+You traded the$rGoron Vase$w
+for a$rZora Scale$w!$0
+Another race-specific thing, I
+wonder what you'll do with it?
+]]
+}
+
+dialog{
+  id = "_treasure.trading.11",
+  icon = "39",
+  skip = "current",
+  text = [[
+You traded the$rZora Scale$w for a
+$rFrozen Fish$w!$0  Finally something
+with some mass appeal!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.12",
+  icon = "38",
+  skip = "current",
+  text = [[
+You traded the$rFrozen Fish$w for the
+$rCulinary Arts of Hyrule book$w!$0
+Neat!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.13",
+  icon = "0",
+  skip = "current",
+  text = [[
+You traded the$rCulinary Arts of
+Hyrule book$w for a$rRito Feather$w!$0
+Finally a truly useful item! Maybe this
+trading stuff is done?
+]]
+}
+
+dialog{
+  id = "_treasure.trading.2",
+  icon = "41",
+  skip = "current",
+  text = [[
+Your $rOdd Mushroom$w was made
+into some$rOdd Potion$w!
+Whatever you do with it, 
+don't try to drink it!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.3",
+  icon = "42",
+  skip = "current",
+  text = [[
+You traded the$rOdd Potion$w for
+a$rDeku Mask$w!$0
+Not sure what the$gDeku$w wanted
+with that potion, but I'll bet
+this is considered trading up!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.4",
+  icon = "43",
+  skip = "current",
+  text = [[
+You traded the$rDeku Mask$w for
+a$rMoon Tear$w!$0
+
+It's weird that the guy wanted
+the mask so badly, but who cares
+since this is shiny!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.5",
+  icon = "44",
+  skip = "current",
+  text = [[
+You traded the$rMoon Tear$w
+for a$rCrystal Ball$w!$0
+You swapped one shiny thing
+for another!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.6",
+  icon = "45",
+  skip = "current",
+  text = [[
+You traded a$rCrystal Ball$w
+for a$rhunk of meat$w!$0
+Impa thinks it's tasty, but
+I wouldn't try it.
+]]
+}
+
+dialog{
+  id = "_treasure.trading.7",
+  icon = "46",
+  skip = "current",
+  text = [[
+You traded the$rTasty Meat$w
+for$rDog Food$w!$0
+Not exactly a fair trade, 
+but you felt bad for the
+hungry Moblin.
+]]
+}
+
+dialog{
+  id = "_treasure.trading.8",
+  icon = "47",
+  skip = "current",
+  text = [[
+You traded the$rDog Food$w 
+for some yummy$rBananas$w!$0
+Now we're getting somewhere!
+]]
+}
+
+dialog{
+  id = "_treasure.trading.9",
+  icon = "48",
+  skip = "current",
+  text = [[
+You traded$rBananas$w for a 
+$rGoron Vase$w!$0 It's quite
+beautiful but you're not sure who
+would want one besides a$gGoron$w.
+]]
+}
+
+dialog{
+  id = "_treasure.tunic.2",
+  icon = "61",
+  skip = "current",
+  text = [[
+You found the$rRed Tunic$w!$0
+This will prevent heat exhaustion
+as well as cut the damage you take!
+]]
+}
+
+dialog{
+  id = "_treasure.tunic.3",
+  icon = "62",
+  skip = "current",
+  text = [[
+You found the$rBlue Tunic$w!$0
+This will prevent you from getting
+too tired while swimming, as well
+as cut the damage you take!
+]]
+}
+
+dialog{
+  id = "_treasure.tunic.4",
+  icon = "69",
+  skip = "current",
+  text = [[
+You got the$rPurple Tunic$w!$0
+This will protect you from the dark
+magic that has infiltrated the world,
+as well as cut the damage you take!
+]]
+}
+
+dialog{
+  id = "_treasure.world_map.1",
+  icon = "70",
+  skip = "current",
+  text = [[
+You got a$rWorld Map$w!$0
+Now you may not get lost!
+]]
+}
+
+dialog{
+  id = "_treasure.world_map.2",
+  icon = "70",
+  skip = "current",
+  text = [[
+You got an$rexpanded World Map$w!$0
+Now you can explore the Subrosian
+underworld without fear!
+]]
+}
+
+dialog{
+  id = "_treasure.world_map.3",
+  icon = "70",
+  skip = "current",
+  text = [[
+You got a$rcomplete World Map$w!$0
+Now you can explore the entirety
+of Hyrule without hesitation!
+]]
+}
+
+dialog{
+  id = "all_characters.aerla",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+Aerla is my name, and milling is my
+game. Without the work that I do, my
+husband wouldn't be able to provide
+the village with bread and other
+staples.
+]]
+}
+
+dialog{
+  id = "all_characters.aleph",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+Hello, young man. I am the village's
+lumberjack. Name's Aleph.$0
+My parents must've always meant for
+me to be a lumberjack, since even my
+name sounds like a tree falling in the
+woods!
+]]
+}
+
+dialog{
+  id = "all_characters.bilo",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+My name is Bilo, and I keep shop
+here at Hylian Village.
+]]
+}
+
+dialog{
+  id = "all_characters.burlon",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I am Burlon the Baker, and it's my
+job to keep the village stocked with
+bread and other baked items.
+]]
+}
+
+dialog{
+  id = "all_characters.celtra",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+Hmmm... A brave traveler has happened
+across my hut. What's that you say? 
+You live here in the village? Then
+how is it that you've never heard of
+Celtra, the great Witch and Potion 
+Maker?!
+]]
+}
+
+dialog{
+  id = "all_characters.dannie",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I am often called Farmer Fora. Right
+now my field is planted with Spring
+crops, such as beans and other staples,
+so the village can stay fed!
+]]
+}
+
+dialog{
+  id = "all_characters.fora",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I am often called Farmer Fora. As one
+of the primary farmers here in
+Hylia Village, it's my job to keep the
+people and animals fed.
+]]
+}
+
+dialog{
+  id = "all_characters.hilda",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+Since the time when Hylia walked the
+lands and skies, those closest to the
+Goddesses have been female priests. I
+am the priest of this village, known
+as Hilda by those whom I preach to.
+]]
+}
+
+dialog{
+  id = "all_characters.jhoro_ethern",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I'm Jhoro Ethern, the most wealthy
+land owner in Hylian Village. Well, at
+least next to the Lord himself that is.
+]]
+}
+
+dialog{
+  id = "all_characters.leona",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I keep shop here at Hylia. Name's
+Leona, and it's a pleasure to meet
+you!
+]]
+}
+
+dialog{
+  id = "all_characters.lonnie",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+My name's Lonnie and I run the
+burgeoning ranch that's just south
+of the village. I know someday it'll
+be a place that will never be
+forgotten!
+]]
+}
+
+dialog{
+  id = "all_characters.meduhi",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I shouldn't even be talking to you.
+My primary job is to patrol the
+village, and the Lord would be angry
+if he knew I was distracted. Name's
+Meduhi if you need assistance.
+]]
+}
+
+dialog{
+  id = "all_characters.myra",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+My name is Myra, the groundskeeper for
+the village. I tend to the greenscape
+known as Hylia's Meadow that's near
+my house.
+]]
+}
+
+dialog{
+  id = "all_characters.nayla",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+As one of the primary farmers here in
+Hylia Village, it's my job to keep the
+people and animals fed. My name is
+Nayla - it's good to see you!
+]]
+}
+
+dialog{
+  id = "all_characters.shaera",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I'm just a lowly shepherd, would could
+you possibly need from me?$0
+My name?$0
+Child, you've known me since you were
+little, I'm Shaera.
+]]
+}
+
+dialog{
+  id = "all_characters.talia",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+Don't get in trouble, and we won't be
+forced to meet again. Name's Talia,
+and don't forget it!
+]]
+}
+
+dialog{
+  id = "all_characters.torgaz_amerghin",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+I'm Torgaz Amerghin, the Lord of this
+village. I see to the welfare of the
+people here and ensure the village's
+protection. Zelda is my wife, and the
+knight you may have seen wandering
+around here works for me. But you
+probably already knew all of that...
+]]
+}
+
+dialog{
+  id = "all_characters.zelda_amerghin",
+  importance = "4",
+  inheritance = "0",
+  known = "true",
+  skip = "current",
+  text = [[
+My name is Zelda Amerghin, and I'm
+seen as almost a mother figure for the
+village. My husband is the Lord Torgaz,
+and together we ensure that the village
+serves as a safe home to its people.
+]]
+}
+
+dialog{
+  id = "architect.0.house",
+  skip = "current",
+  text = [[
+Who am I? Who are you!?
+How dare you barge into my house and ask
+of me - everyone knows who I am, the
+great Architect of Kakariko!
+I built most of this great city with my
+bare hands!$0 Of course that was many
+years ago, and now I can't get my hands
+to do much. Sometimes I wish I had
+someone to pass my knowledge onto.
+Someone who could do the great work that
+I can no longer do.
+]]
+}
+
+dialog{
+  id = "architect.1.house",
+  skip = "current",
+  text = [[
+You say you've met someone who'd like
+to learn the ways of architecture?
+Well, that's great news!$0
+If you can convinve him to come
+here, we can start our work
+right away!
+]]
+}
+
+dialog{
+  id = "architect.2.house",
+  skip = "current",
+  text = [[
+He'll be here any time, you say?
+Well, I should hurry and prepare my
+materials!
+]]
+}
+
+dialog{
+  id = "architect.3.house",
+  skip = "current",
+  text = [[
+This student of yours is doing quite
+well! Of course it will be some time
+before he'll be of any use to his city,
+but someday he could be almost as great
+as me!
+]]
+}
+
+dialog{
+  id = "astronomer.0.house",
+  skip = "current",
+  text = [[
+Good day. My name is Mosq, and I'm a
+famous astronomer in this area of Hyrule.
+]]
+}
+
+dialog{
+  id = "astronomer.0.painting",
+  skip = "current",
+  text = [[
+This Deku's stare is burning into your
+soul. This guy must have an intense love
+for Dekus to have this painting.
+]]
+}
+
+dialog{
+  id = "astronomer.0.trading",
+  question = "1",
+  skip = "current",
+  text = [[
+Most everyone knows I'm an
+astronomer, but most don't know
+that I'm also a Deku enthusiast!
+Being in the desert can feel lifeless
+at times, and the woodsiness
+of the Deku make me feel more alive!
+Wait- is that a$rmask of a Deku$wyou have?
+Please give it to me - then I can have
+the Deku with me always!
+Give it up?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "astronomer.0.trading_no",
+  skip = "current",
+  text = [[
+You are quite cruel for getting my hopes
+up like that. Please leave my house.
+]]
+}
+
+dialog{
+  id = "astronomer.0.trading_yes",
+  skip = "current",
+  text = [[
+Thank you so much for your kindness!
+You have made me very happy. So happy in
+fact that I will give you my most prized
+posession. This Moon Tear is incredibly
+rare and only known to astronomers like
+me. $0Please cherish it as I have.
+]]
+}
+
+dialog{
+  id = "blacksmith.0",
+  skip = "current",
+  text = [[
+Hello there! I don't believe we've met.
+My name is$gRudy$w, I'm the village
+blacksmith. If you need anything fixed up,
+be sure to find me!
+]]
+}
+
+dialog{
+  id = "blacksmith.0.festival",
+  skip = "current",
+  text = [[
+Hey there! I just finished one of my
+demonstrations, but if you come back in
+an hour or so I'll be ready to go again.
+]]
+}
+
+dialog{
+  id = "blacksmith.0.festival_reward",
+  skip = "current",
+  text = [[
+So you won$gTristan's$wrace, huh?
+Well, then I suppose this is yours.
+]]
+}
+
+dialog{
+  id = "blacksmith.0.festival_reward_2",
+  skip = "current",
+  text = [[
+Take care of that. And come visit me
+later if you need anything. I live in a
+cave just west of here in the woods.
+]]
+}
+
+dialog{
+  id = "blacksmith.0.festival_reward_3",
+  skip = "current",
+  text = [[
+By the way, I heard your friend at
+the potion shop was looking for you.
+]]
+}
+
+dialog{
+  id = "blacksmith.1.cave",
+  skip = "current",
+  text = [[
+Hello again!
+I'd love to offer my services, but I
+can't smith without a full basin of
+water. Unfortunately the last of my
+supply was used up during the festival.
+When I started walking over to the
+beach where I usually fill up, there
+were some strange women blocking the
+path. Would you mind checking out the
+situation and getting me some water?
+]]
+}
+
+dialog{
+  id = "blacksmith.1.festival",
+  skip = "current",
+  text = [[
+Hey there! Isn't it a beautiful time
+for the festival?
+]]
+}
+
+dialog{
+  id = "blacksmith.2.cave",
+  skip = "current",
+  text = [[
+Would you mind checking out the
+situation and getting me some water?
+]]
+}
+
+dialog{
+  id = "blacksmith.2.cave_bottle",
+  skip = "current",
+  text = [[
+Wait a second, you don't have a
+$rbottle$w to hold water in! Here, you
+can borrow mine for a little while.
+Thanks for your help!
+]]
+}
+
+dialog{
+  id = "blacksmith.2.cave_bottle_2",
+  text = [[
+Here, I even have an extra bottle
+that I'll give ya.
+Thanks for your help!
+]]
+}
+
+dialog{
+  id = "blacksmith.3.cave",
+  skip = "current",
+  text = [[
+That's exactly what I need!
+Thank you so much.
+
+I'll get that poured into my basin and
+be ready to work on whatever you need!
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave",
+  question = "1",
+  skip = "current",
+  text = [[
+Hey, what do you need?
+Some work done
+Just to chat
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_chat_1",
+  skip = "current",
+  text = [[
+Hmm... never been too good with
+small talk.$0
+Seen any good$rmetal ore$wrecently?
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_chat_2",
+  skip = "current",
+  text = [[
+I once heard that there's a vast realm
+under all of Hyrule. Seems too good
+to be true to me!$0
+Although...$0 if a place like that
+did exist, it would be rife with ore!
+Maybe even the rumored$rMaster Ore$w...
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_chat_3",
+  skip = "current",
+  text = [[
+The adventurer that told me about
+the underground realm said the name
+started with "Sub" or something.
+I don't remember...
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_work",
+  skip = "current",
+  text = [[
+Just so you know, I could probably
+improve your sword if you were able
+to find me the right materials.
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_work_2",
+  skip = "current",
+  text = [[
+Sorry, I think I've done all the
+work I can for you right now!
+]]
+}
+
+dialog{
+  id = "blacksmith.4.cave_work_3",
+  skip = "current",
+  text = [[
+Sorry, I think I've done all the work
+I can for you right now.$0 That's a
+great sword you have though!
+]]
+}
+
+dialog{
+  id = "blacksmith.5.sword",
+  question = "1",
+  skip = "current",
+  text = [[
+That's... that's...$0
+$rMaster Ore$w  !!!$0
+I don't know how you found that, but
+boy are you lucky! With that, I'll be
+able to make your sword more powerful
+in no time!
+How about it?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "blacksmith.5.sword_1",
+  skip = "current",
+  text = [[
+Wonderful! Leave it to me and I'll
+get your old sword perked right up!
+]]
+}
+
+dialog{
+  id = "blacksmith.5.sword_2",
+  skip = "current",
+  text = [[
+Not sure what else you'll do with a
+hunk of ore, but it's your choice.
+]]
+}
+
+dialog{
+  id = "blacksmith.5.sword_leaving",
+  skip = "current",
+  text = [[
+Leaving already? Well, you wouldn't
+want to go without this, right?
+]]
+}
+
+dialog{
+  id = "blacksmith.5.sword_working",
+  skip = "current",
+  text = [[
+Feels great to work on a sword again!
+]]
+}
+
+dialog{
+  id = "blacksmith.6.cave",
+  skip = "current",
+  text = [[
+I don't know how much more I'll be able
+to help you on your adventure, but if I
+can, please come see me!
+]]
+}
+
+dialog{
+  id = "carpenter.0.septen",
+  skip = "current",
+  text = [[
+I'm the only carpenter in town, so
+they asked me to look at this bridge.
+Unfortunatly, I don't know much about
+carpentry yet, and I don't have anyone
+to learn from, so I'll just stare at
+this until I figure out how to fix it. 
+]]
+}
+
+dialog{
+  id = "carpenter.1.septen",
+  skip = "current",
+  text = [[
+What? There's an architect in a nearby
+city who wants to teach someone his
+ways? That sounds perfect for me! I can
+learn everything he has to teach and
+bring it back to my city. Thank you
+for the great information!
+]]
+}
+
+dialog{
+  id = "carpenter.2.kakariko",
+  skip = "current",
+  text = [[
+I've learned so much already. I can't
+thank you enough for this opportunity!
+]]
+}
+
+dialog{
+  id = "carpenter.2.septen",
+  skip = "current",
+  text = [[
+My mentor says that I've finally learned
+enough to return home! I didn't believe
+him at first, but look how quickly I've
+gotten this bridge rebuilt! This city
+will be in full swing in no time!
+]]
+}
+
+dialog{
+  id = "chef.0.beach",
+  skip = "current",
+  text = [[
+Hello! You're a strange looking
+Tokay, right? I deal in bananas since
+they grow all over here! I'm also a
+well known chef along this coast.
+We Tokay are always interested in
+trying new and exciting foods.
+If you find something I might like
+to try, then I'd gladly repay you
+with$rbananas$w!
+]]
+}
+
+dialog{
+  id = "chef.0.house",
+  skip = "current",
+  text = [[
+Sometimes I cook right into the night.
+When you're passionate about something,
+sometimes it's hard to stop!
+]]
+}
+
+dialog{
+  id = "chef.0.trading",
+  question = "1",
+  skip = "current",
+  text = [[
+Hmmm... what is that intriguing
+smell? I've never smelled anything
+like that before.$0 Is it edible?$0
+You say it might be? Well, if you'd
+like to trade me for some$rbananas$w,
+I'll happily give it a try!
+Trade?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "chef.0.trading_no",
+  skip = "current",
+  text = [[
+That's too bad. I guess I'll just need
+to keep my nose peeled for other
+intriguing smells!
+]]
+}
+
+dialog{
+  id = "chef.0.trading_yes",
+  skip = "current",
+  text = [[
+*munch* *munch*$0
+Delicious! I must say, this might be
+my new favorite food!$0
+What do you call it?$0$rDog Food$w?$0
+What an odd name. I will have to find
+some more of this dog food...
+Anyway, here are the$rbananas$wI promised!
+]]
+}
+
+dialog{
+  id = "deku.0.faron",
+  skip = "current",
+  text = [[
+You losing your beach isn't our
+problem! We need our space and don't
+have room for your pity party!
+]]
+}
+
+dialog{
+  id = "deku.0.grove_temple",
+  text = [[
+Feeling the heft of your wallet
+already? Well then buy something from
+me! $0I've also heard rumors of a game
+in Hyrule Castle Town that rewards a
+bigger wallet. Sounds like you may
+want to check that out.
+]]
+}
+
+dialog{
+  id = "deku.0.lost_woods",
+  skip = "current",
+  text = [[
+Hey kid, scram or you'll get lost
+or something...
+]]
+}
+
+dialog{
+  id = "deku.0.trading",
+  question = "1",
+  skip = "current",
+  text = [[
+What's that enticing smell? Is that
+a$rpotion$w? I must have it!
+
+Will you give it to me?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "deku.0.trading_yes",
+  skip = "current",
+  text = [[
+Yay! Thanks mister! In exchange,
+I'll give you this$rcool mask$w. It's so
+cool because it looks just like me!
+]]
+}
+
+dialog{
+  id = "deku.0.warning",
+  skip = "current",
+  text = [[
+Hey kid, I wouldn't wander too far -
+it's dangerous in these woods! At least
+try to find another weapon first, maybe
+something with some range. There's a$bstump
+with a door south-west of here$w, I'll bet
+it would have some interesting stuff if
+you checked it out.
+]]
+}
+
+dialog{
+  id = "deku.1.lost_woods",
+  skip = "current",
+  text = [[
+Hey kid, you might as well get out of here.
+Without the$cpower of the sage Mudora$w,
+you have no chance of finding your way in
+these woods - they're all twisted around
+from the evil that's here now.
+]]
+}
+
+dialog{
+  id = "deku.2.faron",
+  skip = "current",
+  text = [[
+Thank you so much for getting those
+slimy creatures out of our forest!
+]]
+}
+
+dialog{
+  id = "deku.2.lost_woods",
+  skip = "current",
+  text = [[
+At least you have the power of the
+complete$cbook$w, but this place is
+still dangerous. The building at the
+heart of the woods is the worst - it has
+evil just streaming from it. Be sure you
+don't enter until you're SURE you're
+prepared!
+]]
+}
+
+dialog{
+  id = "deku.2.lost_woods_first",
+  text = [[
+Hey kid, you might as well get out of here.
+Without the$cpower of the sage Mudora$w,
+you have no chance of finding your way in
+these woods- they're all twisted around...
+Wait. Is that the$cBook of Mudora$w?!
+And it's fully enchanted! If you were
+able to put that together, maybe you
+will be able to face the evil here.
+]]
+}
+
+dialog{
+  id = "deku.3.faron",
+  skip = "current",
+  text = [[
+Hey$gBoy in Green!$w Since you helped
+us out, we'll give you a little tip...
+That page the$gmonkeys$w just gave you
+looks familiar- we know about a really
+$bold library$w you should check out.
+It's all the way in$bNorth Hyrule$w
+though, so the trick to get there is to
+use the$bsewers$w. That place where you
+got that neat sword was actually part of
+the huge sewer system running under our
+feet! Anyway, you should be able to
+find another sewer access just east
+of$bHyrule Castle Town$w.
+]]
+}
+
+dialog{
+  id = "deku.3.lost_woods",
+  skip = "current",
+  text = [[
+I mean it... don't go near the structure
+in the middle of the Lost Wo...$0
+Forest of Light...$0 unless you're totally
+prepared! The masters... I mean...$0
+The $mDark Tribe$w won't be very happy to
+see you, and they won't make things easy!
+]]
+}
+
+dialog{
+  id = "deku.4.faron.1",
+  skip = "current",
+  text = [[
+Thank you so much for getting those
+slimy creatures out of our forest!
+]]
+}
+
+dialog{
+  id = "deku.4.faron.2",
+  skip = "current",
+  text = [[
+You can find valuable stuff like
+$rMystic Jade$w and$rDeku Sticks$w scattered
+around the forest sometimes.
+]]
+}
+
+dialog{
+  id = "deku.4.faron.3",
+  skip = "current",
+  text = [[
+Find enough$rMystic Jade$w and the Great
+Fairy of the Forest will give you
+something great!
+]]
+}
+
+dialog{
+  id = "deku.4.faron.4",
+  skip = "current",
+  text = [[
+Find enough$rDeku Sticks$w and they can
+be used to make great$rpotions$w!
+]]
+}
+
+dialog{
+  id = "deku.4.faron.5",
+  skip = "current",
+  text = [[
+We're nicer than our relatives over at
+the$bLost Woods$w of the east. I think
+they're just confused by that forest
+and it makes them angry. I have heard
+them say that they like odd smelling
+potions. Maybe if you gave them one of
+those it would cheer them up?$0
+Probably not...
+]]
+}
+
+dialog{
+  id = "deku.4.lost_woods",
+  skip = "current",
+  text = [[
+The$mmasters$w are gone?$0
+What will we do? We Deku need a
+strong leader, or we're lost!
+]]
+}
+
+dialog{
+  id = "gerudo.0.beach",
+  skip = "current",
+  text = [[
+Look at our once great ship!
+What should we do?
+]]
+}
+
+dialog{
+  id = "gerudo.1.beach",
+  skip = "current",
+  text = [[
+Leave us alone, kid.
+We're working...
+]]
+}
+
+dialog{
+  id = "gerudo.2.beach",
+  skip = "current",
+  text = [[
+Good riddance, kid.
+]]
+}
+
+dialog{
+  id = "gerudo.3.desert",
+  skip = "current",
+  text = [[
+We have an airship!
+Let the pilaging commence!
+]]
+}
+
+dialog{
+  id = "goron.0.death_mountain",
+  skip = "current",
+  text = [[
+What's that? $bGoron City$w? THIS is not
+the great$bGoron City$w! I guess that
+cave does look a little like one of our
+houses, but that one has a powerful fairy
+inside! What does she do, you ask? How
+should I know, I'm just a$gGoron$w.
+Check it out for yourself!
+]]
+}
+
+dialog{
+  id = "goron.0.house",
+  skip = "current",
+  text = [[
+Do you ever get tired of eating just
+rocks?$0 What? You don't eat rocks?$0
+Well, I do. And I get a litte bored
+with eating the same thing over and
+over again. I need some variety in
+my life!
+]]
+}
+
+dialog{
+  id = "goron.0.inn",
+  question = "1",
+  skip = "current",
+  text = [[
+Welcome to the$bGoron City Inn$w!
+We offer all the comforts of home
+while you're away.
+It's only 20 rupees to stay. Want to?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "goron.0.trading",
+  question = "1",
+  skip = "current",
+  text = [[
+What is that cool looking food
+you're carrying? It is food,
+right?$0
+Will you let me try it?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "goron.0.trading_no",
+  skip = "current",
+  text = [[
+It's probably best anyway. I'm
+not sure my Goron stomach could
+handle anything more than rocks.
+]]
+}
+
+dialog{
+  id = "goron.0.trading_yes",
+  skip = "current",
+  text = [[
+(munch) *munch*
+Hmmm... these things are pretty
+good! You've opened my eyes to the
+world of food outside of rocks! I
+wonder what else there is out there
+to try?$0 I'm going to give you one
+of our$rGoron Vases$w. It's a sign that
+you're a true Brother to the Gorons!
+]]
+}
+
+dialog{
+  id = "goron.1.death_mountain",
+  skip = "current",
+  text = [[
+Where is Goron City? You must think
+I just know everything, huh?
+Well you're lucky this time! Our city
+is south east from here, across the
+bridge in the old village. I'm sure
+you can find it.
+]]
+}
+
+dialog{
+  id = "goron.2.death_mountain",
+  skip = "current",
+  text = [[
+Why am I out here alone?$0
+I'm getting bored with your
+questions...
+Why don't you go look for something
+exotic to eat? Sometimes we Gorons
+get bored with eating just rocks.
+]]
+}
+
+dialog{
+  id = "goron.3.death_mountain",
+  skip = "current",
+  text = [[
+Just north of where you're standing,
+over that ridge, is the entrance to
+the Cave of Ordeals. What's that,
+you ask? Well it's a super deep cave
+that will test your skills by
+throwing all kinds of scary monsters
+at you... It's being guarded by
+an almost equally scary moblin. I
+keep hearing him complain about how
+hungry he is though. I'll bet if you
+gave him something good to eat, he
+would just get out of your way.
+]]
+}
+
+dialog{
+  id = "great_fairy.0.faron",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the poisoned state
+my great woods are in? Well, it's
+because I've been cursed!$0
+If you can find a large amount of
+treasure known as$rMystic Jade$w, the
+curse should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.0.lake",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the troubled state
+my lake is in!
+If you can find a large amount of
+treasure known as$rGoddess Plume$w, the
+trouble should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.0.mountain",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the evil that
+tramples my mountain!
+If you can find a large amount of
+treasure known as$rGoron Amber$w, the
+evil should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.0.north",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the confused state
+my lands are in!
+If you can find a large amount of
+treasure known as$rMagic Crystal$w, the
+confusion should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.0.snowpeak",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the desolate state
+my lands are in!
+If you can find a large amount of
+treasure known as$rAlchemy Stone$w, the
+desolation should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.0.subrosia",
+  skip = "current",
+  text = [[
+Oh, great hero! You've come to my rescue!$0
+Wait... you don't know what I'm referring
+to? Surely you've seen the troubled state 
+my lands are in!
+If you can find a large amount of
+treasure known as$rSubrosian Ore$w, the
+trouble should be able to be lifted.
+Please help me, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.1",
+  skip = "current",
+  text = [[
+Please return when you've collected
+more treasure.
+I'm counting on you, hero!
+]]
+}
+
+dialog{
+  id = "great_fairy.2",
+  skip = "current",
+  text = [[
+You've made progress, hero!
+I feel stronger already. Thank you!
+]]
+}
+
+dialog{
+  id = "great_fairy.3",
+  skip = "current",
+  text = [[
+Wow, you've come a long way in your
+search! I feel much stronger now.
+Thank you!
+]]
+}
+
+dialog{
+  id = "great_fairy.4",
+  skip = "current",
+  text = [[
+I can feel that you've almost reached
+the goal! I'm almost to full strength.
+Thank you!
+]]
+}
+
+dialog{
+  id = "great_fairy.5.faron",
+  skip = "current",
+  text = [[
+You've collected all the$rMystic Jade$w
+I need, great work! I can now
+restore my beautiful forest to its
+former state. Allow me to reward
+you for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.5.lake",
+  skip = "current",
+  text = [[
+You've collected all the$rGoddess Plume$w
+I need, great work! I can now
+restore my calm land to its former
+state. Allow me to reward you
+for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.5.mountain",
+  skip = "current",
+  text = [[
+You've collected all the$rGoron Amber$w
+I need, great work! I can now
+restore my beautiful mountain to its
+former state. Allow me to reward
+you for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.5.north",
+  skip = "current",
+  text = [[
+You've collected all the$rMagic Crystal$w
+I need, great work! I can now
+restore my calm land to its former
+state. Allow me to reward you
+for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.5.snowpeak",
+  skip = "current",
+  text = [[
+You've collected all the$rAlchemy Stone$w
+I need, great work! I can now
+restore my beautiful land to its
+former state. Allow me to reward you
+for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.5.subrosia",
+  skip = "current",
+  text = [[
+You've collected all the$rSubrosian
+Ore$w I need, great work! I can now
+restore my tranquil land to its
+former state. Allow me to reward you
+for your efforts...
+]]
+}
+
+dialog{
+  id = "great_fairy.6",
+  skip = "current",
+  text = [[
+Thank you for all of your help.
+You truly are the hero I'd been
+waiting for.
+]]
+}
+
+dialog{
+  id = "greetings.familiar",
+  importance = "1",
+  inheritance = "1",
+  skip = "current",
+  var_require = "_known",
+  text = [[
+Hi $v, good to see you again!
+]]
+}
+
+dialog{
+  id = "greetings.generic",
+  importance = "1",
+  inheritance = "1",
+  skip = "current",
+  text = [[
+Hey there, how are you doing today?
+]]
+}
+
+dialog{
+  id = "greetings.weather",
+  importance = "1",
+  inheritance = "1",
+  skip = "current",
+  var_exclude = "raining",
+  text = [[
+Hi! Beautiful day, isn't it?
+]]
+}
+
+dialog{
+  id = "hylia_village.1",
+  importance = "2",
+  inheritance = "1",
+  skip = "current",
+  text = [[
+This is Hylia Village.$0
+Okay, it's probably more of a Hamlet.
+And Hylian Hamlet has a better ring
+to it, but nobody listens to me!
+]]
+}
+
+dialog{
+  id = "hylia_village.2",
+  importance = "2",
+  inheritance = "1",
+  skip = "current",
+  var_require = "test_variable",
+  text = [[
+There's a secret in Hylia Village...
+]]
+}
+
+dialog{
+  id = "hylia_village.farm.1",
+  text = [[
+Right now the south field is planted
+with Spring crops, such as beans and
+other staples, so the village can stay
+fed! That means this field is also
+called Farore's Field, since it's the
+field of green Spring crops.
+]]
+}
+
+dialog{
+  id = "hylia_village.farm.2",
+  text = [[
+Right now the center field is planted
+with Winter crops, such as wheat and
+other feed, so the animals can stay
+fed. For this reason, we also call
+this Nayru's Field - the field of
+Winter crops.
+]]
+}
+
+dialog{
+  id = "hylia_village.farm.3",
+  text = [[
+Right now the north field is not
+planted at all. Having one field law
+fallow every year makes all the farms
+more fertile. We always call the fallow
+field Din's Field - the field of earth.
+]]
+}
+
+dialog{
+  id = "kakariko.fairy",
+  text = [[
+Did you know there are creatures called
+$gGreat Fairies$w hiding throughout Hyrule?
+They have incredible magic and can even
+do things like increase your equipment!
+There should be one in the forest, one
+on the mountain, one on the frozen
+tundra, one near the lake, one in the
+depths of the earth, and one in the
+northern reaches of the land. It would
+do you good to find them all!
+]]
+}
+
+dialog{
+  id = "kakariko.location",
+  text = [[
+I love living in$bKakariko$w because it's
+so centrally located! Sometimes I want
+to wander in the desert for a bit, and
+it's just over the bridge. Or the pretty
+mountains are up north, even with snowy
+ones way up there! Then the$gZoras$w and
+$gGorons$w are to the east and$bCastle Town$w
+is pretty close to the south!
+]]
+}
+
+dialog{
+  id = "monkey.1.faron",
+  question = "1",
+  skip = "current",
+  text = [[
+Hmmm... we're bored now that all the
+fun fighting is over.$0 How about one
+last game? If you can guess which tree
+I'm hiding in with three or less tries,
+I'll give you the paper back.
+
+How's that sound?
+Okay
+Not interested
+]]
+}
+
+dialog{
+  id = "monkey.1.faron_no",
+  skip = "current",
+  text = [[
+You don't want your$cpaper$w back?
+I'll warn you, you won't get very far
+in your quest without it! I won't tell
+you any more unless you play my game
+though...
+]]
+}
+
+dialog{
+  id = "monkey.1.faron_yes",
+  skip = "current",
+  text = [[
+Alright...$0 Ready?!
+]]
+}
+
+dialog{
+  id = "monkey.1.game_right",
+  skip = "current",
+  text = [[
+Aww! You found me! I guess you can
+have this$cdingy paper$wback -
+we won't need it where we're going!
+]]
+}
+
+dialog{
+  id = "monkey.1.game_wrong",
+  skip = "current",
+  text = [[
+Nope! Try again!
+]]
+}
+
+dialog{
+  id = "monkey.2.faron",
+  skip = "current",
+  text = [[
+Sorry - better luck next time!
+]]
+}
+
+dialog{
+  id = "monkey.3.faron",
+  skip = "current",
+  text = [[
+We already said it...
+We're bored with you.
+]]
+}
+
+dialog{
+  id = "priest.0.explain",
+  next = "priest.0.explain_2",
+  skip = "current",
+  text = [[
+Allow me to explain.$yHylia$wwas the
+white goddess who was left with the
+$oGreat Power$wby the$yGolden Goddesses$w.
+When the$moriginal demon$wattacked,
+she was forced to give up her divinity
+in order to fight him, and was killed
+in the process.
+]]
+}
+
+dialog{
+  id = "priest.0.explain_2",
+  skip = "current",
+  text = [[
+Why do we still worship her after all
+this time? Well, there was a long
+period where$yHer Grace$wwas forgotten.
+But recently, some ancient writings
+and a small statue were unearthed near
+here. Those who discovered these
+artifacts moved here and started up
+a new version of the ancient religion.
+]]
+}
+
+dialog{
+  id = "priest.0.sanctuary",
+  skip = "current",
+  text = [[
+Welcome, traveler, to the$bSanctuary
+of Hylia$w.$0 What?$0 You don't know of
+the$yGoddess Hylia$w?
+]]
+}
+
+dialog{
+  id = "rito.0.trading",
+  question = "1",
+  skip = "current",
+  text = [[
+Is that the world famous$rCulinary
+Arts of Hyrule$w in your things?
+I've been looking for that book since I
+got here! It's very difficult to find
+good cookbooks around here for some
+reason, and I very much enjoy cooking.
+Would you consider giving the book to me?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "rito.0.trading_hint",
+  skip = "current",
+  text = [[
+I have all of my cooking equipment
+ready to go, but no knowledge and no
+way to learn. It's sad when one's
+unable to pursue their dream...
+]]
+}
+
+dialog{
+  id = "rito.0.trading_no",
+  skip = "current",
+  text = [[
+Well... that is not very kind of you.
+If you can't share, then I'd like you
+to leave my home.
+]]
+}
+
+dialog{
+  id = "rito.0.trading_yes",
+  skip = "current",
+  text = [[
+That's great! Thank you!
+I can't wait to get started!$0
+Unfortunately I don't have anything to
+offer you in return...$0 Let me think...$0
+All I have to give you is one of my own
+feathers. It sounds weird, but$rRito
+feathers$w actually have magical properties,
+and should let non-Ritos like you float
+in the air for short periods of time.
+Yes, that's what I'll offer in return!
+]]
+}
+
+dialog{
+  id = "shop.arrow",
+  icon = "83",
+  skip = "current",
+  text = [[
+A bunch of arrows.
+Use them in your bow to hit
+things at a distance.
+]]
+}
+
+dialog{
+  id = "shop.bomb_1",
+  icon = "1",
+  skip = "current",
+  text = [[
+A single bomb.
+]]
+}
+
+dialog{
+  id = "shop.bomb_2",
+  icon = "1",
+  skip = "current",
+  text = [[
+A pack of three bombs.
+]]
+}
+
+dialog{
+  id = "shop.bomb_3",
+  icon = "1",
+  skip = "current",
+  text = [[
+A bunch of eight bombs.
+]]
+}
+
+dialog{
+  id = "shop.bomb_bag_1",
+  icon = "54",
+  skip = "current",
+  text = [[
+A small bomb bag that can
+hold 10 bombs.
+]]
+}
+
+dialog{
+  id = "shop.bomb_bag_2",
+  icon = "55",
+  skip = "current",
+  text = [[
+A bomb bag that can
+hold 20 bombs.
+]]
+}
+
+dialog{
+  id = "shop.bottle",
+  icon = "7",
+  skip = "current",
+  text = [[
+A very rare glass bottle in
+which to hold various things.
+]]
+}
+
+dialog{
+  id = "shop.heart",
+  icon = "85",
+  skip = "current",
+  text = [[
+A single heart to restore some
+of your life.
+]]
+}
+
+dialog{
+  id = "shop.hyrule_shield",
+  icon = "64",
+  skip = "current",
+  text = [[
+A durable shield made of
+nearly impenetrable
+Hylian metal.
+]]
+}
+
+dialog{
+  id = "shop.magic",
+  icon = "86",
+  skip = "current",
+  text = [[
+A jar of potion to restore
+some of your magic.
+]]
+}
+
+dialog{
+  id = "shop.no_bottle",
+  skip = "current",
+  text = [[
+I'm so sorry, but I can't sell you
+potions if you have nothing to hold
+them in! Maybe try to find a bottle?
+]]
+}
+
+dialog{
+  id = "shop.ordon_shield",
+  icon = "58",
+  skip = "current",
+  text = [[
+A sturdy shield passed down
+among the Ordon Village
+residents.
+]]
+}
+
+dialog{
+  id = "shop.poe_soul",
+  icon = "82",
+  skip = "current",
+  text = [[
+Some say poe souls have
+useful knowledge...
+]]
+}
+
+dialog{
+  id = "shop.potion_blue",
+  icon = "11",
+  skip = "current",
+  text = [[
+A tasty potion made from deku
+sticks which restores both
+life and magic!
+]]
+}
+
+dialog{
+  id = "shop.potion_green",
+  icon = "10",
+  skip = "current",
+  text = [[
+A delicious potion from local
+herbs and sticks. It'll make you
+feel more magical!
+]]
+}
+
+dialog{
+  id = "shop.potion_red",
+  icon = "9",
+  skip = "current",
+  text = [[
+A tasty potion from local
+herbs. It'll fill your life
+right up!
+]]
+}
+
+dialog{
+  id = "shop.potion_revitalizing",
+  icon = "12",
+  skip = "current",
+  text = [[
+A delicious potion made from
+deku sticks that will restore
+your life, magic, and stamina!
+]]
+}
+
+dialog{
+  id = "shop.pumpkin",
+  icon = "17",
+  skip = "current",
+  text = [[
+Bright orange pumpkin brought
+from south Hyrule. Eat one to
+revitalize yourself!
+]]
+}
+
+dialog{
+  id = "shop.tunic_2",
+  skip = "current",
+  text = [[
+A deep red tunic which protects
+the wearer from heat exhaustion.
+]]
+}
+
+dialog{
+  id = "shop.tunic_3",
+  skip = "current",
+  text = [[
+A bright blue tunic which protects
+the wearer from exhaustion while
+swimming.
+]]
+}
+
+dialog{
+  id = "shop.wallet",
+  icon = "53",
+  skip = "current",
+  text = [[
+A huge wallet which can hold
+almost uncountable rupees!
+]]
+}
+
+dialog{
+  id = "shop.world_map",
+  icon = "70",
+  skip = "current",
+  text = [[
+A map of the Subrosian
+underworld.
+]]
+}
+
+dialog{
+  id = "shopkeep.0",
+  skip = "current",
+  text = [[
+If there's anything you like, just
+pick it up!
+]]
+}
+
+dialog{
+  id = "shopkeep.1",
+  skip = "current",
+  text = [[
+Don't have enough cash, eh?
+I heard there's a man in$bCastle
+Town$w who's running a game where the
+grand prize is a bigger wallet!
+]]
+}
+
+dialog{
+  id = "shopkeep.goron_market",
+  skip = "current",
+  text = [[
+Welcome to the open air Goron Market!
+If there's anything you like, just
+pick it up!
+]]
+}
+
+dialog{
+  id = "shopkeep.potion",
+  skip = "current",
+  text = [[
+Your potion is done and you'll be able
+to buy it in our shop whenever you want!
+We'll even give you the first one free!
+]]
+}
+
+dialog{
+  id = "shopkeep.spoils",
+  question = "1",
+  skip = "current",
+  text = [[
+You'd like to sell me some $v?
+I'm very interested in those!
+How about I buy five of them for
+20 rupees a piece?
+Yes
+No
+]]
+}
+
+dialog{
+  id = "shopkeep.spoils_explain",
+  skip = "current",
+  text = [[
+You don't buy things here, I buy them
+from you! I've made it my life's work to
+collect as many cool things as I can -
+so if you find too many collectibles,
+I'll buy them from you.
+]]
+}
+
+dialog{
+  id = "shopkeep.spoils_no",
+  skip = "current",
+  text = [[
+Come again then.
+]]
+}
+
+dialog{
+  id = "shopkeep.spoils_yes",
+  skip = "current",
+  text = [[
+It's been a pleasure doing business
+with you!
+]]
+}
+
+dialog{
+  id = "traveler.hylia_village",
+  importance = "3",
+  skip = "current",
+  text = [[
+I'm on my way to Hylia Village,
+hoping that there's some place I can
+stay there. Living the mobile life
+isn't glorious, but it's what I have!
+]]
+}
+
