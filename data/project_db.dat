@@ -45,7 +45,6 @@ sprite{ id = "enemies/geldman", description = "Geldman" }
 sprite{ id = "enemies/geyser", description = "Geyser" }
 sprite{ id = "enemies/gibdos", description = "Gibdos" }
 sprite{ id = "enemies/giga", description = "Giga" }
-sprite{ id = "enemies/gohma", description = "Gohma" }
 sprite{ id = "enemies/grim_creeper", description = "Grim Creeper" }
 sprite{ id = "enemies/hardhat_beetle_blue", description = "Hardhat Beetle, blue" }
 sprite{ id = "enemies/hardhat_beetle_red", description = "Hardhat Beetle, red" }
@@ -273,19 +272,9 @@ sprite{ id = "npc/butterfly_grey", description = "Butterfly, grey" }
 sprite{ id = "npc/butterfly_orange", description = "Butterfly, orange" }
 sprite{ id = "npc/butterfly_purple", description = "Butterfly, purple" }
 sprite{ id = "npc/butterfly_red", description = "Butterfly, red" }
-sprite{ id = "npc/deku", description = "Deku" }
 sprite{ id = "npc/dog", description = "Dog" }
-sprite{ id = "npc/gerudo_hesla", description = "Hesla (Gerudo Leader)" }
-sprite{ id = "npc/gerudo_male", description = "Gruce (Gerudo Male)" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo Merchant" }
-sprite{ id = "npc/gerudo_pirate", description = "Gerudo Pirate" }
 sprite{ id = "npc/goron", description = "Goron" }
-sprite{ id = "npc/goron_dampeh", description = "Dampeh (Goron Graveskeeper)" }
-sprite{ id = "npc/goron_dargor", description = "Dargor (Goron Father)" }
-sprite{ id = "npc/goron_galen", description = "Galen (Goron Doctor)" }
-sprite{ id = "npc/goron_ghost", description = "Goron Ghost" }
-sprite{ id = "npc/goron_larin", description = "Gor Larin (Goron Elder)" }
-sprite{ id = "npc/goron_osgor", description = "Osgor (Goron Child)" }
 sprite{ id = "npc/great_fairy", description = "Great Fairy" }
 sprite{ id = "npc/guard", description = "Hylian Guard" }
 sprite{ id = "npc/hylian_baker", description = "Hylian Baker" }
@@ -295,14 +284,11 @@ sprite{ id = "npc/hylian_lord_wife", description = "Hylian Lord's Wife" }
 sprite{ id = "npc/hylian_miller", description = "Hylian Miller" }
 sprite{ id = "npc/hylian_virgator", description = "Hylian Virgator (Landowner)" }
 sprite{ id = "npc/rito", description = "Rito" }
-sprite{ id = "npc/rito_koshi", description = "Chieftain Koshi (Rito Elder)" }
 sprite{ id = "npc/subrosian_blue", description = "Subrosian (Blue, Headband)" }
 sprite{ id = "npc/subrosian_green", description = "Subrosian (Green)" }
 sprite{ id = "npc/subrosian_orange", description = "Subrosian (Orange, Bow)" }
 sprite{ id = "npc/zora", description = "Zora" }
-sprite{ id = "npc/zora_juba", description = "Commander Juba (Zora Elder)" }
 sprite{ id = "npc/zora_king", description = "Zora King" }
-sprite{ id = "npc/zora_soldier", description = "Zora Soldier" }
 
 music{ id = "ballad", description = "Ballad of the Goddess (Marryn)" }
 music{ id = "battle", description = "Battle" }
@@ -321,50 +307,26 @@ music{ id = "faron_woods", description = "Faron Woods" }
 music{ id = "field", description = "Hyrule Field" }
 music{ id = "game_over", description = "Selection menu & Game Over" }
 music{ id = "gerudo", description = "Gerudo Desert" }
-music{ id = "gerudo_airship", description = "Gerudo Airship" }
-music{ id = "gerutones", description = "Gerutones Theme (Gruce)" }
 music{ id = "goron", description = "Goron City" }
 music{ id = "graveyard", description = "Graveyard" }
 music{ id = "happy_mask_salesman", description = "Happy Mask Salesman" }
 music{ id = "house", description = "House" }
 music{ id = "house_beach", description = "Beach House" }
 music{ id = "house_game", description = "Game House" }
-music{ id = "house_zuna", description = "Zuna House" }
 music{ id = "lost_woods", description = "Lost Woods" }
 music{ id = "miniboss", description = "Miniboss" }
 music{ id = "minigame", description = "Mini-game" }
-music{ id = "mudora", description = "Book of Mudora Prayer" }
 music{ id = "north", description = "North Overworld" }
 music{ id = "observatory", description = "Observatory" }
 music{ id = "ranch", description = "LonLon Ranch" }
-music{ id = "sanctuary", description = "Rauru Sanctuary" }
+music{ id = "sanctuary", description = "Sanctuary" }
 music{ id = "select_screen", description = "Select Screen" }
 music{ id = "sewers", description = "Sewers" }
 music{ id = "shop", description = "Shop" }
 music{ id = "shop_potion", description = "Potion Shop" }
 music{ id = "shop_witch", description = "Witch's Hut" }
-music{ id = "snowpeak", description = "Snowpeak" }
 music{ id = "subrosia", description = "Subrosia" }
-music{ id = "temple_grove", description = "Grove Temple" }
-music{ id = "temple_lake", description = "Lakebed Lair" }
-music{ id = "temple_mausoleum", description = "Mountaintop Mausoleum" }
-music{ id = "temple_pyramid", description = "Abandoned Pyramid" }
-music{ id = "temple_sanctum", description = "Interloper Sanctum" }
-music{ id = "temple_snow", description = "Snowpeak Caverns" }
-music{ id = "temple_wind", description = "Tower of the Winds" }
 music{ id = "title_screen", description = "Title screen " }
-music{ id = "town_darunia", description = "Darunia Town" }
-music{ id = "town_hidden_village", description = "Hidden Village" }
-music{ id = "town_kakariko", description = "Kakariko City" }
-music{ id = "town_kasuto", description = "Kasuto Town" }
-music{ id = "town_kasuto_old", description = "Old Kasuto Town" }
-music{ id = "town_mido", description = "Mido Town" }
-music{ id = "town_nabooru", description = "Nabooru Town" }
-music{ id = "town_ordon", description = "Ordon Village" }
-music{ id = "town_rauru", description = "Rauru Town" }
-music{ id = "town_ruto", description = "Ruto Town" }
-music{ id = "town_saria", description = "Saria Town" }
-music{ id = "town_septen", description = "Septen Heights" }
 music{ id = "underground", description = "Underground" }
 music{ id = "zora", description = "Zora's Domain" }
 
@@ -391,7 +353,6 @@ sound{ id = "crystal", description = "crystal" }
 sound{ id = "cucco", description = "cucco" }
 sound{ id = "cursor", description = "cursor" }
 sound{ id = "danger", description = "danger" }
-sound{ id = "deku", description = "deku" }
 sound{ id = "dog", description = "dog" }
 sound{ id = "door_closed", description = "door_closed" }
 sound{ id = "door_open", description = "door_open" }
@@ -432,10 +393,7 @@ sound{ id = "lift", description = "lift" }
 sound{ id = "magic_bar", description = "magic_bar" }
 sound{ id = "message_end", description = "message_end" }
 sound{ id = "message_letter", description = "message_letter" }
-sound{ id = "monkey", description = "monkey" }
-sound{ id = "monkey2", description = "monkey2" }
 sound{ id = "monster_hurt", description = "monster_hurt" }
-sound{ id = "ocarina_wind", description = "ocarina_wind" }
 sound{ id = "octorok", description = "octorok" }
 sound{ id = "ok", description = "ok" }
 sound{ id = "pause_closed", description = "pause_closed" }
@@ -449,7 +407,6 @@ sound{ id = "running", description = "running" }
 sound{ id = "running_obstacle", description = "running_obstacle" }
 sound{ id = "rupee_counter", description = "rupee_counter" }
 sound{ id = "rupee_counter_end", description = "rupee_counter_end" }
-sound{ id = "scarecrow", description = "scarecrow" }
 sound{ id = "secret", description = "secret" }
 sound{ id = "shield", description = "shield" }
 sound{ id = "shovel", description = "shovel" }
@@ -477,7 +434,6 @@ sound{ id = "sword_tapping_weak_wall", description = "sword_tapping_weak_wall" }
 sound{ id = "throw", description = "throw" }
 sound{ id = "timer", description = "timer" }
 sound{ id = "timer_hurry", description = "timer_hurry" }
-sound{ id = "tokay", description = "tokay" }
 sound{ id = "treasure", description = "treasure" }
 sound{ id = "victory", description = "victory" }
 sound{ id = "walk_on_grass", description = "walk_on_grass" }
@@ -617,7 +573,6 @@ enemy{ id = "geldman", description = "Geldman" }
 enemy{ id = "geyser", description = "Geyser" }
 enemy{ id = "gibdos", description = "Gibdos" }
 enemy{ id = "giga", description = "Giga" }
-enemy{ id = "gohma", description = "Gohma (Boss)" }
 enemy{ id = "hardhat_beetle_blue", description = "Hardhat Beetle, Blue" }
 enemy{ id = "hardhat_beetle_red", description = "Hardhat Beetle, Red" }
 enemy{ id = "helmasaur_blue", description = "Helmasaur, blue" }
@@ -641,9 +596,9 @@ enemy{ id = "lizalfos", description = "Lizalfos" }
 enemy{ id = "lizalfos_blue", description = "Lizalfos, Blue" }
 enemy{ id = "lizalfos_red", description = "Lizalfos, Red" }
 enemy{ id = "lizalfos_yellow", description = "Lizalfos, Yellow" }
-enemy{ id = "lynel", description = "Lynel" }
+enemy{ id = "lynel", description = "Lynel, red" }
 enemy{ id = "lynel_blue", description = "Lynel, blue" }
-enemy{ id = "lynel_silver", description = "Lynel, silver (miniboss)" }
+enemy{ id = "lynel_silver", description = "Lynel, silver" }
 enemy{ id = "moblin", description = "Moblin" }
 enemy{ id = "moth", description = "Moth" }
 enemy{ id = "octolux", description = "Octolux" }

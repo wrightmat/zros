@@ -1,5 +1,4 @@
 ![Zelda Rumors of the Sheikah logo](data/logos/logo@2x.png)
-#Zelda Rumors of the Sheikah
 
 This package contains the data files of the quest **Zelda: Rumors of the Sheikah**.
 This quest is a free, open-source game that works with Solarus,
