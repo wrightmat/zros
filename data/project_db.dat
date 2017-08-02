@@ -1,5 +1,6 @@
-map{ id = "hylian_village", description = "Hylian Village" }
-map{ id = "hylian_village_inside", description = "Inside Hylian Village" }
+map{ id = "hylian_settlement", description = "Hylian Settlement" }
+map{ id = "hylian_settlement_inside", description = "Inside Hylian Settlement" }
+map{ id = "hylian_settlement_inside - Copy", description = "hylian_settlement_inside - Copy" }
 
 tileset{ id = "dungeon1", description = "Dungeon 1" }
 tileset{ id = "indoors", description = "Indoors" }
@@ -480,20 +481,6 @@ item{ id = "crystal_counter", description = "Magic Crystal counter" }
 item{ id = "fairy", description = "Fairy" }
 item{ id = "feather", description = "Feather" }
 item{ id = "flippers", description = "Flippers" }
-item{ id = "food_aromatics", description = "Food, Vegetable (Aromatics)" }
-item{ id = "food_beans", description = "Food, Protein (Beans)" }
-item{ id = "food_dairy", description = "Food, Protein (Dairy)" }
-item{ id = "food_eggs", description = "Food, Protein (Eggs)" }
-item{ id = "food_fish", description = "Food, Protein (Fish)" }
-item{ id = "food_grains", description = "Food, Vegetable (Grains)" }
-item{ id = "food_greens", description = "Food, Vegetable (Misc. Greens)" }
-item{ id = "food_meat", description = "Food, Protein (Meat)" }
-item{ id = "food_melons", description = "Food, Fruit (Melons)" }
-item{ id = "food_mushrooms", description = "Food, Vegetable (Mushrooms)" }
-item{ id = "food_peppers", description = "Food, Vegetable (Peppers)" }
-item{ id = "food_pomes", description = "Food, Fruit (Pome Fruits)" }
-item{ id = "food_stone", description = "Food, Fruit (Stone Fruits)" }
-item{ id = "food_tropical", description = "Food, Fruit (Tropical)" }
 item{ id = "glove", description = "Iron Glove / Golden Glove" }
 item{ id = "hammer", description = "Goron Hammer" }
 item{ id = "heart", description = "Heart (x1)" }
@@ -506,10 +493,6 @@ item{ id = "lamp", description = "Lamp" }
 item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
 item{ id = "map", description = "Dungeon Map" }
-item{ id = "monster_jelly", description = "Monster Parts, Jelly" }
-item{ id = "monster_parts", description = "Monster Parts, Misc." }
-item{ id = "monster_tails", description = "Monster Parts, Tails" }
-item{ id = "monster_wings", description = "Monster Parts, Wings" }
 item{ id = "ocarina", description = "Ocarina (Wind)" }
 item{ id = "ore", description = "Subrosian Ore (x1 / x5)" }
 item{ id = "ore_counter", description = "Subrosian Ore counter" }
