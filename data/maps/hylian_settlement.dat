@@ -12571,6 +12571,42 @@ dynamic_tile{
   enabled_at_start = true,
 }
 
+custom_entity{
+  name = "npc_diane",
+  layer = 0,
+  x = 272,
+  y = 349,
+  width = 16,
+  height = 16,
+  direction = 3,
+  sprite = "npc/hylian_farmer_1",
+  model = "npcs/npc_hylian_virgator",
+}
+
+custom_entity{
+  name = "npc_nancy",
+  layer = 0,
+  x = 272,
+  y = 797,
+  width = 16,
+  height = 16,
+  direction = 3,
+  sprite = "npc/hylian_farmer_2",
+  model = "npcs/npc_hylian_virgator",
+}
+
+custom_entity{
+  name = "npc_fran",
+  layer = 0,
+  x = 272,
+  y = 1125,
+  width = 16,
+  height = 16,
+  direction = 3,
+  sprite = "npc/hylian_farmer_3",
+  model = "npcs/npc_hylian_virgator",
+}
+
 tile{
   layer = 1,
   x = 616,
