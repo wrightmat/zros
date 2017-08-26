@@ -277,12 +277,26 @@ sprite{ id = "npc/dog", description = "Dog" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo Merchant" }
 sprite{ id = "npc/goron", description = "Goron" }
 sprite{ id = "npc/great_fairy", description = "Great Fairy" }
-sprite{ id = "npc/guard", description = "Hylian Guard" }
+sprite{ id = "npc/guard_hylian", description = "Hylian Guard" }
+sprite{ id = "npc/hylian_apothecary", description = "Hylian Apothecary" }
 sprite{ id = "npc/hylian_baker", description = "Hylian Baker" }
+sprite{ id = "npc/hylian_child_1", description = "Hylian Child 1" }
+sprite{ id = "npc/hylian_child_2", description = "Hylian Child 2" }
+sprite{ id = "npc/hylian_farmer_1", description = "Hylian Farmer 1 (Din)" }
+sprite{ id = "npc/hylian_farmer_2", description = "Hylian Farmer 2 (Nayru)" }
+sprite{ id = "npc/hylian_farmer_3", description = "Hylian Farmer 3 (Farore)" }
+sprite{ id = "npc/hylian_groundskeeper", description = "Hylian Groundskeeper" }
+sprite{ id = "npc/hylian_innkeeper", description = "Hylian Innkeeper" }
 sprite{ id = "npc/hylian_knight", description = "Hylian Knight" }
 sprite{ id = "npc/hylian_lord", description = "Hylian Lord" }
 sprite{ id = "npc/hylian_lord_wife", description = "Hylian Lord's Wife" }
+sprite{ id = "npc/hylian_lumberjack", description = "Hylian Lumberjack" }
+sprite{ id = "npc/hylian_magistrate", description = "Hylian Magistrate" }
 sprite{ id = "npc/hylian_miller", description = "Hylian Miller" }
+sprite{ id = "npc/hylian_priest", description = "Hylian Priest" }
+sprite{ id = "npc/hylian_rancher", description = "Hylian Rancher" }
+sprite{ id = "npc/hylian_shepherd", description = "Hylian Shepherd" }
+sprite{ id = "npc/hylian_shopkeeper", description = "Hylian Shopkeeper" }
 sprite{ id = "npc/hylian_virgator", description = "Hylian Virgator (Landowner)" }
 sprite{ id = "npc/rito", description = "Rito" }
 sprite{ id = "npc/subrosian_blue", description = "Subrosian (Blue, Headband)" }
