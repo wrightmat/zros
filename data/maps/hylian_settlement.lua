@@ -12,7 +12,11 @@ local game = map:get_game()
 
 -- Event called at initialization time, as soon as this map becomes is loaded.
 function map:on_started()
-
+  if math.random(10) > 4 then
+    game:set_world_rain_mode("outside_world", "rain")
+  else
+    game:set_world_rain_mode("outside_world", nil)
+  end
   -- You can initialize the movement and sprites of various
   -- map entities here.
 end

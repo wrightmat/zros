@@ -7,7 +7,7 @@ properties{
   max_layer = 2,
   world = "outside_world",
   tileset = "outdoors",
-  music = "field",
+  music = "town_hylian",
 }
 
 tile{
@@ -813,8 +813,8 @@ tile{
 
 tile{
   layer = 0,
-  x = 0,
-  y = 0,
+  x = 32,
+  y = 48,
   width = 1184,
   height = 1200,
   pattern = "grass.0",
@@ -12605,6 +12605,18 @@ custom_entity{
   direction = 3,
   sprite = "npc/hylian_farmer_3",
   model = "npcs/npc_hylian_virgator",
+}
+
+custom_entity{
+  name = "animal_dog",
+  layer = 0,
+  x = 632,
+  y = 941,
+  width = 16,
+  height = 16,
+  direction = 0,
+  sprite = "npc/animal_dog",
+  model = "animals/animal_dog",
 }
 
 tile{

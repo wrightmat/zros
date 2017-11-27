@@ -20,11 +20,11 @@ require("scripts/multi_events")
 game.independent_entities = {}
 game.time_flow = 1000 -- One second is one minute in-game (so one hour in-game is one hour).
 
-function game:on_started()
+game:register_event("on_started", function(game)
   -- Set up the dialog box, HUD, hero conditions and effects.
-  condition_manager:initialize(self)
-  self:initialize_dialog_box()
-  self.hud = hud_manager:create(game)
+  condition_manager:initialize(game)
+  game:initialize_dialog_box()
+  game.hud = hud_manager:create(game)
   camera = camera_manager:create(game)
   tone = tone_manager:create(game)
   
@@ -36,12 +36,12 @@ function game:on_started()
   end)
   chron_timer:set_suspended_with_map(false)
   game:calculate_percent_complete()
-end
+end)
 
-function game:on_finished()
+game:register_event("on_finished", function(game)
   -- Clean what was created by on_started().
-  self.hud:quit()
-  self:quit_dialog_box()
+  game.hud:quit()
+  game:quit_dialog_box()
   camera = nil
   -- Ensure the hero always has a sword when they start a new game (possible to lost it permanantly if cursed).
   if (game:get_ability("sword") == 0 and game:get_value("i1821")) then
@@ -52,26 +52,24 @@ function game:on_finished()
   local hours = math.floor(time / 3600)
   local minutes = math.floor((time % 3600) / 60)
   local seconds = time - (hours * 3600) - (minutes * 60)
-  print(hours .. ":" .. minutes .. ":" .. seconds)
-end
+end)
 
 -- This event is called when a new map has just become active.
-function game:on_map_changed(map)
+game:register_event("on_map_changed", function(game)
   -- Notify the hud.
-  self.hud:on_map_changed(map)
-  tone:on_map_changed()
-  
-  game.save_between_maps:load_map(map) -- Create saved and carried entities.
-end
+  game.hud:on_map_changed(game:get_map())
+  tone:on_map_changed(game:get_map())
+  game.save_between_maps:load_map(game:get_map()) -- Create saved and carried entities.
+end)
 
 function game:on_paused()
-  self.hud:on_paused()
-  self:start_pause_menu()
+  game.hud:on_paused()
+  game:start_pause_menu()
 end
 
 function game:on_unpaused()
-  self:stop_pause_menu()
-  self.hud:on_unpaused()
+  game:stop_pause_menu()
+  game.hud:on_unpaused()
 end
 
 function game:get_player_name()

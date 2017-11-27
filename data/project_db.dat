@@ -129,13 +129,12 @@ sprite{ id = "entities/bush", description = "Bush" }
 sprite{ id = "entities/bush_snow", description = "Bush, snowy" }
 sprite{ id = "entities/chest", description = "Chest (normal)" }
 sprite{ id = "entities/chest_big", description = "Chest (big)" }
+sprite{ id = "entities/collectibles/steak", description = "steak" }
 sprite{ id = "entities/conveyor", description = "Conveyor (Arrows)" }
 sprite{ id = "entities/conveyor_belt", description = "Conveyor Belt" }
 sprite{ id = "entities/crystal", description = "Crystal" }
 sprite{ id = "entities/crystal_block", description = "Crystal block" }
 sprite{ id = "entities/crystal_shard", description = "Crystal Shard" }
-sprite{ id = "entities/dark_appears", description = "Dark Appears" }
-sprite{ id = "entities/dark_mirror", description = "Dark Mirror" }
 sprite{ id = "entities/destination", description = "Destination for transporter" }
 sprite{ id = "entities/door_big_key", description = "Door (big key)" }
 sprite{ id = "entities/door_boss_key", description = "Door (boss key)" }
@@ -147,7 +146,6 @@ sprite{ id = "entities/door_small_key_block", description = "Door (small key blo
 sprite{ id = "entities/door_very_weak_wall", description = "Door (very weak wall)" }
 sprite{ id = "entities/door_weak_block", description = "Door (weak block)" }
 sprite{ id = "entities/door_weak_wall", description = "Door (weak wall)" }
-sprite{ id = "entities/drumset", description = "Drumset (Gerutones)" }
 sprite{ id = "entities/explosion", description = "Explosion" }
 sprite{ id = "entities/fire", description = "Fire" }
 sprite{ id = "entities/fire_burns", description = "Fire (burns)" }
@@ -168,7 +166,6 @@ sprite{ id = "entities/lava", description = "Lava" }
 sprite{ id = "entities/light_beam", description = "Light Beam" }
 sprite{ id = "entities/mailbox", description = "Mailbox" }
 sprite{ id = "entities/metal_ball", description = "Metal Ball" }
-sprite{ id = "entities/mine", description = "Mine" }
 sprite{ id = "entities/ocarina_patch", description = "Ocarina Patch" }
 sprite{ id = "entities/platform", description = "Platform" }
 sprite{ id = "entities/pot", description = "Pot" }
@@ -181,12 +178,10 @@ sprite{ id = "entities/rupee_icon", description = "Rupee Icon" }
 sprite{ id = "entities/shadow", description = "Shadow" }
 sprite{ id = "entities/sign", description = "Sign" }
 sprite{ id = "entities/sign_stone", description = "Sign, stone" }
-sprite{ id = "entities/slot_machine", description = "Slot Machine" }
 sprite{ id = "entities/soil", description = "Soil (shovel)" }
 sprite{ id = "entities/soil_snow", description = "Soil, snowy (shovel)" }
 sprite{ id = "entities/star", description = "Star" }
 sprite{ id = "entities/statue", description = "Statue" }
-sprite{ id = "entities/statue_castle", description = "Castle Statue (Armament)" }
 sprite{ id = "entities/stone_pile", description = "Stone pile" }
 sprite{ id = "entities/stone_small_black", description = "Stone, small black" }
 sprite{ id = "entities/stone_small_white", description = "Stone, small white" }
@@ -214,8 +209,6 @@ sprite{ id = "entities/torch_light_room", description = "Torch light, room" }
 sprite{ id = "entities/torch_light_tile", description = "Torch light, tile" }
 sprite{ id = "entities/torch_metal", description = "Metal torch" }
 sprite{ id = "entities/torch_wood", description = "Wooden torch" }
-sprite{ id = "entities/tower_wind_base", description = "Tower of Wind (base)" }
-sprite{ id = "entities/tower_wind_top", description = "Tower of Wind (top)" }
 sprite{ id = "entities/tree_apple", description = "Apple Tree" }
 sprite{ id = "entities/vine_down", description = "Vines, Down" }
 sprite{ id = "entities/vine_left", description = "Vines, Left" }
@@ -267,13 +260,19 @@ sprite{ id = "menus/quest_icons", description = "Menus: Quest Icons" }
 sprite{ id = "menus/quests_cursor", description = "Menus: Quests Cursor" }
 sprite{ id = "menus/selection_menu_cursor", description = "Menus: Selection menu cursor" }
 sprite{ id = "menus/solarus_logo", description = "Menus: Solarus logo" }
+sprite{ id = "npc/animal_dog", description = "Dog" }
+sprite{ id = "npc/animal_goat", description = "Goat" }
+sprite{ id = "npc/animal_pig", description = "Pig" }
+sprite{ id = "npc/animal_rabbit_1", description = "Rabbit 1" }
+sprite{ id = "npc/animal_rabbit_2", description = "Rabbit 2" }
+sprite{ id = "npc/animal_rabbit_3", description = "Rabbit 3" }
+sprite{ id = "npc/animal_swan", description = "Swan" }
 sprite{ id = "npc/butterfly_blessed", description = "Butterfly, blessed" }
 sprite{ id = "npc/butterfly_blue", description = "Butterfly, blue" }
 sprite{ id = "npc/butterfly_grey", description = "Butterfly, grey" }
 sprite{ id = "npc/butterfly_orange", description = "Butterfly, orange" }
 sprite{ id = "npc/butterfly_purple", description = "Butterfly, purple" }
 sprite{ id = "npc/butterfly_red", description = "Butterfly, red" }
-sprite{ id = "npc/dog", description = "Dog" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo Merchant" }
 sprite{ id = "npc/goron", description = "Goron" }
 sprite{ id = "npc/great_fairy", description = "Great Fairy" }
@@ -304,6 +303,9 @@ sprite{ id = "npc/subrosian_green", description = "Subrosian (Green)" }
 sprite{ id = "npc/subrosian_orange", description = "Subrosian (Orange, Bow)" }
 sprite{ id = "npc/zora", description = "Zora" }
 sprite{ id = "npc/zora_king", description = "Zora King" }
+sprite{ id = "weather/leaf", description = "weather/leaf" }
+sprite{ id = "weather/rain", description = "weather/rain" }
+sprite{ id = "weather/snow", description = "weather/snow" }
 
 music{ id = "ballad", description = "Ballad of the Goddess (Marryn)" }
 music{ id = "battle", description = "Battle" }
@@ -342,6 +344,9 @@ music{ id = "shop_potion", description = "Potion Shop" }
 music{ id = "shop_witch", description = "Witch's Hut" }
 music{ id = "subrosia", description = "Subrosia" }
 music{ id = "title_screen", description = "Title screen " }
+music{ id = "town_hylian", description = "Hylian Settlement" }
+music{ id = "town_ranch", description = "Lonnie's Ranch" }
+music{ id = "town_rito", description = "Rito Village" }
 music{ id = "underground", description = "Underground" }
 music{ id = "zora", description = "Zora's Domain" }
 
@@ -463,13 +468,6 @@ sound{ id = "world_warp", description = "world_warp" }
 sound{ id = "wrong", description = "wrong" }
 sound{ id = "zora", description = "zora" }
 
-item{ id = "airship_part", description = "Airship Part (Magnetite / Propeller / Din's Pearl)" }
-item{ id = "alchemy", description = "Alchemy Stone" }
-item{ id = "alchemy_counter", description = "Alchemy Stone counter" }
-item{ id = "amber", description = "Goron Amber" }
-item{ id = "amber_counter", description = "Goron Amber counter" }
-item{ id = "apple", description = "Apple" }
-item{ id = "apple_counter", description = "Apple counter" }
 item{ id = "arrow", description = "Arrows (x1 / x3 / x5)" }
 item{ id = "arrow_light", description = "Light Arrows (x1 / x3 / x5)" }
 item{ id = "big_key", description = "Dungeon Big Key" }
@@ -487,8 +485,6 @@ item{ id = "bottle_4", description = "Bottle 4" }
 item{ id = "bow", description = "Hero's Bow" }
 item{ id = "bow_light", description = "Bow of Light" }
 item{ id = "cane", description = "Hebra's Cane" }
-item{ id = "carrot", description = "Carrot" }
-item{ id = "carrot_counter", description = "Carrot counter" }
 item{ id = "compass", description = "Dungeon Compass" }
 item{ id = "crystal", description = "Magic Crystal" }
 item{ id = "crystal_counter", description = "Magic Crystal counter" }
@@ -641,9 +637,12 @@ enemy{ id = "wizzrobe_fire", description = "Wizzrobe, Fire" }
 enemy{ id = "wizzrobe_ice", description = "Wizzrobe, Ice" }
 enemy{ id = "zola", description = "Zola" }
 
+entity{ id = "animals/animal_dog", description = "Dog" }
 entity{ id = "arrow", description = "Arrow" }
 entity{ id = "butterfly", description = "Butterfly" }
+entity{ id = "collectibles/steak", description = "Steak" }
 entity{ id = "fire", description = "Fire (custom)" }
+entity{ id = "generic_animal", description = "Generic Animal" }
 entity{ id = "generic_flying_pickable", description = "Generic Flying Pickable" }
 entity{ id = "generic_npc", description = "Generic NPC" }
 entity{ id = "generic_portable", description = "Generic Portable" }

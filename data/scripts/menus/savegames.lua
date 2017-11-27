@@ -1021,7 +1021,7 @@ function savegame_menu:validate_player_name()
 end
 
 function savegame_menu:set_initial_values(savegame)
-  savegame:set_starting_location("hylian_village", "destination")
+  savegame:set_starting_location("hylian_settlement", "destination")
   savegame:set_value("player_name", self.player_name)
 
   -- Initially give 3 hearts, the first tunic and the first wallet.

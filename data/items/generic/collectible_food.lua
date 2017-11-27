@@ -33,6 +33,7 @@ function item:on_using()
   else
     sol.audio.play_sound("chewing")
     self:remove_amount(1)
+    game:set_value(item:get_name() .. "_" .. variant .. "_counter", amount - 1)
     game:add_life(32) -- 8 hearts
     game:add_stamina(20)
   end
