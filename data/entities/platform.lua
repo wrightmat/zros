@@ -8,13 +8,15 @@ local speed = 25
 local time_stopped = 1000
 
 function entity:on_created()
+local size_x, size_y = self:get_size()
   self:create_sprite("entities/platform")
-  self:set_size(32, 32)
+  self:set_size(size_x, size_y) -- default is 32,32
   self:set_origin(16, 16)
   self:set_can_traverse("jumper", true)
   self:set_can_traverse_ground("hole", true)
   self:set_can_traverse_ground("deep_water", true)
-  self:set_can_traverse_ground("traversable", false)
+  self:set_can_traverse_ground("lava", true)
+  self:set_can_traverse_ground("traversable", true)
   self:set_can_traverse_ground("shallow_water", false)
   self:set_can_traverse_ground("wall", false)
   self:set_modified_ground("traversable")
@@ -28,7 +30,7 @@ function entity:on_created()
   m:start(self)
   
   self:add_collision_test("touching", function(platform, other)
-    if other:get_type() == "wall" and other:get_type() ~= "jumper" then
+    if other:get_type() == "wall" then
       self:on_obstacle_reached(m)
     end
   end)
@@ -52,7 +54,7 @@ function entity:on_position_changed()
   if not self:is_on_platform(hero) then return end
   local hx, hy, hl = hero:get_position()
   local direction4 = self:get_sprite():get_direction()
-  local dx, dy = 0, 0 --Variables for the translation.
+  local dx, dy = 0, 0 -- Variables for the translation.
   if direction4 == 0 then dx = 1
   elseif direction4 == 1 then dy = -1
   elseif direction4 == 2 then dx = -1
@@ -62,7 +64,7 @@ function entity:on_position_changed()
 end
 
 function entity:on_movement_changed(movement)
-  --Change direction of the sprite when the movement changes.
+  -- Change direction of the sprite when the movement changes.
   local direction4 = movement:get_direction4()
   self:get_sprite():set_direction(direction4)
 end

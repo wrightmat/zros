@@ -3,6 +3,29 @@ local quest_manager = {}
 -- This script handles global behavior of this quest,
 -- that is, things not related to a particular savegame.
 
+-- Initialize the behavior of the camera.
+local function initialize_camera()
+  local camera_meta = sol.main.get_metatable("camera")
+
+  function camera_meta:quake(map, direction, length)
+    local speed = 700
+    local map = self:get_map()
+    local hx, hy, _ = map:get_hero():get_position()
+    local w, h = map:get_size()
+    local x, y, dx, dy
+    if direction%2 == 0 then
+      x = w/2; y = hy; dx = 8; dy = 0
+    else
+      x = hx; y = h/2; dx = 0; dy = 8
+    end
+    map:move_camera(x+dx, y+dy, speed, function()
+      map:move_camera(x-dx, y-dy, speed, function()
+        self:quake(map, direction, length)
+      end, 0, length)
+    end, 0, length)
+  end
+end
+
 -- Initialize the behavior of destructible entities.
 local function initialize_destructibles()
   local destructible_meta = sol.main.get_metatable("destructible")
@@ -159,14 +182,20 @@ local function initialize_npcs()
     end
   end
 
+  -- Apply custom systems to some objects
+  local shop_manager = require("scripts/gameplay/shop_manager")
+  if name:match("^shop") then shop_manager:start_shop(game) end -- Shop System
+
   -- Make certain entities automatic hooks for the hookshot.
   function npc_meta:is_hookshot_hook()
     if self:get_sprite() ~= nil then
-      if self:get_sprite():get_animation_set() == "entities/sign" then return true end
-      if self:get_sprite():get_animation_set() == "entities/mailbox" then return true end
-      if self:get_sprite():get_animation_set() == "entities/torch" then return true end
-      if self:get_sprite():get_animation_set() == "entities/torch_wood" then return true end
-      if self:get_sprite():get_animation_set() == "entities/block" then return true end
+      local anim_set = self:get_sprite():get_animation_set()
+      if anim_set == "entities/sign" then return true
+      elseif anim_set == "entities/mailbox" then return true
+      elseif anim_set == "entities/torch" then return true
+      elseif anim_set == "entities/torch_wood" then return true
+      elseif anim_set == "entities/block" then return true
+      else return false end
     else return false end
   end
   function chest_meta:is_hookshot_hook()
@@ -528,6 +557,7 @@ end
 function quest_manager:initialize_quest()
   initialize_game()
   initialize_maps()
+  initialize_camera()
   initialize_entities()
 end
 

@@ -1,23 +1,34 @@
 local entity = ...
 local map = entity:get_map()
 local hero = map:get_entity("hero")
+
 local ex, ey, el
 local timer
 local time_in = 0
 
--- Quicksand: entity which slows the hero until he finally falls in.
+-- Quicksand: entity which slows the hero until
+-- he finally falls in
 
 function entity:on_created()
   self:create_sprite("entities/quicksand")
-  self:set_size(32, 32); self:set_origin(16, 16)
+  self:set_size(32, 32)
+  self:set_origin(16, 16)
   ex, ey, el = self:get_center_position()
   self:get_sprite():set_animation("quicksand")
-  
+
   self:add_collision_test("overlapping", function(quicksand, other)
-    if other:get_type() ~= "hero" then return end
+    if other:get_type() ~= "hero" then
+      return
+    end
     local hero = other
-    -- Move the hero toward the quicksand's center every 20 ms while he is overlapping it (and not in a state like "running").
-    if timer == nil and (hero:get_state() == "free" or hero:get_state() == "sword loading") then
+
+    -- Only do this in some specific states (in particular, don't do it while jumping, flying with the hookshot, etc.)
+    if hero:get_state() ~= "free" and hero:get_state() ~= "sword loading" then
+      return
+    end
+
+    -- Move the hero toward the quicksand's center every 20 ms while he is overlapping it.
+    if timer == nil then
       timer = sol.timer.start(self, 20, function()
         time_in = time_in + 1
         hx, hy, hl = hero:get_position()
