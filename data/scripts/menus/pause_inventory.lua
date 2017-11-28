@@ -25,7 +25,7 @@ function inventory_submenu:on_started()
   self.inventory_items_surface = sol.surface.create(320, 240)
   self.inventory_dialog_surface = sol.surface.create(160, 48)
   self.inventory_cursor_sprite = sol.sprite.create("menus/quests_cursor")
-  self.inventory_dialog_sprite = sol.sprite.create("menus/quest_dialog")
+  self.inventory_dialog_sprite = sol.sprite.create("menus/menu_dialog")
   self.cursor_sprite = sol.sprite.create("menus/pause_cursor")
   self.sprites = {}
   self.counters = {}
@@ -188,8 +188,8 @@ function inventory_submenu:on_finished()
   end
 
   if self.game.hud ~= nil then
-    self.game.hud.elements[10].surface:set_opacity(255)
-    self.game.hud.elements[11].surface:set_opacity(255)
+    self.game.hud.primary[5].surface:set_opacity(255)
+    self.game.hud.primary[6].surface:set_opacity(255)
   end
 end
 
@@ -217,8 +217,8 @@ print("inventory.caption.item." .. item_name .. "." .. variant)
     self:set_caption(nil)
     self.game:set_custom_command_effect("action", nil)
   end
-  self.game.hud.elements[10].surface:set_opacity(item_icon_opacity) --item_icon_1
-  self.game.hud.elements[11].surface:set_opacity(item_icon_opacity) --item_icon_2
+  self.game.hud.primary[5].surface:set_opacity(item_icon_opacity) --item_icon_1
+  self.game.hud.primary[6].surface:set_opacity(item_icon_opacity) --item_icon_2
 end
 
 function inventory_submenu:get_selected_index()

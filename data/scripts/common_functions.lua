@@ -1,4 +1,4 @@
-local game = ...
+local common_functions = {}
 
 -- originally from http://stackoverflow.com/questions/6075262/lua-table-tostringtablename-and-table-fromstringstringtable-functions
 -- modified fixed a serialization issue with invalid name. and wrap with 2 functions to serialize / deserialize
@@ -14,3 +14,5 @@ function stringToTable(str)
   end)
   return fields
 end
+
+return common_functions

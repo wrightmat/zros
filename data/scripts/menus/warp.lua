@@ -1,5 +1,5 @@
-local game = ...
-local warp_menu = {}  -- The warp menu.
+local warp_menu = {}
+
 local initial_point
 local initial_y = 10
 local initial_volume 
@@ -26,11 +26,12 @@ warp_points = {         -- Intentionally Global!
   b1514 = { "b1515", "34", 120, 258, "Lake Hylia" },
   b1515 = { "b1514", "13", 210, 365, "Floria Peninsula" }
 }
+local game_meta = sol.main.get_metatable("game")
 
-function game:on_warp_started(point)
+game_meta:register_event("on_warp_started", function(game, point)
   initial_point = point
   if not sol.menu.is_started(warp_menu) then sol.menu.start(game, warp_menu) end
-end
+end)
 
 function warp_menu:on_started()
   game.hud:set_enabled(false)
@@ -191,3 +192,5 @@ function warp_menu:on_finished()
   game.hud.elements[12].surface:set_opacity(255) --attack_icon
   game.hud.elements[9]:on_menu_closed() -- pause_icon
 end
+
+return warp_menu

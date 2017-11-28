@@ -3,10 +3,13 @@
 local camera_manager = {}
 
 local camera_speed = 128
+local game_meta = sol.main.get_metatable("game")
 
-function camera_manager:create(game)
-  local camera_menu = {}
+game_meta:register_event("on_started", function(game)
+  sol.menu.start(game, camera_manager)
+end)
 
+function camera_manager:on_started()
   local moving = false         -- If moving away from the hero.
   local just_restored = false  -- If just got back to the hero.
   local initial_x, initial_y, camera_width, camera_height
@@ -24,8 +27,7 @@ function camera_manager:create(game)
     local hero_x, hero_y = hero:get_center_position()
 
     map:move_camera(hero_x, hero_y, camera_speed, function()
-      if sol.input.is_key_pressed("left control") or
-          sol.input.is_key_pressed("right control") then
+      if sol.input.is_key_pressed("left control") or sol.input.is_key_pressed("right control") then
         just_restored = true
         update_camera()
       end
@@ -94,50 +96,43 @@ function camera_manager:create(game)
 
     end, 0, 1e9)
   end
+end
 
-  function camera_menu:on_command_pressed(command)
-    local handled = false
-    local control = sol.input.is_key_pressed("left control") or sol.input.is_key_pressed("right control")
-    if control and
-        (command == "right" or command == "up" or command == "left" or command == "down") then
-      update_camera()
-      handled = true
-    end
+function camera_manager:on_command_pressed(command)
+  local handled = false
+  local control = sol.input.is_key_pressed("left control") or sol.input.is_key_pressed("right control")
+  if control and
+      (command == "right" or command == "up" or command == "left" or command == "down") then
+    update_camera()
+    handled = true
+  end
+  return handled
+end
 
+function camera_manager:on_command_released(command)
+  local handled = false
+  if not moving then
     return handled
   end
 
-  function camera_menu:on_command_released(command)
-    local handled = false
-    if not moving then
-      return handled
-    end
+  if command == "right" or command == "up" or command == "left" or command == "down" then
+    update_camera()
+    handled = true
+  end
+  return handled
+end
 
-    if command == "right" or command == "up" or command == "left" or command == "down" then
-      update_camera()
-      handled = true
-    end
-
+function camera_manager:on_key_released(key)
+  local handled = false
+  if not moving then
     return handled
   end
 
-  function camera_menu:on_key_released(key)
-    local handled = false
-    if not moving then
-      return handled
-    end
-
-    if key == "left control" or key == "right control" then
-      update_camera()
-      handled = true
-    end
-
-    return handled
+  if key == "left control" or key == "right control" then
+    update_camera()
+    handled = true
   end
-
-  sol.menu.start(game, camera_menu)
-
-  return camera_menu
+  return handled
 end
 
 return camera_manager

@@ -1,17 +1,4 @@
-local game = ...
-
-local game_over_menu = {}  -- The game-over menu.
-
-local music
-local background_img
-local hero_was_visible
-local hero_dead_sprite
-local hero_dead_x, hero_dead_y
-local fade_sprite
-local fairy_sprite
-local cursor_position
-local state
-
+-- Game Over Menu - called when the player loses all life.
 -- state can be one of:
 -- "waiting_start": The game-over scene will start soon.
 -- "closing_game": Fade-out on the game screen.
@@ -23,14 +10,28 @@ local state
 -- "menu": The player can choose an option in the game-over menu.
 -- "finished": An action was validated in the menu.
 
-function game:on_game_over_started()
+local game_over_menu = {}
+
+local music
+local background_img
+local hero_was_visible
+local hero_dead_sprite
+local hero_dead_x, hero_dead_y
+local fade_sprite
+local fairy_sprite
+local cursor_position
+local state
+
+local game_meta = sol.main.get_metatable("game")
+
+game_meta:register_event("on_game_over_started", function(game)
   -- Attach the game-over menu to the map so that the map's fade-out
   -- effect applies to it when restarting the game.
   if game:get_hero():is_condition_active('cursed') then game:get_hero():stop_cursed() end -- Otherwise sword is permanently disabled!
   if game:get_value("times_died") == nil then game:set_value("times_died", 0) end
   game:set_value("times_died", game:get_value("times_died") + 1)
   sol.menu.start(game:get_map(), game_over_menu)
-end
+end)
 
 function game_over_menu:on_started()
   local hero = game:get_hero()
@@ -100,7 +101,6 @@ function game_over_menu:on_started()
           fairy_sprite:set_xy(76, 112)  -- Cursor.
           cursor_position = 0
         end
-
       end
     end
   end)
@@ -191,3 +191,5 @@ function game_over_menu:on_command_pressed(command)
     end
   end
 end
+
+return game_over_menu

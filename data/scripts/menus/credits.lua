@@ -1,12 +1,13 @@
-local game = ...
-local credits_menu = {}  -- The credits menu.
+local credits_menu = {}
 
 local credits_background = sol.surface.create("menus/credits_background.png")
 local text_width, text_height = 0
 
-function game:on_credits_started()
+local game_meta = sol.main.get_metatable("game")
+
+game_meta:register_event("on_credits_started", function(game)
   sol.menu.start(self, credits_menu)
-end
+end)
 
 function credits_menu:on_started()
   local map = game:get_map()
@@ -125,3 +126,5 @@ function credits_menu:on_key_pressed(key, modifiers)
     end_credits()
   end
 end
+
+return credits_menu
