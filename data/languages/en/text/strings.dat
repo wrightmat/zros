@@ -14,7 +14,7 @@ text{ key = "inventory.caption.item.airship_part.5", value = "Sequence Completed
 text{ key = "inventory.caption.item.alchemy_counter.1", value = "Alchemy Stone" }
 text{ key = "inventory.caption.item.amber_counter.1", value = "Goron Amber" }
 text{ key = "inventory.caption.item.apple_counter.1", value = "Apples" }
-text{ key = "inventory.caption.item.bomb_counter.1", value = "Bombs" }
+text{ key = "inventory.caption.item.bomb.1", value = "Bombs" }
 text{ key = "inventory.caption.item.book_mudora.1", value = "Dingy Page?" }
 text{ key = "inventory.caption.item.book_mudora.2", value = "Pages of a Book?" }
 text{ key = "inventory.caption.item.book_mudora.3", value = "Book of Mudora$Pages" }

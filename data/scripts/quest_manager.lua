@@ -180,11 +180,11 @@ local function initialize_npcs()
     else
       game:set_dialog_style("default")
     end
+    
+    -- Apply custom systems to some objects
+    local shop_manager = require("scripts/shop_manager")
+    if name:match("^shop") then shop_manager:start_shop(game) end -- Shop System
   end
-
-  -- Apply custom systems to some objects
-  local shop_manager = require("scripts/gameplay/shop_manager")
-  if name:match("^shop") then shop_manager:start_shop(game) end -- Shop System
 
   -- Make certain entities automatic hooks for the hookshot.
   function npc_meta:is_hookshot_hook()

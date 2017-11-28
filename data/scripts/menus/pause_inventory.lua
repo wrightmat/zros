@@ -5,7 +5,7 @@ local item_names = {
   -- 1st row: Equippable
   "lamp",
   "bow",
-  "bomb_counter",
+  "bomb",
   "boomerang",
   "hookshot",
   "cane",
@@ -207,7 +207,6 @@ function inventory_submenu:set_cursor_position(row, column)
   
   local item_icon_opacity = 128
   if variant > 0 then
-print("inventory.caption.item." .. item_name .. "." .. variant)
     self:set_caption("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "info")
     if item:is_assignable() then

@@ -473,7 +473,6 @@ item{ id = "arrow_light", description = "Light Arrows (x1 / x3 / x5)" }
 item{ id = "big_key", description = "Dungeon Big Key" }
 item{ id = "bomb", description = "Bombs (x1 / x3 / x5)" }
 item{ id = "bomb_bag", description = "Bomb bag (small / large / huge)" }
-item{ id = "bomb_counter", description = "Bomb counter" }
 item{ id = "book_mudora", description = "Book of Mudora (7 variants)" }
 item{ id = "boomerang", description = "Boomerang" }
 item{ id = "boots", description = "Pegasus Boots" }
@@ -486,8 +485,6 @@ item{ id = "bow", description = "Hero's Bow" }
 item{ id = "bow_light", description = "Bow of Light" }
 item{ id = "cane", description = "Hebra's Cane" }
 item{ id = "compass", description = "Dungeon Compass" }
-item{ id = "crystal", description = "Magic Crystal" }
-item{ id = "crystal_counter", description = "Magic Crystal counter" }
 item{ id = "fairy", description = "Fairy" }
 item{ id = "feather", description = "Feather" }
 item{ id = "flippers", description = "Flippers" }
@@ -497,21 +494,12 @@ item{ id = "heart", description = "Heart (x1)" }
 item{ id = "heart_container", description = "Heart Container" }
 item{ id = "heart_piece", description = "Heart Piece (of 4)" }
 item{ id = "hookshot", description = "Hookshot" }
-item{ id = "jade", description = "Mystic Jade" }
-item{ id = "jade_counter", description = "Mystic Jade counter" }
 item{ id = "lamp", description = "Lamp" }
 item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
 item{ id = "map", description = "Dungeon Map" }
 item{ id = "ocarina", description = "Ocarina (Wind)" }
-item{ id = "ore", description = "Subrosian Ore (x1 / x5)" }
-item{ id = "ore_counter", description = "Subrosian Ore counter" }
-item{ id = "plume", description = "Goddess Plume" }
-item{ id = "plume_counter", description = "Goddess Plume counter" }
-item{ id = "poe_soul", description = "Poe Soul" }
 item{ id = "potion", description = "Potion (Red / Green / Blue)" }
-item{ id = "pumpkin", description = "Pumpkin (x1)" }
-item{ id = "pumpkin_counter", description = "Pumpkin counter" }
 item{ id = "quiver", description = "Quiver (small / large / huge)" }
 item{ id = "random", description = "Random" }
 item{ id = "random_enemy", description = "Random, Enemy" }
@@ -524,8 +512,6 @@ item{ id = "rupee_bag", description = "Rupee Bag/Wallet (Small / Big / Huge)" }
 item{ id = "shield", description = "Shield (Ordon / Hylian / Light)" }
 item{ id = "shovel", description = "Shovel" }
 item{ id = "small_key", description = "Small Key" }
-item{ id = "stick", description = "Deku Stick" }
-item{ id = "stick_counter", description = "Deku Stick counter" }
 item{ id = "sword", description = "Sword (Ordon / Forged / Light)" }
 item{ id = "trading", description = "Trading Item (12 variants)" }
 item{ id = "tunic", description = "Tunic (Green / Red / Blue)" }
@@ -637,7 +623,9 @@ enemy{ id = "wizzrobe_fire", description = "Wizzrobe, Fire" }
 enemy{ id = "wizzrobe_ice", description = "Wizzrobe, Ice" }
 enemy{ id = "zola", description = "Zola" }
 
-entity{ id = "animals/animal_dog", description = "Dog" }
+entity{ id = "animals/bird", description = "Bird" }
+entity{ id = "animals/butterfly", description = "Butterfly" }
+entity{ id = "animals/dog", description = "Dog" }
 entity{ id = "arrow", description = "Arrow" }
 entity{ id = "butterfly", description = "Butterfly" }
 entity{ id = "collectibles/steak", description = "Steak" }
@@ -661,6 +649,7 @@ entity{ id = "npcs/npc_hylian_virgator", description = "NPC: Hylian Virgator" }
 entity{ id = "ocarina_patch", description = "Ocarina Patch" }
 entity{ id = "platform", description = "Moving Platform" }
 entity{ id = "quicksand", description = "Quicksand (Lakebed)" }
+entity{ id = "shop_manager", description = "Shop Manager" }
 entity{ id = "soil", description = "Soft soil (Shovel)" }
 entity{ id = "stone_pile", description = "Stone pile" }
 entity{ id = "switch_rust", description = "Switch, Rusted" }

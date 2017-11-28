@@ -145,12 +145,13 @@ hero_meta:register_event("is_condition_active", function(hero, condition)
   end
 end)
 
-hero_meta:register_event("set_condition_active", function(hero, condition, active)
+hero_meta:register_event("set_condition", function(hero, condition, active)
   hero.condition[condition] = active
 end)
 
 hero_meta:register_event("on_taking_damage", function(hero, in_damage)
   local damage = in_damage
+  local game = hero:get_game()
 
   if hero:is_condition_active('frozen') then
     damage = damage * 3
@@ -165,7 +166,6 @@ hero_meta:register_event("on_taking_damage", function(hero, in_damage)
   local protection_divider = tunic_level * math.ceil(shield_level / 2)
   if protection_divider == 0 then protection_divider = 1 end
   damage = math.floor(damage / protection_divider)
-
   if damage < 1 then damage = 1 end
 
   game:remove_life(damage)

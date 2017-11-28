@@ -10,7 +10,7 @@ local minimap = {
   sprite = nil -- The minimap sprite, representing the map
 }
 
-local chest_loader = require("scripts/loader/chest")
+local chest_loader = require("scripts/maps/chest")
 
 function minimap:new(game)
   local object = {}
