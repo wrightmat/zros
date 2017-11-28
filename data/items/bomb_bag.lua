@@ -10,18 +10,17 @@ end
 
 function item:on_variant_changed(variant)
   -- The bomb bag determines the maximum amount of the bomb counter.
-  local bombs_counter = self:get_game():get_item("bomb_counter")
   local bomb = self:get_game():get_item("bomb")
   if variant == 0 then
-    bombs_counter:set_max_amount(0)
+    bomb:set_max_amount(0)
     bomb:set_obtainable(false)
   else
     local max_amounts = {10, 30, 60}
     local max_amount = max_amounts[variant]
 
     -- Set the max value of the bomb counter.
-    bombs_counter:set_variant(1)
-    bombs_counter:set_max_amount(max_amount)
+    bomb:set_variant(1)
+    bomb:set_max_amount(max_amount)
 
     -- Unlock pickable bombs.
     bomb:set_obtainable(true)
@@ -30,7 +29,7 @@ end
 
 function item:on_obtaining(variant, savegame_variable)
   if variant > 0 then
-    local bombs_counter = self:get_game():get_item("bomb_counter")
-    bombs_counter:set_amount(bombs_counter:get_max_amount())
+    local bomb = self:get_game():get_item("bomb")
+    bomb:set_amount(bomb:get_max_amount())
   end
 end
