@@ -11,7 +11,7 @@ game:set_value(entity:get_name() .. "_memory", 12) -- Number of dialogs this NPC
 -- Hylian Virgator/Landowner (name?)
 -- Walks out of his house in the morning, then through town to
 -- each of his farms throughout the day. Returns home in the evening.
-
+--[[
 function entity:determine_routine()
   if hour == 7 then
     follow_path(entity, "wp_npc_virgator_1", function()
@@ -87,7 +87,7 @@ function entity:on_created()
     return true
   end)
 end
-
+--]]
 function entity:on_interaction()
   entity:on_generic_interaction()
 end

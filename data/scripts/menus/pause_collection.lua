@@ -88,8 +88,8 @@ function collection_submenu:on_finished()
   end
 
   if self.game.hud ~= nil then
-    self.game.hud.elements[10].surface:set_opacity(255)
-    self.game.hud.elements[11].surface:set_opacity(255)
+    self.game.hud.primary[5].surface:set_opacity(255)
+    self.game.hud.primary[6].surface:set_opacity(255)
   end
 end
 
@@ -115,8 +115,8 @@ function collection_submenu:set_cursor_position(row, column)
     self:set_caption(nil)
     self.game:set_custom_command_effect("action", nil)
   end
-  self.game.hud.elements[10].surface:set_opacity(item_icon_opacity) -- item_icon_1
-  self.game.hud.elements[11].surface:set_opacity(item_icon_opacity) -- item_icon_2
+  self.game.hud.primary[5].surface:set_opacity(item_icon_opacity) -- item_icon_1
+  self.game.hud.primary[6].surface:set_opacity(item_icon_opacity) -- item_icon_2
 end
 
 function collection_submenu:get_selected_index()

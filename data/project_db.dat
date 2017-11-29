@@ -469,11 +469,9 @@ sound{ id = "wrong", description = "wrong" }
 sound{ id = "zora", description = "zora" }
 
 item{ id = "arrow", description = "Arrows (x1 / x3 / x5)" }
-item{ id = "arrow_light", description = "Light Arrows (x1 / x3 / x5)" }
 item{ id = "big_key", description = "Dungeon Big Key" }
 item{ id = "bomb", description = "Bombs (x1 / x3 / x5)" }
 item{ id = "bomb_bag", description = "Bomb bag (small / large / huge)" }
-item{ id = "book_mudora", description = "Book of Mudora (7 variants)" }
 item{ id = "boomerang", description = "Boomerang" }
 item{ id = "boots", description = "Pegasus Boots" }
 item{ id = "boss_key", description = "Dungeon Boss Key" }
@@ -482,7 +480,6 @@ item{ id = "bottle_2", description = "Bottle 2" }
 item{ id = "bottle_3", description = "Bottle 3" }
 item{ id = "bottle_4", description = "Bottle 4" }
 item{ id = "bow", description = "Hero's Bow" }
-item{ id = "bow_light", description = "Bow of Light" }
 item{ id = "cane", description = "Hebra's Cane" }
 item{ id = "compass", description = "Dungeon Compass" }
 item{ id = "fairy", description = "Fairy" }
@@ -513,7 +510,6 @@ item{ id = "shield", description = "Shield (Ordon / Hylian / Light)" }
 item{ id = "shovel", description = "Shovel" }
 item{ id = "small_key", description = "Small Key" }
 item{ id = "sword", description = "Sword (Ordon / Forged / Light)" }
-item{ id = "trading", description = "Trading Item (12 variants)" }
 item{ id = "tunic", description = "Tunic (Green / Red / Blue)" }
 item{ id = "world_map", description = "World Map" }
 

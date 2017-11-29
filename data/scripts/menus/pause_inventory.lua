@@ -71,11 +71,11 @@ function inventory_submenu:on_started()
   self.caption_text_keys[1] = "quest_status.caption.pieces_of_heart"
   
   -- Trading sequence.
-  local trading_sequence = self.game:get_value("i1800") or 0
-  item_sprite:set_animation("trading_sequence")
-  item_sprite:set_direction(trading_sequence)
-  item_sprite:draw(self.inventory_items_surface, 100, 129)
-  self.caption_text_keys[2] = "quest_status.caption.trading_sequence"
+  --local trading_sequence = self.game:get_value("i1800") or 0
+  --item_sprite:set_animation("trading_sequence")
+  --item_sprite:set_direction(trading_sequence)
+  --item_sprite:draw(self.inventory_items_surface, 100, 129)
+  --self.caption_text_keys[2] = "quest_status.caption.trading_sequence"
   
   -- Rupee bag.
   local rupee_bag = self.game:get_item("rupee_bag"):get_variant()
@@ -173,8 +173,8 @@ function inventory_submenu:on_started()
   
   -- Initialize the cursor
   local index = self.game:get_value("pause_inventory_last_item_index") or 0
-  local row = math.floor(index / 7)
-  local column = index % 7
+  local row = math.floor(index / 6)
+  local column = index % 6
   self:set_cursor_position(row, column)
 end
 
@@ -197,7 +197,7 @@ function inventory_submenu:set_cursor_position(row, column)
   self.cursor_row = row
   self.cursor_column = column
   
-  local index = row * 7 + column
+  local index = row * 6 + column
   self.game:set_value("pause_inventory_last_item_index", index)
   
   -- Update the caption text and the action icon.
@@ -221,7 +221,7 @@ function inventory_submenu:set_cursor_position(row, column)
 end
 
 function inventory_submenu:get_selected_index()
-  return self.cursor_row * 7 + self.cursor_column
+  return self.cursor_row * 6 + self.cursor_column
 end
 
 function inventory_submenu:is_item_selected()
@@ -262,7 +262,7 @@ function inventory_submenu:on_command_pressed(command)
       handled = true
 
     elseif command == "right" then
-      if self.cursor_column == 6 then
+      if self.cursor_column == 5 then
         self:next_submenu()
       else
         sol.audio.play_sound("cursor")
@@ -291,21 +291,22 @@ function inventory_submenu:on_draw(dst_surface)
   self:draw_caption(dst_surface)
   -- Draw each inventory item.
   local quest_width, quest_height = dst_surface:get_size()
-  local initial_x = quest_width / 2 - 96
-  local initial_y = quest_height / 2 - 38
+  local initial_x = quest_width / 2 - 80
+  local initial_y = quest_height / 2 - 42
   local y = initial_y
   local k = 0
   for i = 0, 3 do
     local x = initial_x
-    for j = 0, 6 do
+    for j = 0, 5 do
       k = k + 1
       if item_names[k] ~= nil then
         local item = self.game:get_item(item_names[k])
         if item ~= nil and item:get_variant() > 0 then
           -- The player has this item: draw it.
-          self.sprites[k]:draw(dst_surface, x, y)
+          self.sprites[k]:draw(dst_surface, x, y + 6)
           if self.counters[k] ~= nil then
-            self.counters[k]:draw(dst_surface, x + 8, y)
+            -- This item has a counter: draw it.
+            self.counters[k]:draw(dst_surface, x + 6, y + 4)
           end
         end
       end
@@ -316,7 +317,7 @@ function inventory_submenu:on_draw(dst_surface)
   -- Draw the un-equippable items.
   self.inventory_items_surface:draw(dst_surface, x, y)
   -- Draw the cursor.
-  self.cursor_sprite:draw(dst_surface, initial_x + 32 * self.cursor_column, initial_y - 5 + 32 * self.cursor_row)
+  self.cursor_sprite:draw(dst_surface, initial_x + 32 * self.cursor_column, initial_y + 32 * self.cursor_row)
   -- Draw the item being assigned if any.
   if self:is_assigning_item() then
     self.item_assigned_sprite:draw(dst_surface)
@@ -398,9 +399,8 @@ function inventory_submenu:is_assigning_item()
 end
 
 -- Stops assigning the item right now.
--- This function is called when we want to assign the item without
--- waiting for its throwing movement to end, for example when the inventory submenu
--- is being closed.
+-- This function is called when we want to assign the item without waiting for its
+-- throwing movement to end, for example when the inventory submenu is being closed.
 function inventory_submenu:finish_assigning_item()
   -- If the item to assign is already assigned to the other icon, switch both items.
   local slot = self.item_assigned_destination
