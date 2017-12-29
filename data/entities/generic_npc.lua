@@ -114,13 +114,21 @@ end
 
 function entity:on_post_draw()
   -- Draw the NPC's name above the entity if it's known.
-  if game:get_value(entity:get_name() .. "_known") then
-    local name_surface = sol.text_surface.create({ font = font, font_size = 8, text = name_display })
-    local x, y, l = entity:get_position()
-    local w, h = entity:get_sprite():get_size()
-    if self:get_distance(hero) < 100 then
-      map:draw_visual(name_surface, x-(w/2), y-(h-4))
+  if entity:get_name() ~= nil then
+    if game:get_value(entity:get_name() .. "_known") then
+      local name_surface = sol.text_surface.create({ font = font, font_size = 8, text = name_display })
+      local x, y, l = entity:get_position()
+      local w, h = entity:get_sprite():get_size()
+      if self:get_distance(hero) < 100 then
+        map:draw_visual(name_surface, x-(w/2), y-(h-4))
+      end
     end
+  end
+end
+
+function entity:set_routine(npc, routine)
+  for k, v in pairs(routine) do
+    game:add_routine(k, npc:get_name(), v)
   end
 end
 
@@ -131,7 +139,7 @@ end
 
 function entity:on_obstacle_reached(movement)
   entity:add_collision_test("touching", function(self, other)
-    if can_converse and other:get_type() == "custom_entity" and string.sub(other:get_name(), 1, 4) == "npc_" then
+    if can_converse and other:get_type() == "custom_entity" and other:get_name() ~= nil and string.sub(other:get_name(), 1, 4) == "npc_" then
       -- Stop each character, storing their movements to resume later.
       can_converse = false
       if entity:get_movement() then
@@ -180,7 +188,9 @@ function entity:on_obstacle_reached(movement)
         -- TODO: Figure out why the characters jump around when the movement is resumed - am I doing something wrong or an engine bug?
         talking_sprite:remove()
         m1:start(entity); entity:get_sprite():set_animation("walking")
-        m2:start(other); other:get_sprite():set_animation("walking")
+        if m2 ~= nil then
+          m2:start(other); other:get_sprite():set_animation("walking")
+        end
       end)
       sol.timer.start(game, 20000, function() can_converse = true end)
     end

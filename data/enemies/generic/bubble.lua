@@ -1,6 +1,6 @@
 local behavior = {}
 
--- Behavior of an an invincible enemy that moves 
+-- Behavior of an invincible enemy that moves 
 -- in diagonal directions and bounces against walls.
 
 function behavior:create(enemy, properties)

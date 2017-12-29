@@ -24,21 +24,3 @@ function item:on_obtaining(variant, savegame_variable)
   end
   game:get_item("bow"):add_amount(amount)
 end
-
-function item:on_pickable_created(pickable)
-  if game:has_item("bow_light") then
-    -- Automatically replace the normal arrow by a light one.
-    local _, variant, savegame_variable = pickable:get_treasure()
-    local map = pickable:get_map()
-    local x, y, layer = pickable:get_position()
-    map:create_pickable{
-      layer = layer,
-      x = x,
-      y = y,
-      treasure_name = "arrow_light",
-      treasure_variant = variant,
-      treasure_savegame_variable = savegame_variable,
-    }
-    pickable:remove()
-  end
-end

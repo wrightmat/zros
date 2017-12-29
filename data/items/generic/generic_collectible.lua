@@ -41,9 +41,6 @@ function generic:create(entity, properties)
   end
   
   function entity:on_created()
-print(name_display)
-print(properties.effect)
-print(properties.variant)
     self:set_shadow("small")
     self:set_can_disappear(true)
     self:set_assignable(true)

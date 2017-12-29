@@ -20,7 +20,7 @@ function entity:on_created()
   local sprite = self:get_sprite()
   if sprite then self.main_sprite = sprite end -- Store main sprite in variable.
   -- Add wings sprite.
-  local wings_sprite = self:create_sprite("npc/butterfly_grey")
+  local wings_sprite = self:create_sprite("entities/wings")
   wings_sprite:set_animation("wings")
   self.wings_sprite = wings_sprite -- Store wings sprite in variable.
   -- Create shadow sprite.

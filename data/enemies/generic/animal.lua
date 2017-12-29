@@ -47,6 +47,12 @@ function entity:follow_path(entity, dest, callback)
 end
 
 function entity:on_generic_created()
+  self:set_drawn_in_y_order(true)
+  self:set_can_traverse("hero", false)
+  self:set_traversable_by("hero", false)
+  -- Don't allow NPC to traverse other NPCs when moving.
+  self:set_traversable_by("npc", false)
+  self:set_traversable_by("custom_entity", false)
   self:random_walk()
 end
 
