@@ -7,6 +7,7 @@ local rain_manager_enabled = true
 local snow_manager_enabled = true
 local hail_manager_enabled = true
 local leaf_manager_enabled = true
+local sand_manager_enabled = true
 
 local game_meta = sol.main.get_metatable("game")
 
@@ -41,4 +42,12 @@ else -- Redefine methods to avoid errors.
   function game_meta:set_leaf_mode(leaf_mode) end
   function game_meta:get_world_leaf_mode(world) return nil end
   function game_meta:set_world_leaf_mode(world, leaf_mode) end
+end
+if sand_manager_enabled then
+  require("scripts/weather/sand_manager")
+else -- Redefine methods to avoid errors.
+  function game_meta:get_sand_mode() return nil end
+  function game_meta:set_sand_mode(sand_mode) end
+  function game_meta:get_world_sand_mode(world) return nil end
+  function game_meta:set_world_sand_mode(world, sand_mode) end
 end

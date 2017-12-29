@@ -1,22 +1,24 @@
--- Leaf manager script.
+-- fall manager script.
 -- From "snow manager" script by Diarandor (Solarus Team). Modified by froggy77.
 -- License: GPL v3-or-later.
 -- Donations: solarus-games.org, diarandor at gmail dot com.
 
 --[[   Instructions:
 To add this script to your game, call from game_manager script:
-    require("scripts/weather/leaf_manager")
+    require("scripts/weather/fall_manager")
 
 The functions here defined are:
     game:get_leaf_mode()
-    game:set_leaf_mode(leaf_mode)
+    game:set_leaf_mode(fall_mode)
     game:get_world_leaf_mode(world)
-    game:set_world_leaf_mode(world, leaf_mode)
+    game:set_world_leaf_mode(world, fall_mode)
 
-fall modes: "leaf", "leaf_storm", nil (no leaves).
+leaf modes: "leaf", "leaf_storm", nil (no fall).
 --]]
 
-local leaf_manager = {}
+-- This script requires the multi_event script and the teleporters meta:
+require("scripts/multi_events")
+local fall_manager = {}
 
 local game_meta = sol.main.get_metatable("game")
 local map_meta = sol.main.get_metatable("map")
@@ -43,36 +45,36 @@ local current_game, current_map, current_fall_mode, previous_fall_mode
 local previous_world, current_world, is_scrolling
 
 -- Get/set current fall mode in the current map.
-function game_meta:get_leaf_mode() return current_leaf_mode end
+function game_meta:get_leaf_mode() return current_fall_mode end
 function game_meta:set_leaf_mode(fall_mode)
   previous_world = current_world
-  leaf_manager:start_leaf_mode(leaf_mode)
+  fall_manager:start_fall_mode(fall_mode)
 end
 -- Get/set the fall mode for a given world.
 function game_meta:get_world_leaf_mode(world)
-  return world and self:get_value("leaf_mode_" .. world) or nil
+  return world and self:get_value("fall_mode_" .. world) or nil
 end
-function game_meta:set_world_leaf_mode(world, leaf_mode)
-  self:set_value("leaf_mode_" .. world, leaf_mode)
-  if current_world == world then self:set_leaf_mode(leaf_mode) end
+function game_meta:set_world_leaf_mode(world, fall_mode)
+  self:set_value("fall_mode_" .. world, fall_mode)
+  if current_world == world then self:set_leaf_mode(fall_mode) end
 end
 
 -- Initialize fall manager.
 game_meta:register_event("on_started", function(game)
   current_game = game
-  leaf_manager:on_created()
+  fall_manager:on_created()
 end)
 -- Initialize fall on maps when necessary.
 game_meta:register_event("on_map_changed", function(game)
-  leaf_manager:on_map_changed(game:get_map())
+  fall_manager:on_map_changed(game:get_map())
 end)
 -- Allow to draw surfaces (it uses the event "game.on_draw").
 game_meta:register_event("on_draw", function(game, dst_surface)
-  leaf_manager:on_draw(dst_surface)
+  fall_manager:on_draw(dst_surface)
 end)
 
 -- Create fall and dark surfaces.
-function leaf_manager:on_created()
+function fall_manager:on_created()
   -- Create surfaces.
   local w, h = sol.video.get_quest_size()
   fall_surface = sol.surface.create(w, h)
@@ -81,7 +83,7 @@ function leaf_manager:on_created()
   dark_surface:set_blend_mode("multiply")
   leaf_surface = sol.surface.create(8, 8)
   -- Initialize main variables.
-  current_leaf_mode, previous_leaf_mode, previous_world = nil, nil, nil
+  current_fall_mode, previous_fall_mode, previous_world = nil, nil, nil
   num_leaves, num_splashes, current_darkness = 0, 0, 0
   leaf_list, splash_list, timers = {}, {}, {}
   local num_slots = math.max(max_num_leaves_fall, max_num_leaves_fall_storm)
@@ -94,20 +96,20 @@ function leaf_manager:on_created()
 end
 
 -- Update current_fall_mode and current_map variables.
-function leaf_manager:on_map_changed(map)
+function fall_manager:on_map_changed(map)
   local world = map:get_world()
   current_map = map
   previous_world = current_world
   current_world = world
-  local leaf_mode = current_game:get_world_leaf_mode(world)
-  self:start_leaf_mode(leaf_mode)
+  local fall_mode = current_game:get_world_leaf_mode(world)
+  self:start_fall_mode(fall_mode)
   if is_scrolling then self:finish_scrolling() end
 end
 
 -- Draw surfaces of the fall manager.
-function leaf_manager:on_draw(dst_surface)
-  if current_leaf_mode == nil then
-    if previous_leaf_mode == nil or previous_world ~= current_world then
+function fall_manager:on_draw(dst_surface)
+  if current_fall_mode == nil then
+    if previous_fall_mode == nil or previous_world ~= current_world then
       return
     end
   end
@@ -122,7 +124,7 @@ function leaf_manager:on_draw(dst_surface)
 end
 
 -- Draw a falling leaf or splash on a surface with its properties (Opacity = 0 means transparent).
-function leaf_manager:draw_leaf(dst_surface, x, y, leaf, animation)
+function fall_manager:draw_leaf(dst_surface, x, y, leaf, animation)
   leaf_sprite:set_animation(animation)
   leaf_sprite:set_direction(leaf.direction or 0)
   leaf_sprite:set_frame(leaf.frame or 0)
@@ -133,8 +135,8 @@ function leaf_manager:draw_leaf(dst_surface, x, y, leaf, animation)
 end
 
 -- Update fall surface.
-function leaf_manager:update_fall_surface()
-  if current_leaf_mode == nil and previous_leaf_mode == nil then
+function fall_manager:update_fall_surface()
+  if current_fall_mode == nil and previous_fall_mode == nil then
     return
   end
   fall_surface:clear()
@@ -159,10 +161,10 @@ function leaf_manager:update_fall_surface()
 end
 
 -- Create properties list for a new water leaf at random position.
-function leaf_manager:create_leaf(deviation)
+function fall_manager:create_leaf(deviation)
   -- Prepare next slot.
   local max_num_leaves = max_num_leaves_fall
-  if current_leaf_mode == "fall_storm" then max_num_leaves = max_num_leaves_fall_storm end
+  if current_fall_mode == "leaf_storm" then max_num_leaves = max_num_leaves_fall_storm end
   local index, leaf = 0, leaf_list[0]
   while index < max_num_leaves and leaf.exists do
     index = index + 1
@@ -175,7 +177,7 @@ function leaf_manager:create_leaf(deviation)
   leaf.init_x = cx + cw * math.random()
   leaf.init_y = cy + ch * math.random()
   leaf.x, leaf.y, leaf.frame = 0, 0, 0
-  leaf.speed = (current_fall_mode == "fall") and fall_speed or fall_storm_speed
+  leaf.speed = (current_fall_mode == "leaf") and fall_speed or fall_storm_speed
   local num_dir = leaf_sprite:get_num_directions("leaf")
   leaf.direction = math.random(0, num_dir - 1) -- Sprite direction.
   local inverted_angle = (math.random(0,1) == 1)
@@ -190,7 +192,7 @@ function leaf_manager:create_leaf(deviation)
 end
 
 -- Create splash effect and put it in the list.
-function leaf_manager:create_splash(index)
+function fall_manager:create_splash(index)
   -- Disable associated leaf.
   local leaf = leaf_list[index]
   num_leaves = num_leaves - 1
@@ -207,7 +209,7 @@ function leaf_manager:create_splash(index)
 end
 
 -- Destroy the timers whose names appear in the list.
-function leaf_manager:stop_timers(timers_list)
+function fall_manager:stop_timers(timers_list)
   for _, key  in pairs(timers_list) do
     local t = timers[key]
     if t then t:stop() end
@@ -216,7 +218,7 @@ function leaf_manager:stop_timers(timers_list)
 end
 
 -- Start a fall mode in the current map.
-function leaf_manager:start_leaf_mode(fall_mode)
+function fall_manager:start_fall_mode(fall_mode)
   -- Update fall modes.
   previous_fall_mode = current_fall_mode
   current_fall_mode = fall_mode
@@ -225,21 +227,21 @@ function leaf_manager:start_leaf_mode(fall_mode)
   -- Update darkness (fade-out effects included).
   self:update_darkness()
   -- Nothing more to do if there is no fall.
-  if leaf_mode == nil then return end
+  if fall_mode == nil then return end
   --Initialize leaf parameters (used by "fall_manager.create_leaf").
   local game = current_game
   local current_leaf_delay
-  if leaf_mode == "fall" then current_leaf_delay = fall_leaf_delay
-  elseif leaf_mode == "fall_storm" then current_leaf_delay = fall_storm_leaf_delay
-  elseif leaf_mode ~= nil then error("Invalid fall mode.") end
+  if fall_mode == "leaf" then current_leaf_delay = fall_leaf_delay
+  elseif fall_mode == "leaf_storm" then current_leaf_delay = fall_storm_leaf_delay
+  elseif fall_mode ~= nil then error("Invalid fall mode.") end
   -- Initialize leaf creation timer.
   timers["leaf_creation_timer"] = sol.timer.start(game, current_leaf_delay, function()
     -- Random angle deviation in case of fall_storm.
     local leaf_deviation = 0
-    if leaf_mode == "fall_storm" then
+    if fall_mode == "leaf_storm" then
       leaf_deviation = math.random(-1, 1) * math.random() * math.pi / 8
     end
-    leaf_manager:create_leaf(leaf_deviation)
+    fall_manager:create_leaf(leaf_deviation)
     return true -- Repeat loop.
   end)
   -- Initialize leaf position timer.
@@ -313,10 +315,10 @@ function leaf_manager:start_leaf_mode(fall_mode)
 end
 
 -- Fade in/out dark surface for fall_storm mode. Parameter (opacity) is optional.
-function leaf_manager:update_darkness()
+function fall_manager:update_darkness()
   -- Define next darkness value.
   local darkness = 0
-  if current_fall_mode == "fall_storm" then
+  if current_fall_mode == "leaf_storm" then
     darkness = math.random(min_darkness, max_darkness)
   end
   local d = 0 -- Increment/decrement for opacity.
@@ -333,7 +335,7 @@ function leaf_manager:update_darkness()
     dark_surface:clear()
     dark_surface:fill_color({r, g, b})
     if darkness == current_darkness then -- Darkness reached.
-      if current_fall_mode == "fall_storm" then -- fall_storm mode.
+      if current_fall_mode == "leaf_storm" then -- fall_storm mode.
         self:update_darkness() -- Repeat process with new random darkness value.
       end
       return false
@@ -344,16 +346,16 @@ function leaf_manager:update_darkness()
 end
 
 -- Add scrolling features to teletransporters.
-function leaf_manager:initialize_scrolling_feature()
+function fall_manager:initialize_scrolling_feature()
   local tele_meta = sol.main.get_metatable("teletransporter")
   tele_meta:register_event("on_activated", function(tele)
     local dir = tele:get_scrolling_direction()
-    if dir then leaf_manager:start_scrolling(dir) end
+    if dir then fall_manager:start_scrolling(dir) end
   end)
 end
 
 -- Start scrolling feature: shift 5 pixels each 10 milliseconds (like the engine).
-function leaf_manager:start_scrolling(direction)
+function fall_manager:start_scrolling(direction)
   is_scrolling = true
   local dx = {[0] = -1, [1] = 0, [2] = 1, [3] = 0}
   local dy = {[0] = 0, [1] = -1, [2] = 0, [3] = 1}
@@ -367,12 +369,12 @@ function leaf_manager:start_scrolling(direction)
   timers["scrolling"]:set_suspended_with_map(false)
 end
 -- Stop scrolling feature.
-function leaf_manager:finish_scrolling()
+function fall_manager:finish_scrolling()
   local map = current_map
   map:register_event("on_opening_transition_finished", function(map)
     is_scrolling = false
   end)
 end
 
--- Return leaf manager.
-return leaf_manager
+-- Return fall manager.
+return fall_manager

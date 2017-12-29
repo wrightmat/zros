@@ -9,6 +9,7 @@ function fire:on_created()
   self:set_size(16, 16); self:set_origin(8, 13)
   self:set_can_traverse("hero", true)
   self:set_traversable_by("hero", true)
+  self:set_layer_independent_collisions(true)
   
   function sprite:on_animation_finished()
     fire:remove()
@@ -57,17 +58,26 @@ end)
 fire:add_collision_test("touching", function(fire, entity)
   if entity:get_type() == "destructible" then
     if not is_flammable(entity) then return end
-    
     -- Possibly already being destroyed.
     if get_destructible_sprite(entity):get_animation() ~= "on_ground" then return end
-    
     local ex, ey, el = entity:get_position()
-    if math.random(10) >= 4 and not entity:overlaps(fire, "sprite") then -- 60% chance of the bush spreading the fire.
+    if math.random(10) >= 4 and not entity:overlaps(fire, "sprite") then -- 60% chance of the destructible spreading the fire.
       sol.timer.start(map, math.random(10*100), function()
         map:create_custom_entity({ direction = 0, x = ex, y = ey, layer = el, width = 16, height = 16, model = "fire" })
       end)
     end
     sol.timer.start(map, 500, function() destroy_destructible(fire, entity) end)
+  elseif entity:get_type() == "dynamic_tile" then
+    local tile_id = entity:get_pattern_id()
+    if not tile_id:match("^tree") or tile_id:match("^wood") or tile_id:match("^grass") then return end
+    local ex, ey, el = entity:get_position(); local eh, ew = entity:get_size()
+    local fx, fy, fl = fire:get_position()
+    if math.random(10) >= 4 then
+      sol.timer.start(map, math.random(10*100), function()
+print("creating fire at position " .. fx+((ex-fx)/2) .. ", " .. fy+((ey-fy)/2))
+        map:create_custom_entity({ direction = 0, x = fx+((ex-fx)/2), y = fy+((ey-fy)/2), layer = el, width = 16, height = 16, model = "fire" })
+      end)
+    end
   end
   
   function destroy_destructible(fire, entity)
