@@ -1,11 +1,40 @@
-map{ id = "hylian_settlement", description = "Hylian Settlement" }
-map{ id = "hylian_settlement_inside", description = "Inside Hylian Settlement" }
-map{ id = "hylian_settlement_inside - Copy", description = "hylian_settlement_inside - Copy" }
+map{ id = "A2", description = "Gerudo Desert" }
+map{ id = "A3", description = "Sand Sea" }
+map{ id = "A4", description = "Lonnie Ranch" }
+map{ id = "A5", description = "Lake Hylia North" }
+map{ id = "A6", description = "Lake Hylia South" }
+map{ id = "B1", description = "Subrosia (Underground)" }
+map{ id = "B2", description = "Gerudo Encampment" }
+map{ id = "B3", description = "Lanayru Desert" }
+map{ id = "B4", description = "Hylian Settlement" }
+map{ id = "B5", description = "Hylian Field South" }
+map{ id = "B6", description = "Korok Woods" }
+map{ id = "C1", description = "Eldin Volcano" }
+map{ id = "C2", description = "Eldin Pass" }
+map{ id = "C3", description = "Sheikah Village" }
+map{ id = "C4", description = "Hylian Field East" }
+map{ id = "C5", description = "Lost Woods" }
+map{ id = "C6", description = "Hylian Garrison" }
+map{ id = "D1", description = "Goron Village" }
+map{ id = "D2", description = "Death Mountain Crater" }
+map{ id = "D3", description = "Faron Woods / Shadow Temple" }
+map{ id = "E1", description = "Hebra Peak" }
+map{ id = "E2", description = "Hebra Climb" }
+map{ id = "E3", description = "Zora's Domain / Cistern Cavern" }
+map{ id = "E4", description = "Lake Floria" }
+map{ id = "Inside_B4", description = "Hylian Settlement, Inside" }
 
-tileset{ id = "dungeon1", description = "Dungeon 1" }
 tileset{ id = "indoors", description = "Indoors" }
 tileset{ id = "outdoors", description = "Outdoors" }
 
+sprite{ id = "animals/cucco", description = "Cucco" }
+sprite{ id = "animals/dog", description = "dog" }
+sprite{ id = "animals/goat", description = "Goat" }
+sprite{ id = "animals/pig", description = "Pig" }
+sprite{ id = "animals/rabbit_1", description = "Rabbit 1" }
+sprite{ id = "animals/rabbit_2", description = "Rabbit 2" }
+sprite{ id = "animals/rabbit_3", description = "Rabbit 3" }
+sprite{ id = "animals/swan", description = "Swan" }
 sprite{ id = "effects/rain", description = "Rain" }
 sprite{ id = "enemies/armos", description = "Armos Statue" }
 sprite{ id = "enemies/armos_big", description = "Armos Statue, Big" }
@@ -129,7 +158,6 @@ sprite{ id = "entities/bush", description = "Bush" }
 sprite{ id = "entities/bush_snow", description = "Bush, snowy" }
 sprite{ id = "entities/chest", description = "Chest (normal)" }
 sprite{ id = "entities/chest_big", description = "Chest (big)" }
-sprite{ id = "entities/collectibles/steak", description = "steak" }
 sprite{ id = "entities/conveyor", description = "Conveyor (Arrows)" }
 sprite{ id = "entities/conveyor_belt", description = "Conveyor Belt" }
 sprite{ id = "entities/crystal", description = "Crystal" }
@@ -154,6 +182,7 @@ sprite{ id = "entities/fire_small", description = "Fire (small)" }
 sprite{ id = "entities/fireworks_shell", description = "Fireworks (aerial shell)" }
 sprite{ id = "entities/fireworks_shower", description = "Fireworks (ground shower)" }
 sprite{ id = "entities/grass", description = "Grass" }
+sprite{ id = "entities/great_tree_top", description = "Great Tree (Top)" }
 sprite{ id = "entities/ground_effects", description = "Ground Effects" }
 sprite{ id = "entities/hammer_stake", description = "Hammer Stake" }
 sprite{ id = "entities/hint_stone", description = "Hint stone" }
@@ -215,6 +244,7 @@ sprite{ id = "entities/vine_left", description = "Vines, Left" }
 sprite{ id = "entities/vine_right", description = "Vines, Right" }
 sprite{ id = "entities/vine_up", description = "Vines, Up" }
 sprite{ id = "entities/warp_appears", description = "Warp Appears" }
+sprite{ id = "entities/wings", description = "Wings (Flying Pickable)" }
 sprite{ id = "hero/ground1", description = "Hero: Ground 1 (grass)" }
 sprite{ id = "hero/ground2", description = "Hero: Ground 2 (water)" }
 sprite{ id = "hero/shield1", description = "Hero: Shield 1" }
@@ -260,22 +290,22 @@ sprite{ id = "menus/quest_icons", description = "Menus: Quest Icons" }
 sprite{ id = "menus/quests_cursor", description = "Menus: Quests Cursor" }
 sprite{ id = "menus/selection_menu_cursor", description = "Menus: Selection menu cursor" }
 sprite{ id = "menus/solarus_logo", description = "Menus: Solarus logo" }
-sprite{ id = "npc/animal_dog", description = "Dog" }
-sprite{ id = "npc/animal_goat", description = "Goat" }
-sprite{ id = "npc/animal_pig", description = "Pig" }
-sprite{ id = "npc/animal_rabbit_1", description = "Rabbit 1" }
-sprite{ id = "npc/animal_rabbit_2", description = "Rabbit 2" }
-sprite{ id = "npc/animal_rabbit_3", description = "Rabbit 3" }
-sprite{ id = "npc/animal_swan", description = "Swan" }
+sprite{ id = "npc/beetle_horned", description = "Beetle, Horned" }
+sprite{ id = "npc/beetle_pincer", description = "Beetle, Pincer" }
+sprite{ id = "npc/beetle_rhino", description = "Beetle, Rhino" }
+sprite{ id = "npc/beetle_stag", description = "Beetle, Stag" }
 sprite{ id = "npc/butterfly_blessed", description = "Butterfly, blessed" }
 sprite{ id = "npc/butterfly_blue", description = "Butterfly, blue" }
 sprite{ id = "npc/butterfly_grey", description = "Butterfly, grey" }
-sprite{ id = "npc/butterfly_orange", description = "Butterfly, orange" }
-sprite{ id = "npc/butterfly_purple", description = "Butterfly, purple" }
-sprite{ id = "npc/butterfly_red", description = "Butterfly, red" }
+sprite{ id = "npc/butterfly_pink", description = "Butterfly, pink" }
+sprite{ id = "npc/dragonfly_dark", description = "Dragonfly, dark" }
+sprite{ id = "npc/dragonfly_gerudo", description = "Dragonfly, Gerudo" }
+sprite{ id = "npc/dragonfly_green", description = "Dragonfly, green" }
+sprite{ id = "npc/dragonfly_yellow", description = "Dragonfly, yellow" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo Merchant" }
 sprite{ id = "npc/goron", description = "Goron" }
 sprite{ id = "npc/great_fairy", description = "Great Fairy" }
+sprite{ id = "npc/great_tree", description = "Great Tree" }
 sprite{ id = "npc/guard_hylian", description = "Hylian Guard" }
 sprite{ id = "npc/hylian_apothecary", description = "Hylian Apothecary" }
 sprite{ id = "npc/hylian_baker", description = "Hylian Baker" }
@@ -297,6 +327,21 @@ sprite{ id = "npc/hylian_rancher", description = "Hylian Rancher" }
 sprite{ id = "npc/hylian_shepherd", description = "Hylian Shepherd" }
 sprite{ id = "npc/hylian_shopkeeper", description = "Hylian Shopkeeper" }
 sprite{ id = "npc/hylian_virgator", description = "Hylian Virgator (Landowner)" }
+sprite{ id = "npc/kokiri_1", description = "Koriki 1" }
+sprite{ id = "npc/korok_1", description = "Korok 1" }
+sprite{ id = "npc/korok_10", description = "Korok Elder" }
+sprite{ id = "npc/korok_2", description = "Korok 2" }
+sprite{ id = "npc/korok_3", description = "Korok 3" }
+sprite{ id = "npc/korok_4", description = "Korok 4" }
+sprite{ id = "npc/korok_5", description = "Korok 5" }
+sprite{ id = "npc/korok_6", description = "Korok 6" }
+sprite{ id = "npc/korok_7", description = "Korok 7" }
+sprite{ id = "npc/korok_8", description = "Korok 8" }
+sprite{ id = "npc/korok_9", description = "Korok 9" }
+sprite{ id = "npc/mayfly_blue", description = "Mayfly, Blue" }
+sprite{ id = "npc/mayfly_green", description = "Mayfly, Green" }
+sprite{ id = "npc/mayfly_red", description = "Mayfly, Red" }
+sprite{ id = "npc/mayfly_yellow", description = "Mayfly, Yellow" }
 sprite{ id = "npc/rito", description = "Rito" }
 sprite{ id = "npc/subrosian_blue", description = "Subrosian (Blue, Headband)" }
 sprite{ id = "npc/subrosian_green", description = "Subrosian (Green)" }
@@ -305,6 +350,7 @@ sprite{ id = "npc/zora", description = "Zora" }
 sprite{ id = "npc/zora_king", description = "Zora King" }
 sprite{ id = "weather/leaf", description = "weather/leaf" }
 sprite{ id = "weather/rain", description = "weather/rain" }
+sprite{ id = "weather/sand", description = "weather/sand" }
 sprite{ id = "weather/snow", description = "weather/snow" }
 
 music{ id = "ballad", description = "Ballad of the Goddess (Marryn)" }
@@ -318,37 +364,27 @@ music{ id = "cave", description = "Cave" }
 music{ id = "cave_ice", description = "Cave of Ice" }
 music{ id = "cave_ordeals", description = "Cave of Ordeals" }
 music{ id = "credits", description = "Credits" }
-music{ id = "death_mountain", description = "Death Mountain" }
 music{ id = "fairy", description = "Fairy Fountain" }
-music{ id = "faron_woods", description = "Faron Woods" }
-music{ id = "field", description = "Hyrule Field" }
 music{ id = "game_over", description = "Selection menu & Game Over" }
-music{ id = "gerudo", description = "Gerudo Desert" }
-music{ id = "goron", description = "Goron City" }
 music{ id = "graveyard", description = "Graveyard" }
 music{ id = "happy_mask_salesman", description = "Happy Mask Salesman" }
 music{ id = "house", description = "House" }
 music{ id = "house_beach", description = "Beach House" }
 music{ id = "house_game", description = "Game House" }
-music{ id = "lost_woods", description = "Lost Woods" }
 music{ id = "miniboss", description = "Miniboss" }
 music{ id = "minigame", description = "Mini-game" }
-music{ id = "north", description = "North Overworld" }
-music{ id = "observatory", description = "Observatory" }
-music{ id = "ranch", description = "LonLon Ranch" }
-music{ id = "sanctuary", description = "Sanctuary" }
 music{ id = "select_screen", description = "Select Screen" }
 music{ id = "sewers", description = "Sewers" }
 music{ id = "shop", description = "Shop" }
 music{ id = "shop_potion", description = "Potion Shop" }
 music{ id = "shop_witch", description = "Witch's Hut" }
-music{ id = "subrosia", description = "Subrosia" }
 music{ id = "title_screen", description = "Title screen " }
+music{ id = "town_goron", description = "Goron City" }
 music{ id = "town_hylian", description = "Hylian Settlement" }
+music{ id = "town_korok", description = "Korok Woods" }
 music{ id = "town_ranch", description = "Lonnie's Ranch" }
 music{ id = "town_rito", description = "Rito Village" }
 music{ id = "underground", description = "Underground" }
-music{ id = "zora", description = "Zora's Domain" }
 
 sound{ id = "arrow_hit", description = "arrow_hit" }
 sound{ id = "beamos", description = "beamos" }
@@ -485,25 +521,55 @@ item{ id = "compass", description = "Dungeon Compass" }
 item{ id = "fairy", description = "Fairy" }
 item{ id = "feather", description = "Feather" }
 item{ id = "flippers", description = "Flippers" }
+item{ id = "food_fruit_1", description = "Fruit - Healing Apple" }
+item{ id = "food_fruit_2", description = "Fruit - Energizing Apple" }
+item{ id = "food_fruit_3", description = "Fruit - Powerful Bananas" }
+item{ id = "food_fruit_4", description = "Fruit - Courageous Coconut" }
+item{ id = "food_meat_1", description = "Meat - Steak" }
+item{ id = "food_meat_2", description = "Meat - Poultry" }
+item{ id = "food_meat_3", description = "Meta - Brave Porgy" }
+item{ id = "food_meat_4", description = "Meat - Enduring Carp" }
+item{ id = "food_mushroom_1", description = "Mushroom - Zapshroom" }
+item{ id = "food_mushroom_2", description = "Mushroom - Chillshroom" }
+item{ id = "food_mushroom_3", description = "Mushroom - Sunshroom" }
+item{ id = "food_mushroom_4", description = "Mushroom - Hearty Truffle" }
+item{ id = "food_plant_1", description = "Plant - Hylian Wheat" }
+item{ id = "food_plant_2", description = "Plant - Electric Saffina" }
+item{ id = "food_plant_3", description = "Plant - Cool Saffina" }
+item{ id = "food_plant_4", description = "Plant - Warm Saffina" }
+item{ id = "food_vegetable_1", description = "Vegetable - Swift Carrot" }
+item{ id = "food_vegetable_2", description = "Vegetable - Enduring Pumpkin" }
+item{ id = "food_vegetable_3", description = "Vegetable - Magical Beans" }
+item{ id = "food_vegetable_4", description = "Vegetable - Wise Wildberry" }
 item{ id = "glove", description = "Iron Glove / Golden Glove" }
 item{ id = "hammer", description = "Goron Hammer" }
 item{ id = "heart", description = "Heart (x1)" }
 item{ id = "heart_container", description = "Heart Container" }
 item{ id = "heart_piece", description = "Heart Piece (of 4)" }
 item{ id = "hookshot", description = "Hookshot" }
+item{ id = "insect_beetle", description = "Beetle" }
+item{ id = "insect_butterfly", description = "Butterfly" }
+item{ id = "insect_dragonfly", description = "Dragonfly" }
+item{ id = "insect_mayfly", description = "Mayfly" }
 item{ id = "lamp", description = "Lamp" }
 item{ id = "magic_bar", description = "Magic Bar (none / half / full)" }
 item{ id = "magic_flask", description = "Magic Flask (small / big)" }
 item{ id = "map", description = "Dungeon Map" }
+item{ id = "monster_guts", description = "Monster Guts" }
+item{ id = "monster_jelly", description = "Monster Jelly" }
+item{ id = "monster_tails", description = "Monster Tails" }
+item{ id = "monster_wings", description = "Monster Wings" }
 item{ id = "ocarina", description = "Ocarina (Wind)" }
 item{ id = "potion", description = "Potion (Red / Green / Blue)" }
 item{ id = "quiver", description = "Quiver (small / large / huge)" }
 item{ id = "random", description = "Random" }
-item{ id = "random_enemy", description = "Random, Enemy" }
-item{ id = "random_mountain", description = "Random, Mountain Area" }
-item{ id = "random_north", description = "Random, North Hyrule" }
-item{ id = "random_subrosia", description = "Random, Subrosia" }
-item{ id = "random_woods", description = "Random, Wooded Area" }
+item{ id = "random_animal", description = "Random, Animal" }
+item{ id = "random_bird", description = "Random, Bird" }
+item{ id = "random_fish", description = "Random, Fish" }
+item{ id = "random_monster", description = "Random, Monster" }
+item{ id = "random_monster_jelly", description = "Random, Monster (Jelly)" }
+item{ id = "random_monster_tail", description = "Random, Monster (Tail)" }
+item{ id = "random_monster_wing", description = "Random, Monster (Wing)" }
 item{ id = "rupee", description = "Rupees (x1 / x5 / x20 / x50 / x100 / x300)" }
 item{ id = "rupee_bag", description = "Rupee Bag/Wallet (Small / Big / Huge)" }
 item{ id = "shield", description = "Shield (Ordon / Hylian / Light)" }
@@ -513,6 +579,8 @@ item{ id = "sword", description = "Sword (Ordon / Forged / Light)" }
 item{ id = "tunic", description = "Tunic (Green / Red / Blue)" }
 item{ id = "world_map", description = "World Map" }
 
+enemy{ id = "animals/cucco", description = "Cucco (Bird)" }
+enemy{ id = "animals/dog", description = "Dog" }
 enemy{ id = "armos", description = "Armos Statue" }
 enemy{ id = "armos_big", description = "Armos Statue, Big (laser)" }
 enemy{ id = "bari_blue", description = "Bari, Blue" }
@@ -533,7 +601,6 @@ enemy{ id = "chuchu_red", description = "ChuChu, Red" }
 enemy{ id = "chuchu_white", description = "ChuChu, White (Ice)" }
 enemy{ id = "chuchu_yellow", description = "ChuChu, Yellow (Electric)" }
 enemy{ id = "crab", description = "Crab" }
-enemy{ id = "cucco", description = "Cucco" }
 enemy{ id = "deadrock", description = "Deadrock" }
 enemy{ id = "dodongo", description = "Dodongo" }
 enemy{ id = "evil_tile", description = "Evil Tile" }
@@ -619,11 +686,11 @@ enemy{ id = "wizzrobe_fire", description = "Wizzrobe, Fire" }
 enemy{ id = "wizzrobe_ice", description = "Wizzrobe, Ice" }
 enemy{ id = "zola", description = "Zola" }
 
-entity{ id = "animals/bird", description = "Bird" }
-entity{ id = "animals/butterfly", description = "Butterfly" }
-entity{ id = "animals/dog", description = "Dog" }
+entity{ id = "animals/insect_beetle", description = "Beetle" }
+entity{ id = "animals/insect_butterfly", description = "Butterfly" }
+entity{ id = "animals/insect_dragonfly", description = "Dragonfly" }
+entity{ id = "animals/insect_mayfly", description = "Mayfly" }
 entity{ id = "arrow", description = "Arrow" }
-entity{ id = "butterfly", description = "Butterfly" }
 entity{ id = "collectibles/steak", description = "Steak" }
 entity{ id = "fire", description = "Fire (custom)" }
 entity{ id = "generic_animal", description = "Generic Animal" }
@@ -642,6 +709,7 @@ entity{ id = "npcs/npc_hylian_lord", description = "NPC: Hylian Lord" }
 entity{ id = "npcs/npc_hylian_lord_wife", description = "NPC: Hylian Lord's Wife (Zelda)" }
 entity{ id = "npcs/npc_hylian_miller", description = "NPC: Hylian Miller" }
 entity{ id = "npcs/npc_hylian_virgator", description = "NPC: Hylian Virgator" }
+entity{ id = "npcs/npc_korok_1", description = "NPC: Korok 1" }
 entity{ id = "ocarina_patch", description = "Ocarina Patch" }
 entity{ id = "platform", description = "Moving Platform" }
 entity{ id = "quicksand", description = "Quicksand (Lakebed)" }

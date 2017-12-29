@@ -13,11 +13,23 @@ local item_names = {
   "feather",
   "shovel",
   "hammer",
+  "flippers",
+  "world_map", -- placeholder
+  "world_map", -- placeholder
   -- 3rd row: Switchable
+  -- Block section: Non-equippable
   "sword",
   "shield",
+  "bottle_1",
+  "bottle_2",
+  "bottle_3",
+  "bottle_4",
   "tunic",
-  "boots"
+  "boots",
+  "rupee_bag",
+  "bomb_bag",
+  "quiver",
+  "glove"
 }
 
 function inventory_submenu:on_started()

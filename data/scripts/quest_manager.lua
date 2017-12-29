@@ -152,57 +152,6 @@ local function initialize_enemies()
   end
 end
 
--- Initialize NPC behavior specific to this quest.
-local function initialize_npcs()
-  local npc_meta = sol.main.get_metatable("npc")
-  local chest_meta = sol.main.get_metatable("chest")
-
-  -- Give default dialog styles to certain entities.
-  function npc_meta:on_interaction()
-    local game = self:get_game()
-    local name = self:get_name()
-
-    if name:match("^sign") then
-      game:set_dialog_style("wood")
-      game:start_dialog("_" .. name)
-    elseif name:match("^mailbox") then
-      game:set_dialog_style("wood")
-      if self:get_name() == "mailbox_link" then
-        game:start_dialog("_signs.mailbox.link")
-      elseif self:get_name() == "mailbox_office" then
-        game:start_dialog("_signs.mailbox.office")
-      else
-        game:start_dialog("_signs.mailbox")
-      end
-    elseif name:match("^hint_stone") then
-      game:set_dialog_style("stone")
-      game:start_dialog("_" .. name)
-    else
-      game:set_dialog_style("default")
-    end
-    
-    -- Apply custom systems to some objects
-    local shop_manager = require("scripts/shop_manager")
-    if name:match("^shop") then shop_manager:start_shop(game) end -- Shop System
-  end
-
-  -- Make certain entities automatic hooks for the hookshot.
-  function npc_meta:is_hookshot_hook()
-    if self:get_sprite() ~= nil then
-      local anim_set = self:get_sprite():get_animation_set()
-      if anim_set == "entities/sign" then return true
-      elseif anim_set == "entities/mailbox" then return true
-      elseif anim_set == "entities/torch" then return true
-      elseif anim_set == "entities/torch_wood" then return true
-      elseif anim_set == "entities/block" then return true
-      else return false end
-    else return false end
-  end
-  function chest_meta:is_hookshot_hook()
-    return true
-  end
-end
-
 local function initialize_hero()
   -- Modify metatable of hero to make carried entities follow him with hero:on_position_changed().
   local hero_meta = sol.main.get_metatable("hero")
@@ -326,6 +275,57 @@ local function initialize_hero()
   end
 end
 
+-- Initialize NPC behavior specific to this quest.
+local function initialize_npcs()
+  local npc_meta = sol.main.get_metatable("npc")
+
+  -- Give default dialog styles to certain entities.
+  function npc_meta:on_interaction()
+    local game = self:get_game()
+    local name = self:get_name()
+
+    if name:match("^sign") then
+      game:set_dialog_style("wood")
+      game:start_dialog("_" .. name)
+    elseif name:match("^mailbox") then
+      game:set_dialog_style("wood")
+      if self:get_name() == "mailbox_link" then
+        game:start_dialog("_signs.mailbox.link")
+      elseif self:get_name() == "mailbox_office" then
+        game:start_dialog("_signs.mailbox.office")
+      else
+        game:start_dialog("_signs.mailbox")
+      end
+    elseif name:match("^hint_stone") then
+      game:set_dialog_style("stone")
+      game:start_dialog("_" .. name)
+    else
+      game:set_dialog_style("default")
+    end
+    
+    -- Apply custom systems to some objects
+    local shop_manager = require("scripts/shop_manager")
+    if name:match("^shop") then shop_manager:start_shop(game) end -- Shop System
+  end
+
+  -- Make certain entities automatic hooks for the hookshot.
+  function npc_meta:is_hookshot_hook()
+    if self:get_sprite() ~= nil then
+      local anim_set = self:get_sprite():get_animation_set()
+      if anim_set == "entities/sign" then return true
+      elseif anim_set == "entities/mailbox" then return true
+      elseif anim_set == "entities/torch" then return true
+      elseif anim_set == "entities/torch_wood" then return true
+      elseif anim_set == "entities/block" then return true
+      else return false end
+    else return false end
+  end
+
+  local chest_meta = sol.main.get_metatable("chest")
+  function chest_meta:is_hookshot_hook()
+    return true
+  end
+end
 
 -- Initialize map entity related behaviors.
 local function initialize_entities()
@@ -333,8 +333,8 @@ local function initialize_entities()
   initialize_destructibles()
   initialize_enemies()
   initialize_sensors()
-  initialize_npcs()
   initialize_hero()
+  initialize_npcs()
 end
 
 local function initialize_maps()
@@ -347,14 +347,14 @@ local function initialize_maps()
     local camera = self:get_camera()
     local game = self:get_game()
     local hero = self:get_hero()
-      
+    
     delay_before = delay_before or 1000
     delay_after = delay_after or 1000
-      
+    
     local back_x, back_y = camera:get_position_to_track(hero)
     game:set_suspended(true)
     camera:start_manual()
-
+    
     local movement = sol.movement.create("target")
     movement:set_target(camera:get_position_to_track(x, y))
     movement:set_ignore_obstacles(true)
@@ -381,7 +381,7 @@ local function initialize_maps()
     end)
   end
   
-  function map_metatable:on_started(destination)
+  function map_metatable:on_opening_transition_finished()
     local game = self:get_game()
     
     function random_8(lower, upper)
@@ -389,6 +389,189 @@ local function initialize_maps()
       return math.random(math.ceil(lower/8), math.floor(upper/8))*8
     end
     
+    -- Parse map properties and create dynamic entities
+    -- 1: weather ("rain", "rainstorm", "snow", "snowstorm", "hail", "fog", "leaf", "leafstorm", nil)
+    -- 2: weather probability (1-10)
+    -- 3: temperature ("cold", "cool", "temperate", "warm", "hot") -- determines type of collectibles created
+    -- 4: type of insect ("butterfly", "dragonfly", "mayfly", "beetle", nil)
+    -- 5: type of food ("aromatics", "beans", "grains", "greens", "melons", "mushrooms", "peppers", "pomes", "stones", "tropical", nil)
+    local properties = game:get_map().properties
+    local world = game:get_map():get_world()
+    local map_height, map_width = game:get_map():get_size()
+    if properties ~= nil then
+      if properties[1] == "leaf" or properties[1] == "leaf_storm" then
+        if math.random() <= properties[2] then
+          game:set_world_leaf_mode(world, properties[1])
+          game:set_world_rain_mode(world, nil)
+          game:set_world_snow_mode(world, nil)
+          game:set_world_hail_mode(world, nil)
+          game:set_world_sand_mode(world, nil)
+        end
+      elseif properties[1] == "snow" or properties[1] == "snowstorm" then
+        if math.random() <= properties[2] then
+          game:set_world_snow_mode(world, properties[1])
+          game:set_world_rain_mode(world, nil)
+          game:set_world_leaf_mode(world, nil)
+          game:set_world_sand_mode(world, nil)
+        end
+      elseif properties[1] == "hail" or properties[1] == "hailstorm" then
+        if math.random() <= properties[2] then
+          game:set_world_hail_mode(world, properties[1])
+          game:set_world_rain_mode(world, nil)
+          game:set_world_leaf_mode(world, nil)
+          game:set_world_sand_mode(world, nil)
+        end
+      elseif properties[1] == "rain" or properties[1] == "storm" then
+        if math.random() <= properties[2] then
+          game:set_world_rain_mode(world, properties[1])
+          game:set_world_snow_mode(world, nil)
+          game:set_world_hail_mode(world, nil)
+          game:set_world_leaf_mode(world, nil)
+          game:set_world_sand_mode(world, nil)
+        end
+      elseif properties[1] == "sand" or properties[1] == "sandstorm" then
+        if math.random() <= properties[2] then
+          game:set_world_sand_mode(world, properties[1])
+          game:set_world_snow_mode(world, nil)
+          game:set_world_hail_mode(world, nil)
+          game:set_world_leaf_mode(world, nil)
+          game:set_world_rain_mode(world, nil)
+        end
+      elseif properties[1] == "fog" then
+          -- fog
+      else
+        game:set_world_rain_mode(world, nil)
+        game:set_world_snow_mode(world, nil)
+        game:set_world_hail_mode(world, nil)
+        game:set_world_leaf_mode(world, nil)
+        game:set_world_sand_mode(world, nil)
+      end
+
+      if properties[4] == "butterfly" then
+        local insect_random = tonumber(math.random(5))
+        for i = 1, insect_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_custom_entity({ model="animals/insect_butterfly",sprite="npc/butterfly_blue",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "temperate" then
+            self:create_custom_entity({ model="animals/insect_butterfly",sprite="npc/butterfly_blessed",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "hot" then
+            self:create_custom_entity({ model="animals/insect_butterfly",sprite="npc/butterfly_pink",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_custom_entity({ model="animals/insect_butterfly",sprite="npc/butterfly_grey",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          end
+        end
+
+      elseif properties[4] == "dragonfly" then
+        local insect_random = tonumber(math.random(5))
+        for i = 1, insect_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_custom_entity({ model="animals/insect_dragonfly",sprite="npc/dragonfly_dark",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "temperate" then
+            self:create_custom_entity({ model="animals/insect_dragonfly",sprite="npc/dragonfly_green",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "hot" then
+            self:create_custom_entity({ model="animals/insect_dragonfly",sprite="npc/dragonfly_yellow",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_custom_entity({ model="animals/insect_dragonfly",sprite="npc/dragonfly_gerudo",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          end
+        end
+
+      elseif properties[4] == "mayfly" then
+        local insect_random = tonumber(math.random(5))
+        for i = 1, insect_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_blue",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "temperate" then
+            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_green",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "hot" then
+            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_red",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_yellow",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          end
+        end
+
+      elseif properties[4] == "beetle" then
+        local insect_random = tonumber(math.random(5))
+        for i = 1, insect_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_horned",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "temperate" then
+            self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_rhino",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "hot" then
+            self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_pincer",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_custom_entity({ model="animals/insect_bettle",sprite="npc/beetle_stag",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+          end
+        end
+
+      end
+
+      if properties[5] == "mushrooms" then
+        local food_random = tonumber(math.random(5))
+        for i = 1, food_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_pickable({ treasure_name="food_mushroom_2", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "temperate" then
+            self:create_pickable({ treasure_name="food_mushroom_4", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "hot" then
+            self:create_pickable({ treasure_name="food_mushroom_3", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_pickable({ treasure_name="food_mushroom_1", treasure_variant=1, x=ex, y=ey, layer=0 })
+          end
+        end
+
+      elseif properties[5] == "plants" then
+        local food_random = tonumber(math.random(5))
+        for i = 1, food_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_pickable({ treasure_name="food_plant_3", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "temperate" then
+            self:create_pickable({ treasure_name="food_plant_1", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "hot" then
+            self:create_pickable({ treasure_name="food_plant_4", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_pickable({ treasure_name="food_plant_2", treasure_variant=1, x=ex, y=ey, layer=0 })
+          end
+        end
+
+      elseif properties[5] == "vegetables" then
+        local food_random = tonumber(math.random(5))
+        for i = 1, food_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_pickable({ treasure_name="food_vegetable_4", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "temperate" then
+            self:create_pickable({ treasure_name="food_vegetable_2", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "hot" then
+            self:create_pickable({ treasure_name="food_vegetable_1", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_pickable({ treasure_name="food_vegetable_3", treasure_variant=1, x=ex, y=ey, layer=0 })
+          end
+        end
+
+      elseif properties[5] == "fruits" then
+        local food_random = tonumber(math.random(5))
+        for i = 1, food_random do
+          local ex, ey = random_8(1,map_width), random_8(1,map_height)
+          if properties[3] == "cold" then
+            self:create_pickable({ treasure_name="food_fruit_2", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "temperate" then
+            self:create_pickable({ treasure_name="food_fruit_3", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "hot" then
+            self:create_pickable({ treasure_name="food_fruit_1", treasure_variant=1, x=ex, y=ey, layer=0 })
+          elseif properties[3] == "warm" or "cool" then
+            self:create_pickable({ treasure_name="food_fruit_4", treasure_variant=1, x=ex, y=ey, layer=0 })
+          end
+        end
+
+      end
+    end
+
     -- Night time is more dangerous - add various enemies.
     if game:get_map():get_world() == "outside_world" and game:get_time_of_day() == "night" then
       local keese_random = math.random()

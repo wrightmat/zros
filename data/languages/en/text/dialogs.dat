@@ -447,163 +447,6 @@ Watch your$gMagic Meter$w!
 }
 
 dialog{
-  id = "_item_description.airship_part.1",
-  skip = "current",
-  text = [[
-A large chunk of Magnetite -
-a rare metal ore.
-]]
-}
-
-dialog{
-  id = "_item_description.airship_part.2",
-  skip = "current",
-  text = [[
-A huge metal propeller.
-Not sure what this is for?
-]]
-}
-
-dialog{
-  id = "_item_description.airship_part.3",
-  skip = "current",
-  text = [[
-Din's Pearl is a magical artifact which
-should help speed repair work.
-]]
-}
-
-dialog{
-  id = "_item_description.airship_part.4",
-  icon = "29",
-  skip = "current",
-  text = [[
-Master Ore is rare and useful for
-things like sword smithing.
-]]
-}
-
-dialog{
-  id = "_item_description.airship_part.5",
-  text = [[
-This sequence is complete!
-]]
-}
-
-dialog{
-  id = "_item_description.alchemy_counter.1",
-  skip = "current",
-  text = [[
-Desired by many, this artifact is said
-to bring riches to its owner.
-]]
-}
-
-dialog{
-  id = "_item_description.amber_counter.1",
-  skip = "current",
-  text = [[
-This tasty Goron treat is valuable
-because it contains a bug!
-]]
-}
-
-dialog{
-  id = "_item_description.apple.1",
-  icon = "16",
-  skip = "current",
-  text = [[
-Crisp, red apples can be found
-throughout Hyrule. Eat one to
-restore some of your energy!
-]]
-}
-
-dialog{
-  id = "_item_description.apple_counter.1",
-  icon = "16",
-  skip = "current",
-  text = [[
-Crisp, red apples can be found
-throughout Hyrule. Eat one to
-restore some of your energy!
-]]
-}
-
-dialog{
-  id = "_item_description.bomb_counter.1",
-  icon = "1",
-  skip = "current",
-  text = [[
-Use Bombs against enemies or to
-blow up obstacles!
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.1",
-  skip = "current",
-  text = [[
-It's a musty piece of paper found
-in a musty dungeon.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.2",
-  skip = "current",
-  text = [[
-A couple pages which belong to a
-much larger$cbook$w.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.3",
-  skip = "current",
-  text = [[
-A collection of pages from the
-legendary$cBook of Mudora$w.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.4",
-  skip = "current",
-  text = [[
-A collection of pages from the
-legendary$cBook of Mudora$w.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.5",
-  skip = "current",
-  text = [[
-A collection of pages from the
-legendary$cBook of Mudora$w.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.6",
-  skip = "current",
-  text = [[
-A collection of pages from the
-legendary$cBook of Mudora$w.
-]]
-}
-
-dialog{
-  id = "_item_description.book_mudora.7",
-  skip = "current",
-  text = [[
-The legendary and enchanted
-$cBook of Mudora$w.
-]]
-}
-
-dialog{
   id = "_item_description.boomerang.1",
   icon = "4",
   skip = "current",
@@ -1003,37 +846,6 @@ ice blocks on a whim!
 }
 
 dialog{
-  id = "_item_description.carrot.1",
-  icon = "18",
-  skip = "current",
-  text = [[
-Deep orange carrots can be found
-in the ground throughout Hyrule.
-Eat one to revitalize yourself!
-]]
-}
-
-dialog{
-  id = "_item_description.carrot_counter.1",
-  icon = "18",
-  skip = "current",
-  text = [[
-Deep orange carrots can be found in
-the ground throughout Hyrule. Eat
-one to revitalize yourself!
-]]
-}
-
-dialog{
-  id = "_item_description.crystal_counter.1",
-  skip = "current",
-  text = [[
-No one knows how this solid chunk of
-pure, crystallized magic came to be...
-]]
-}
-
-dialog{
   id = "_item_description.feather.1",
   icon = "0",
   skip = "current",
@@ -1094,44 +906,12 @@ propel you to far away places!
 }
 
 dialog{
-  id = "_item_description.jade_counter.1",
-  skip = "current",
-  text = [[
-Mystic Jade is captivating and very
-valuable because of its beautiful
-form and color.
-]]
-}
-
-dialog{
   id = "_item_description.lamp.1",
   icon = "5",
   skip = "current",
   text = [[
 A lantern to light torches and
 give off light in dark places.
-]]
-}
-
-dialog{
-  id = "_item_description.meat.1",
-  icon = "19",
-  skip = "current",
-  text = [[
-Hunks of meat may be left when you
-kill enemies. It may not look very
-appetizing, but it's nutritious!
-]]
-}
-
-dialog{
-  id = "_item_description.meat_counter.1",
-  icon = "19",
-  skip = "current",
-  text = [[
-Hunks of meat may be left when you
-kill enemies. It may not look very
-appetizing, but it's nutritious!
 ]]
 }
 
@@ -1147,194 +927,11 @@ to go!
 }
 
 dialog{
-  id = "_item_description.ore_counter.1",
-  skip = "current",
-  text = [[
-This strong metallic compound is
-found only in the deepest depths
-of the earth.
-]]
-}
-
-dialog{
-  id = "_item_description.plume_counter.1",
-  skip = "current",
-  text = [[
-Rumors say this item was dropped by the
-goddess in a long-forgotten era. It's a
-legendary treasure few will ever behold!
-]]
-}
-
-dialog{
-  id = "_item_description.pumpkin.1",
-  icon = "17",
-  skip = "current",
-  text = [[
-Bright orange pumpkins grow only
-in the south of Hyrule. Eat one
-to revitalize yourself!
-]]
-}
-
-dialog{
-  id = "_item_description.pumpkin_counter.1",
-  icon = "17",
-  skip = "current",
-  text = [[
-Bright orange pumpkins grow only
-in the south of Hyrule. Eat one
-to revitalize yourself!
-]]
-}
-
-dialog{
   id = "_item_description.shovel.1",
   skip = "current",
   text = [[
 This sturdy shovel is able to dig up
 any buried treasure!
-]]
-}
-
-dialog{
-  id = "_item_description.stick_counter.1",
-  skip = "current",
-  text = [[
-Deku sticks are found in forrested
-areas and can be used to create
-powerful potions.
-]]
-}
-
-dialog{
-  id = "_item_description.trading.1",
-  icon = "40",
-  skip = "current",
-  text = [[
-It's an Odd Mushroom with a very
-pungent aroma. Take it to a potion
-maker, probably.
-]]
-}
-
-dialog{
-  id = "_item_description.trading.10",
-  icon = "49",
-  skip = "current",
-  text = [[
-It's a scale from one of the Zora
-people. How will this be useful?
-]]
-}
-
-dialog{
-  id = "_item_description.trading.11",
-  icon = "50",
-  skip = "current",
-  text = [[
-It's a frozen fish. Not so sure this
-was trading up...
-]]
-}
-
-dialog{
-  id = "_item_description.trading.12",
-  icon = "51",
-  skip = "current",
-  text = [[
-It's the most famous cookbook in
-all Hyrule!
-This could be valuable!
-]]
-}
-
-dialog{
-  id = "_item_description.trading.13",
-  text = [[
-You finished the trading sequence!
-Now go use your Rito Feather!
-]]
-}
-
-dialog{
-  id = "_item_description.trading.2",
-  icon = "41",
-  skip = "current",
-  text = [[
-It's an Odd Potion. What do you
-think you should do with it?
-]]
-}
-
-dialog{
-  id = "_item_description.trading.3",
-  icon = "42",
-  skip = "current",
-  text = [[
-It's a mask in the form of a Deku.
-Maybe someone will like it?
-]]
-}
-
-dialog{
-  id = "_item_description.trading.4",
-  icon = "43",
-  skip = "current",
-  text = [[
-It's said to be a tear from the
-moon itself.$0 It glistens!
-]]
-}
-
-dialog{
-  id = "_item_description.trading.5",
-  icon = "44",
-  skip = "current",
-  text = [[
-It's a shining ball made from
-pure crystal.
-]]
-}
-
-dialog{
-  id = "_item_description.trading.6",
-  icon = "45",
-  skip = "current",
-  text = [[
-It's supposed to be tasty meat.$0
-Not sure it's actually edible.
-]]
-}
-
-dialog{
-  id = "_item_description.trading.7",
-  icon = "46",
-  skip = "current",
-  text = [[
-It's some interesing looking dog
-food. Maybe someone other than a
-dog will like it?
-]]
-}
-
-dialog{
-  id = "_item_description.trading.8",
-  icon = "47",
-  skip = "current",
-  text = [[
-It's a bunch of delicious looking
-bananas!
-]]
-}
-
-dialog{
-  id = "_item_description.trading.9",
-  icon = "48",
-  skip = "current",
-  text = [[
-It's a beautiful vase fashioned by
-the Goron people.
 ]]
 }
 
@@ -2344,89 +1941,6 @@ hasn't been home for a while!
 }
 
 dialog{
-  id = "_treasure.airship_part.1",
-  skip = "current",
-  text = [[
-You found a chunk of$rMagnetite$w!$0
-It's a sturdy construction material
-with a variey of uses.
-]]
-}
-
-dialog{
-  id = "_treasure.airship_part.2",
-  skip = "current",
-  text = [[
-You found a$rPropeller$w!$0
-What could the Gerudo need with this?
-]]
-}
-
-dialog{
-  id = "_treasure.airship_part.3",
-  skip = "current",
-  text = [[
-You found$rDin's Pearl$w!$0
-The magic from this artifact should
-speed the Gerudo's repairs considerably!
-Get back as soon as you can.
-]]
-}
-
-dialog{
-  id = "_treasure.airship_part.4",
-  icon = "29",
-  skip = "current",
-  text = [[
-You got some$rMaster Ore$w!$0
-The blacksmith can use it to
-improve your sword!
-]]
-}
-
-dialog{
-  id = "_treasure.alchemy.1",
-  icon = "25",
-  skip = "current",
-  text = [[
-You got an$rAlchemy Stone$w!
-This artifact is said to bring
-riches to its owner.
-]]
-}
-
-dialog{
-  id = "_treasure.amber.1",
-  icon = "22",
-  skip = "current",
-  text = [[
-You got$rGoron Amber$w!
-This tasty Goron treat is valuable
-because it contains a bug!
-]]
-}
-
-dialog{
-  id = "_treasure.apple.1",
-  icon = "16",
-  skip = "current",
-  text = [[
-You got an$rApple$w!$0
-Eat it to regain some stamina!
-]]
-}
-
-dialog{
-  id = "_treasure.apple.2",
-  icon = "16",
-  skip = "current",
-  text = [[
-You got some$rApples$w!$0
-Eat them to regain some stamina!
-]]
-}
-
-dialog{
   id = "_treasure.arrow.1",
   icon = "83",
   skip = "current",
@@ -2530,94 +2044,6 @@ dialog{
   text = [[
 You got a$rHuge Bomb Bag$w!$0
 It holds 60 Bombs!
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.1",
-  icon = "20",
-  skip = "current",
-  text = [[
-You got a page to a$cbook$w!
-This seems like an awfully
-paltry prize after all this
-trouble. Maybe it'll be
-useful in some way?
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.2",
-  icon = "20",
-  skip = "current",
-  text = [[
-You got a page to a$cbook$w!
-This seems like an awfully
-paltry prize after all this
-trouble. Maybe it'll be
-useful in some way?
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.3",
-  icon = "20",
-  skip = "current",
-  text = [[
-You got a page to the
-$cBook of Mudora!$w
-It's coming together!
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.4",
-  icon = "20",
-  skip = "current",
-  text = [[
-You got another page to the
-$cBook of Mudora!$w
-
-It's starting to look like
-a real book!
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.5",
-  icon = "20",
-  skip = "current",
-  text = [[
-It's yet another page of the
-$cBook of Mudora!$w
-
-You have almost a complete
-book now!
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.6",
-  icon = "20",
-  skip = "current",
-  text = [[
-It's the final page of the
-$cBook of Mudora!$w
-
-The book is complete, now
-it just needs its magic
-restored!
-]]
-}
-
-dialog{
-  id = "_treasure.book_mudora.7",
-  icon = "20",
-  skip = "current",
-  text = [[
-The$cBook of Mudora$w has been
-enchanted! Finally the book
-is back to its full power!
 ]]
 }
 
@@ -3005,36 +2431,14 @@ long ago.
 }
 
 dialog{
-  id = "_treasure.bow_light.1",
-  icon = "2",
-  skip = "current",
-  text = [[
-You found the$rLight Bow$w!$0
-This is a powerful weapon which
-allows you to shoot pure arrows
-of light!
-]]
-}
-
-dialog{
   id = "_treasure.cane.1",
   icon = "15",
-  next = "_warning_magic",
+  next = "_info.warning_magic",
   skip = "current",
   text = [[
 You found$rHebra's Cane$w!$0
 Use it to create ice blocks
 on a whim.
-]]
-}
-
-dialog{
-  id = "_treasure.carrot.1",
-  icon = "18",
-  skip = "current",
-  text = [[
-You got a$rCarrot$w!$0
-Eat it to regain some stamina!
 ]]
 }
 
@@ -3049,18 +2453,6 @@ but only works in this dungeon.
 This one has a special feature -
 when you enter a room with hidden
 treasure, a sound will play!
-]]
-}
-
-dialog{
-  id = "_treasure.crystal.1",
-  icon = "23",
-  skip = "current",
-  text = [[
-You got a$rMagic Crystal$w!$0
-No one knows how this solid
-chunk of pure, crystallized
-magic came to be...
 ]]
 }
 
@@ -3088,12 +2480,182 @@ like a pro!
 }
 
 dialog{
-  id = "_treasure.food_meat.1",
+  id = "_treasure.food_fruit_1.1",
   icon = "19",
   skip = "current",
   text = [[
-You got some$rMeat$w!$0
-Eat it to regain some stamina!
+You got a$rHealing Apple$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_fruit_2.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got an$rEnergizing Apple$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_fruit_3.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rPowerful Bananas$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_fruit_4.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rCourageous Coconut$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_meat_1.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rRaw Steak$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_meat_2.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rRaw Poultryw!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_meat_3.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rBrave Porgy$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_meat_4.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rEnduring Carp$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_mushroom_1.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rZapshroom$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_mushroom_2.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rChillshroom$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_mushroom_3.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rSunshroom$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_mushroom_4.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rHearty Truffle$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_plant_1.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rHylian Wheat$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_plant_2.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rElectric Saffina$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_plant_3.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rCool Saffina$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_plant_4.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rWarm Saffina$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_vegetable_1.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rSwift Carrot$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_vegetable_2.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got an$rEnduring Pumpkin$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_vegetable_3.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got some$rMagical Beans$w!$0
+]]
+}
+
+dialog{
+  id = "_treasure.food_vegetable_4.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got a$rWise Wildberry$w!$0
 ]]
 }
 
@@ -3124,7 +2686,7 @@ dialog{
   icon = "27",
   skip = "current",
   text = [[
-You got the$rGoron Hammer!$w
+You got the$rGoron Hammer$w!$0
 This powerful weapon can pound
 stakes into the ground.
 ]]
@@ -3174,19 +2736,9 @@ unreachable!
 }
 
 dialog{
-  id = "_treasure.jade.1",
-  icon = "21",
-  skip = "current",
-  text = [[
-You got some$rMystic Jade$w!
-It's such a beautiful color!
-]]
-}
-
-dialog{
   id = "_treasure.lamp.1",
   icon = "5",
-  next = "_warning_magic",
+  next = "_info.warning_magic",
   skip = "current",
   text = [[
 You found a$rLantern$w!$0
@@ -3232,9 +2784,20 @@ dialog{
   icon = "70",
   skip = "current",
   text = [[
-You found a$rDungeon Map$w!
+You found a$rDungeon Map$w!$0
 Use it to navigate difficult areas
 and explore new places!
+]]
+}
+
+dialog{
+  id = "_treasure.monster_guts.1",
+  icon = "19",
+  skip = "current",
+  text = [[
+You got$rMonster Guts$w!$0
+Make it into an elixir to restore
+your life.
 ]]
 }
 
@@ -3244,50 +2807,6 @@ dialog{
   skip = "current",
   text = [[
 You got$rMonster Jelly$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_jelly.2",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got$rRed Monster Jelly$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_jelly.3",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got$rBlue Monster Jelly$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_jelly.4",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got$rYellow Monster Jelly$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_parts.1",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rMonster Part$w!$0
 Make it into an elixir to restore
 your life.
 ]]
@@ -3305,77 +2824,11 @@ your life.
 }
 
 dialog{
-  id = "_treasure.monster_tails.2",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rRed Monster Tail$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_tails.3",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rBlue Monster Tail$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_tails.4",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rYellow Monster Tail$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
   id = "_treasure.monster_wings.1",
   icon = "19",
   skip = "current",
   text = [[
-You got a$rRed Monster Wing$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_wings.2",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rBlue Monster Wing$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_wings.3",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rYellow Monster Wing$w!$0
-Make it into an elixir to restore
-your life.
-]]
-}
-
-dialog{
-  id = "_treasure.monster_wings.4",
-  icon = "19",
-  skip = "current",
-  text = [[
-You got a$rBlack Monster Wing$w!$0
+You got a$rMonster Wing$w!$0
 Make it into an elixir to restore
 your life.
 ]]
@@ -3389,39 +2842,6 @@ dialog{
 You got the$rOcarina of Wind$w!$0
 Use this magical instrument
 to get where you need to go!
-]]
-}
-
-dialog{
-  id = "_treasure.ore.1",
-  icon = "30",
-  skip = "current",
-  text = [[
-You found$rSubrosian Ore$w! It's a
-strong metallic compound from
-the deepest depths of the earth!
-]]
-}
-
-dialog{
-  id = "_treasure.ore.2",
-  icon = "30",
-  skip = "current",
-  text = [[
-You found$rSubrosian Ore$w! It's a
-strong metallic compound from
-the deepest depths of the earth!
-]]
-}
-
-dialog{
-  id = "_treasure.plume.1",
-  icon = "24",
-  skip = "current",
-  text = [[
-You found a$rGoddess Plume$w!
-This is a legendary treasure
-few will ever behold!
 ]]
 }
 
@@ -3468,21 +2888,11 @@ and stamina!
 }
 
 dialog{
-  id = "_treasure.pumpkin.1",
-  icon = "17",
-  skip = "current",
-  text = [[
-You got a$rPumpkin$w!
-It looks quite nutritious.
-]]
-}
-
-dialog{
   id = "_treasure.quiver.1",
   icon = "57",
   skip = "current",
   text = [[
-You received a$rSmall Quiver$W!$0
+You received a$rSmall Quiver$w!$0
 It holds your arrows, but only
 10 at once.
 ]]
@@ -3597,7 +3007,7 @@ dialog{
   skip = "current",
   text = [[
 You were awarded a trusty$rwooden
-shield of Ordon origins$w.Be
+shield of Ordon origins$w.$0Be
 careful, it's only made of wood.
 ]]
 }
@@ -3628,11 +3038,12 @@ wielder from most anything!
 
 dialog{
   id = "_treasure.shovel.1",
+  icon = "74",
   skip = "current",
   text = [[
-You got a sturdy$rShovel$w! Use
-it to dig up any buried treasue
-you can find!
+You got a sturdy$rShovel$w!$0
+Use it to dig up any buried
+treasue you can find!
 ]]
 }
 
@@ -3644,17 +3055,6 @@ dialog{
 You found a$rSmall Key$w!$0
 Use it to open doors, but only
 in this area.
-]]
-}
-
-dialog{
-  id = "_treasure.stick.1",
-  icon = "26",
-  skip = "current",
-  text = [[
-You found a$rDeku stick$w!
-Maybe someone will be able
-to make something of it...
 ]]
 }
 
@@ -3690,162 +3090,6 @@ dialog{
 You received the$rLight Sword$w!$0
 Its shining edge can destroy
 most anything!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.1",
-  icon = "40",
-  skip = "current",
-  text = [[
-You found an$rOdd Mushroom$w!
-The scent is quite...
-interesting.
-]]
-}
-
-dialog{
-  id = "_treasure.trading.10",
-  icon = "49",
-  skip = "current",
-  text = [[
-You traded the$rGoron Vase$w
-for a$rZora Scale$w!$0
-Another race-specific thing, I
-wonder what you'll do with it?
-]]
-}
-
-dialog{
-  id = "_treasure.trading.11",
-  icon = "39",
-  skip = "current",
-  text = [[
-You traded the$rZora Scale$w for a
-$rFrozen Fish$w!$0  Finally something
-with some mass appeal!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.12",
-  icon = "38",
-  skip = "current",
-  text = [[
-You traded the$rFrozen Fish$w for the
-$rCulinary Arts of Hyrule book$w!$0
-Neat!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.13",
-  icon = "0",
-  skip = "current",
-  text = [[
-You traded the$rCulinary Arts of
-Hyrule book$w for a$rRito Feather$w!$0
-Finally a truly useful item! Maybe this
-trading stuff is done?
-]]
-}
-
-dialog{
-  id = "_treasure.trading.2",
-  icon = "41",
-  skip = "current",
-  text = [[
-Your $rOdd Mushroom$w was made
-into some$rOdd Potion$w!
-Whatever you do with it, 
-don't try to drink it!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.3",
-  icon = "42",
-  skip = "current",
-  text = [[
-You traded the$rOdd Potion$w for
-a$rDeku Mask$w!$0
-Not sure what the$gDeku$w wanted
-with that potion, but I'll bet
-this is considered trading up!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.4",
-  icon = "43",
-  skip = "current",
-  text = [[
-You traded the$rDeku Mask$w for
-a$rMoon Tear$w!$0
-
-It's weird that the guy wanted
-the mask so badly, but who cares
-since this is shiny!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.5",
-  icon = "44",
-  skip = "current",
-  text = [[
-You traded the$rMoon Tear$w
-for a$rCrystal Ball$w!$0
-You swapped one shiny thing
-for another!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.6",
-  icon = "45",
-  skip = "current",
-  text = [[
-You traded a$rCrystal Ball$w
-for a$rhunk of meat$w!$0
-Impa thinks it's tasty, but
-I wouldn't try it.
-]]
-}
-
-dialog{
-  id = "_treasure.trading.7",
-  icon = "46",
-  skip = "current",
-  text = [[
-You traded the$rTasty Meat$w
-for$rDog Food$w!$0
-Not exactly a fair trade, 
-but you felt bad for the
-hungry Moblin.
-]]
-}
-
-dialog{
-  id = "_treasure.trading.8",
-  icon = "47",
-  skip = "current",
-  text = [[
-You traded the$rDog Food$w 
-for some yummy$rBananas$w!$0
-Now we're getting somewhere!
-]]
-}
-
-dialog{
-  id = "_treasure.trading.9",
-  icon = "48",
-  skip = "current",
-  text = [[
-You traded$rBananas$w for a 
-$rGoron Vase$w!$0 It's quite
-beautiful but you're not sure who
-would want one besides a$gGoron$w.
 ]]
 }
 
@@ -5242,6 +4486,15 @@ waiting for.
 }
 
 dialog{
+  id = "great_tree.1",
+  text = [[
+I am the Great Tree of the Korok
+Forest - also known to my children
+as the Great Deku Tree.
+]]
+}
+
+dialog{
   id = "greetings.familiar",
   importance = "1",
   inheritance = "1",
@@ -5259,6 +4512,20 @@ dialog{
   skip = "current",
   text = [[
 Hey there, how are you doing today?
+]]
+}
+
+dialog{
+  id = "greetings.hylian",
+  text = [[
+Welcome to our Hylian Settlement!
+]]
+}
+
+dialog{
+  id = "greetings.korok",
+  text = [[
+Welcome to Korok Woods!
 ]]
 }
 
@@ -5363,114 +4630,10 @@ is pretty close to the south!
 }
 
 dialog{
-  id = "monkey.1.faron",
-  question = "1",
-  skip = "current",
+  id = "korok_woods.1",
   text = [[
-Hmmm... we're bored now that all the
-fun fighting is over.$0 How about one
-last game? If you can guess which tree
-I'm hiding in with three or less tries,
-I'll give you the paper back.
-
-How's that sound?
-Okay
-Not interested
-]]
-}
-
-dialog{
-  id = "monkey.1.faron_no",
-  skip = "current",
-  text = [[
-You don't want your$cpaper$w back?
-I'll warn you, you won't get very far
-in your quest without it! I won't tell
-you any more unless you play my game
-though...
-]]
-}
-
-dialog{
-  id = "monkey.1.faron_yes",
-  skip = "current",
-  text = [[
-Alright...$0 Ready?!
-]]
-}
-
-dialog{
-  id = "monkey.1.game_right",
-  skip = "current",
-  text = [[
-Aww! You found me! I guess you can
-have this$cdingy paper$wback -
-we won't need it where we're going!
-]]
-}
-
-dialog{
-  id = "monkey.1.game_wrong",
-  skip = "current",
-  text = [[
-Nope! Try again!
-]]
-}
-
-dialog{
-  id = "monkey.2.faron",
-  skip = "current",
-  text = [[
-Sorry - better luck next time!
-]]
-}
-
-dialog{
-  id = "monkey.3.faron",
-  skip = "current",
-  text = [[
-We already said it...
-We're bored with you.
-]]
-}
-
-dialog{
-  id = "priest.0.explain",
-  next = "priest.0.explain_2",
-  skip = "current",
-  text = [[
-Allow me to explain.$yHylia$wwas the
-white goddess who was left with the
-$oGreat Power$wby the$yGolden Goddesses$w.
-When the$moriginal demon$wattacked,
-she was forced to give up her divinity
-in order to fight him, and was killed
-in the process.
-]]
-}
-
-dialog{
-  id = "priest.0.explain_2",
-  skip = "current",
-  text = [[
-Why do we still worship her after all
-this time? Well, there was a long
-period where$yHer Grace$wwas forgotten.
-But recently, some ancient writings
-and a small statue were unearthed near
-here. Those who discovered these
-artifacts moved here and started up
-a new version of the ancient religion.
-]]
-}
-
-dialog{
-  id = "priest.0.sanctuary",
-  skip = "current",
-  text = [[
-Welcome, traveler, to the$bSanctuary
-of Hylia$w.$0 What?$0 You don't know of
-the$yGoddess Hylia$w?
+The southern part of Korok Woods
+is where the Great Deku Tree lives.
 ]]
 }
 
@@ -5770,16 +4933,6 @@ Don't have enough cash, eh?
 I heard there's a man in$bCastle
 Town$w who's running a game where the
 grand prize is a bigger wallet!
-]]
-}
-
-dialog{
-  id = "shopkeep.goron_market",
-  skip = "current",
-  text = [[
-Welcome to the open air Goron Market!
-If there's anything you like, just
-pick it up!
 ]]
 }
 

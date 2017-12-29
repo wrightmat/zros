@@ -7,6 +7,7 @@ text{ key = "credits.6", value = "Sprites/Tiles -----$Moffett1990 - Floria Baba/
 text{ key = "credits.7", value = "Music -----$ellebirdy23 (Alisa) - Book of Mudora (Laruto's Lament)$Richard Wurth - Interloper Sanctum (Serendipity)$Laura Shigihara - Ballad of the Goddess (Marryn)$Shady Cicada - Groose Theme Rock Cover (Gruce)$Zelda Reorchestrated Team$Nintendo of America" }
 text{ key = "credits.8", value = "A very special thank you to...$ $Satoru Iwata$ $Who gave my childhood something to love." }
 text{ key = "inventory.caption.item.bomb.1", value = "Bombs" }
+text{ key = "inventory.caption.item.bomb_bag.1", value = "Bomb Bag" }
 text{ key = "inventory.caption.item.boomerang.1", value = "Boomerang" }
 text{ key = "inventory.caption.item.boomerang.2", value = "Magical Boomerang" }
 text{ key = "inventory.caption.item.boots.1", value = "Pegasus Boots" }
@@ -46,57 +47,48 @@ text{ key = "inventory.caption.item.bow.1", value = "Bow" }
 text{ key = "inventory.caption.item.bow.2", value = "Bow & Arrows" }
 text{ key = "inventory.caption.item.cane.1", value = "Hebra's Cane" }
 text{ key = "inventory.caption.item.feather.1", value = "Rito Feather" }
-text{ key = "inventory.caption.item.food_beans.1", value = "Chikaloo Nut" }
-text{ key = "inventory.caption.item.food_beans.2", value = "Scent Seed" }
-text{ key = "inventory.caption.item.food_beans.3", value = "Deku Nut" }
-text{ key = "inventory.caption.item.food_beans.4", value = "Magic Beans" }
-text{ key = "inventory.caption.item.food_dairy.1", value = "LonLon Milk" }
-text{ key = "inventory.caption.item.food_dairy.2", value = "Chateau Romani" }
-text{ key = "inventory.caption.item.food_dairy.3", value = "Goat Cheese" }
-text{ key = "inventory.caption.item.food_dairy.4", value = "LonLon Cheese" }
-text{ key = "inventory.caption.item.food_eggs.1", value = "Eldin Ostrich Egg" }
-text{ key = "inventory.caption.item.food_eggs.2", value = "Cucco Egg" }
-text{ key = "inventory.caption.item.food_eggs.3", value = "Duck Egg" }
-text{ key = "inventory.caption.item.food_eggs.4", value = "Weird Egg" }
-text{ key = "inventory.caption.item.food_fish.1", value = "Hearty Salmon" }
-text{ key = "inventory.caption.item.food_fish.2", value = "Hyrule Bass" }
-text{ key = "inventory.caption.item.food_fish.3", value = "Mighty Porgy" }
-text{ key = "inventory.caption.item.food_fish.4", value = "Sanke Carp" }
-text{ key = "inventory.caption.item.food_meat.1", value = "Raw Steak" }
-text{ key = "inventory.caption.item.food_meat.2", value = "Raw Poultry" }
-text{ key = "inventory.caption.item.food_meat.3", value = "Minced Meat" }
-text{ key = "inventory.caption.item.food_meat.4", value = "Tasty Meat" }
+text{ key = "inventory.caption.item.flippers.1", value = "Flippers" }
+text{ key = "inventory.caption.item.food_fruit_1.1", value = "Healing Apple" }
+text{ key = "inventory.caption.item.food_fruit_2.1", value = "Energizing Apple" }
+text{ key = "inventory.caption.item.food_fruit_3.1", value = "Powerful Bananas" }
+text{ key = "inventory.caption.item.food_fruit_4.1", value = "Courageous Coconut" }
+text{ key = "inventory.caption.item.food_meat_1.1", value = "Raw Steak" }
+text{ key = "inventory.caption.item.food_meat_2.1", value = "Raw Poultry" }
+text{ key = "inventory.caption.item.food_meat_3.1", value = "Brave Porgy" }
+text{ key = "inventory.caption.item.food_meat_4.1", value = "Enduring Carp" }
+text{ key = "inventory.caption.item.food_mushroom_1.1", value = "Zapshroom" }
+text{ key = "inventory.caption.item.food_mushroom_2.1", value = "Chillshroom" }
+text{ key = "inventory.caption.item.food_mushroom_3.1", value = "Sunshroom" }
+text{ key = "inventory.caption.item.food_mushroom_4.1", value = "Hearty Truffle" }
+text{ key = "inventory.caption.item.food_plant_1.1", value = "Hylian Wheat" }
+text{ key = "inventory.caption.item.food_plant_2.1", value = "Electric Saffina" }
+text{ key = "inventory.caption.item.food_plant_3.1", value = "Cool Saffina" }
+text{ key = "inventory.caption.item.food_plant_4.1", value = "Warm Saffina" }
+text{ key = "inventory.caption.item.food_vegetable_1.1", value = "Swift Carrot" }
+text{ key = "inventory.caption.item.food_vegetable_2.1", value = "Enduring Pumpkin" }
+text{ key = "inventory.caption.item.food_vegetable_3.1", value = "Magical Beans" }
+text{ key = "inventory.caption.item.food_vegetable_4.1", value = "Wise Wildberry" }
+text{ key = "inventory.caption.item.glove.1", value = "Glove" }
 text{ key = "inventory.caption.item.hammer.1", value = "Goron Hammer" }
 text{ key = "inventory.caption.item.hookshot.1", value = "Hookshot" }
+text{ key = "inventory.caption.item.insect_beetle.1", value = "Beetle" }
+text{ key = "inventory.caption.item.insect_butterfly.1", value = "Butterfly" }
+text{ key = "inventory.caption.item.insect_dragonfly.1", value = "Dragonfly" }
+text{ key = "inventory.caption.item.insect_mayfly.1", value = "Mayfly" }
 text{ key = "inventory.caption.item.lamp.1", value = "Lantern" }
-text{ key = "inventory.caption.item.monster_jelly.1", value = "Green Monster Jelly" }
-text{ key = "inventory.caption.item.monster_jelly.2", value = "Red Monster Jelly" }
-text{ key = "inventory.caption.item.monster_jelly.3", value = "Blue Monster Jelly" }
-text{ key = "inventory.caption.item.monster_jelly.4", value = "Yellow Monster Jelly" }
-text{ key = "inventory.caption.item.monster_tails.1", value = "Green Monster Tail" }
-text{ key = "inventory.caption.item.monster_tails.2", value = "Red Monster Tail" }
-text{ key = "inventory.caption.item.monster_tails.3", value = "Blue Monster Tail" }
-text{ key = "inventory.caption.item.monster_tails.4", value = "Yellow Monster Tail" }
-text{ key = "inventory.caption.item.monster_wings.1", value = "Red Monster Wing" }
-text{ key = "inventory.caption.item.monster_wings.2", value = "Blue Monster Wing" }
-text{ key = "inventory.caption.item.monster_wings.3", value = "Yellow Monster Wing" }
-text{ key = "inventory.caption.item.monster_wings.4", value = "Black Monster Wing" }
+text{ key = "inventory.caption.item.monster_guts.1", value = "Monster Guts" }
+text{ key = "inventory.caption.item.monster_jelly.1", value = "Monster Jelly" }
+text{ key = "inventory.caption.item.monster_tails.1", value = "Monster Tail" }
+text{ key = "inventory.caption.item.monster_wings.1", value = "Monster Wing" }
+text{ key = "inventory.caption.item.quiver.1", value = "Quiver" }
+text{ key = "inventory.caption.item.rupee_bag.1", value = "Rupee Bag" }
+text{ key = "inventory.caption.item.shield.1", value = "Shield" }
 text{ key = "inventory.caption.item.shovel.1", value = "Shovel" }
 text{ key = "inventory.caption.item.sword.1", value = "Sword" }
-text{ key = "inventory.caption.item.trading.1", value = "Odd Mushroom" }
-text{ key = "inventory.caption.item.trading.10", value = "Zora Scale" }
-text{ key = "inventory.caption.item.trading.11", value = "Frozen Fish" }
-text{ key = "inventory.caption.item.trading.12", value = "Culinary Arts$of Hyrule" }
-text{ key = "inventory.caption.item.trading.13", value = "Sequence Completed" }
-text{ key = "inventory.caption.item.trading.2", value = "Odd Potion" }
-text{ key = "inventory.caption.item.trading.3", value = "Deku Mask" }
-text{ key = "inventory.caption.item.trading.4", value = "Moon Tear" }
-text{ key = "inventory.caption.item.trading.5", value = "Crystal Ball" }
-text{ key = "inventory.caption.item.trading.6", value = "Tasty Meat" }
-text{ key = "inventory.caption.item.trading.7", value = "Dog Food" }
-text{ key = "inventory.caption.item.trading.8", value = "Bananas" }
-text{ key = "inventory.caption.item.trading.9", value = "Goron Vase" }
-text{ key = "inventory.caption.item.tunic.1", value = "Tunic" }
+text{ key = "inventory.caption.item.tunic.1", value = "Green Tunic" }
+text{ key = "inventory.caption.item.tunic.2", value = "Red Tunic" }
+text{ key = "inventory.caption.item.tunic.3", value = "Blue Tunic" }
+text{ key = "inventory.caption.item.tunic.4", value = "Purple Tunic" }
 text{ key = "map.caption.dungeon_name_1", value = "Hyrulian$Sewers/Ruins" }
 text{ key = "map.caption.dungeon_name_2", value = "Sacred Grove" }
 text{ key = "map.caption.dungeon_name_3", value = "Abandoned Pyramid" }

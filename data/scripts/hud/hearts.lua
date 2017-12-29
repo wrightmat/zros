@@ -8,16 +8,13 @@ function hearts:new(game)
   self.__index = self
 
   object:initialize(game)
-
   return object
 end
 
 function hearts:initialize(game)
-
   self.game = game
   self.surface = sol.surface.create(90, 18)
-  self.dst_x = 0
-  self.dst_y = 0
+  self.dst_x = 0; self.dst_y = 0
   self.empty_heart_sprite = sol.sprite.create("hud/empty_heart")
   self.nb_max_hearts_displayed = game:get_max_life() / 4
   self.nb_current_hearts_displayed = game:get_life()
@@ -25,7 +22,6 @@ function hearts:initialize(game)
 end
 
 function hearts:on_started()
-
   -- This function is called when the HUD starts or
   -- was disabled and gets enabled again.
   -- Unlike other HUD elements, the timers were canceled because they
@@ -39,7 +35,6 @@ end
 -- Checks whether the view displays the correct info
 -- and updates it if necessary.
 function hearts:check()
-
   local need_rebuild = false
 
   -- Maximum life.
@@ -104,9 +99,7 @@ function hearts:check()
 end
 
 function hearts:repeat_danger_sound()
-
   if self.game:get_life() <= self.game:get_max_life() / 4 then
-
     sol.audio.play_sound("danger")
     self.danger_sound_timer = sol.timer.start(self, 750, function()
       self:repeat_danger_sound()
@@ -118,9 +111,7 @@ function hearts:repeat_danger_sound()
 end
 
 function hearts:rebuild_surface()
-
   self.surface:clear()
-
   -- Display the hearts.
   for i = 0, self.nb_max_hearts_displayed - 1 do
     local x, y = (i % 10) * 9, math.floor(i / 10) * 9
@@ -148,14 +139,8 @@ end
 function hearts:on_draw(dst_surface)
   local x, y = self.dst_x, self.dst_y
   local width, height = dst_surface:get_size()
-  if x < 0 then
-    x = width + x
-  end
-  if y < 0 then
-    y = height + y
-  end
-
-  -- Everything was already drawn on self.surface.
+  if x < 0 then x = width + x end
+  if y < 0 then y = height + y end
   self.surface:draw(dst_surface, x, y)
 end
 

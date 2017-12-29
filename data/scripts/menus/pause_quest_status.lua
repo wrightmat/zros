@@ -17,6 +17,7 @@ function quest_status_submenu:on_started()
   self.quest_cursor_position = 1
   self.quest_dialog_state = 0
   self.caption_text_keys = {}
+  self.tunic = self.game:get_item("tunic"):get_variant()
   
   self.quests_num = 0
   self.quests_texts = {}

@@ -8,23 +8,23 @@ function clock:new(game)
   self.__index = self
 
   object:initialize(game)
-
   return object
 end
 
 function clock:initialize(game)
   self.game = game
   self.surface = sol.surface.create(32, 32)
+  self.dst_x = 0; self.dst_y = 0
   self.clock_img = sol.sprite.create("hud/clock")
-
+  game.time_flow = 1000
   self:check()
   self:rebuild_surface()
 end
 
 function clock:check()
   local need_rebuild = false
-  if self.game:get_value("hour_of_day") == nil then self.game:set_value("hour_of_day", 12) end
-  local hour = tonumber(string.format("%." .. (idp or 0) .. "f", self.game:get_value("hour_of_day")))
+  if self.game:get_value("current_hour") == nil then self.game:set_value("current_hour", 7) end
+  local hour = tonumber(string.format("%." .. (idp or 0) .. "f", self.game:get_value("current_hour")))
   
   -- Current hour.
   if hour ~= self.hour_displayed then
@@ -46,7 +46,6 @@ end
 
 function clock:rebuild_surface()
   self.surface:clear()
-
   -- Clock icon.
   self.clock_img:draw(self.surface, 16, 16)
 end
@@ -59,13 +58,8 @@ end
 function clock:on_draw(dst_surface)
   local x, y = self.dst_x, self.dst_y
   local width, height = dst_surface:get_size()
-  if x < 0 then
-    x = width + x
-  end
-  if y < 0 then
-    y = height + y
-  end
-
+  if x < 0 then x = width + x end
+  if y < 0 then y = height + y end
   self.surface:draw(dst_surface, x, y)
 end
 

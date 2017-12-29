@@ -35,11 +35,11 @@ function hud_manager:initialize(game)
   
   -- Primary HUD 
   local hearts_builder 		  = require(path .. "hearts")
-  local magic_bar_builder 	  = require(path .. "magic_bar") 
-  local attack_icon_builder   = require(path .. "attack_icon")
-  local action_icon_builder   = require(path .. "action_icon")
-  local item_icon_builder 	  = require(path .. "item_icon")
-  local small_keys_builder 	  = require(path .. "small_keys")
+  local magic_bar_builder 	= require(path .. "magic_bar") 
+  local attack_icon_builder = require(path .. "attack_icon")
+  local action_icon_builder = require(path .. "action_icon")
+  local item_icon_builder 	= require(path .. "item_icon")
+  local small_keys_builder 	= require(path .. "small_keys")
   local rupees_builder 		  = require(path .. "rupees")
   local floor_builder 		  = require(path .. "floor")
   local minimap_builder 	  = require(path .. "minimap")
@@ -48,9 +48,10 @@ function hud_manager:initialize(game)
   local clock_builder 		  = require(path .. "clock")
   
   -- Third HUD
-  local bars_builder 		  = require(path .. "cutscene_bars")
+  local bars_builder 		    = require(path .. "cutscene_bars")
   local map_name_builder 	  = require(path .. "map_name")
-  local hints_builder         = require(path .. "hints")
+  local hints_builder       = require(path .. "hints")
+  local collectible_builder = require(path .. "collectibles")
   
   -- local boss_life_builder = require("scripts/hud/boss_life")
   -- local horse_stamina = require("scripts/hud/horse_stamina")
@@ -113,6 +114,9 @@ function hud_manager:initialize(game)
 
   local hints = hints_builder:new(game)
   hud.third[#hud.third + 1] = hints
+
+  local collectitible = collectible_builder:new(game)
+  hud.third[#hud.third + 1] = collectible
   
   -- local menu = plunging_bar_builder:new(game)
   -- menu:set_dst_position(15,38)
@@ -260,7 +264,7 @@ function hud_manager:initialize(game)
 
   -- Start the HUD.
   hud:set_enabled(true)
-  --game:set_clock_enabled(true)
+  game:start_tone_system()
 
   -- Update it regularly.
   check_hud()

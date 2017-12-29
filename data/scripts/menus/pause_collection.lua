@@ -2,37 +2,37 @@ local submenu = require("scripts/menus/pause_submenu")
 local collection_submenu = submenu:new()
 
 local item_names = {
-  "food_meat",
-  "food_fish",
-  "food_dairy",
-  "food_eggs",
-  "food_beans",
-  "boots",
-  "bottle_1",
-
-  "food_grains",
-  "food_aromatics",
-  "food_mushrooms",
-  "food_greens",
-  "food_peppers",
-  "hammer",
-  "bottle_2",
-
-  "food_pomes",
-  "food_tropical",
-  "food_melons",
-  "food_stone",
-  "trading",
-  "airship_part",
-  "bottle_3",
-
+  "food_meat_1",
+  "food_mushroom_1",
+  "food_plant_1",
+  "food_vegetable_1",
+  "food_fruit_1",
   "monster_jelly",
+  "insect_butterfly",
+
+  "food_meat_2",
+  "food_mushroom_2",
+  "food_plant_2",
+  "food_vegetable_2",
+  "food_fruit_2",
   "monster_wings",
+  "insect_dragonfly",
+
+  "food_meat_3",
+  "food_mushroom_3",
+  "food_plant_3",
+  "food_vegetable_3",
+  "food_fruit_3",
   "monster_tails",
-  "monster_parts",
-  "crystal_counter",
-  "ore_counter",
-  "bottle_4"
+  "insect_mayfly",
+
+  "food_meat_4",
+  "food_mushroom_4",
+  "food_plant_4",
+  "food_vegetable_4",
+  "food_fruit_4",
+  "monster_guts",
+  "insect_beetle"
 }
 
 function collection_submenu:on_started()

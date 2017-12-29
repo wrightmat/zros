@@ -22,7 +22,6 @@ game.independent_entities = {}
 
 game:register_event("on_started", function(game)
   game.hud = hud_manager:initialize(game)
-  game:calculate_percent_complete()
 end)
 
 game:register_event("on_finished", function(game)

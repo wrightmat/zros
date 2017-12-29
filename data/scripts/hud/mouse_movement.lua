@@ -1,4 +1,4 @@
--- Control the hero with the mouse.
+-- Control the hero with the mouse (or touch).
 
 local mouse_movement_builder = {}
 
