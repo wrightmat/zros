@@ -11,14 +11,15 @@ local probabilities = {
   [{ "arrow", 1 }]      = 8,    -- 1 arrow.
   [{ "arrow", 2 }]      = 5,    -- 5 arrows.
   [{ "arrow", 3 }]      = 2,    -- 10 arrows.
-  [{ "rupee", 1 }]      = 50,   -- 1 rupee.
-  [{ "rupee", 2 }]      = 15,   -- 5 rupees.
+  [{ "rupee", 1 }]      = 20,   -- 1 rupee.
+  [{ "rupee", 2 }]      = 10,   -- 5 rupees.
   [{ "rupee", 3 }]      = 5,    -- 20 rupees.
-  [{ "magic_flask", 1}] = 20,   -- Small magic jar.
+  [{ "magic_flask", 1}] = 10,   -- Small magic jar.
   [{ "magic_flask", 2}] = 8,    -- Big magic jar.
-  [{ "heart", 1}]       = 25,  -- Heart.
+  [{ "heart", 1}]       = 10,   -- Heart.
   [{ "fairy", 1}]       = 2,    -- Fairy.
-  [{ "carrot", 1}]      = 2,    -- Carrot.
+  [{ "food_meat_3", 1}] = 10,   -- Brave Porgy.
+  [{ "food_meat_4", 1}] = 10,   -- Enduring Carp.
 }
 
 function item:on_pickable_created(pickable)
