@@ -1,0 +1,35 @@
+properties{
+  x = 0,
+  y = 1201,
+  width = 1600,
+  height = 1200,
+  min_layer = -2,
+  max_layer = 2,
+  world = "outside",
+  tileset = "outdoors",
+}
+
+teletransporter{
+  name = "to_B2",
+  layer = -2,
+  x = 1600,
+  y = 0,
+  width = 16,
+  height = 1200,
+  transition = "scrolling",
+  destination_map = "B2",
+  destination = "_side",
+}
+
+teletransporter{
+  name = "to_A3",
+  layer = 0,
+  x = 0,
+  y = 1200,
+  width = 1600,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "A3",
+  destination = "_side",
+}
+
