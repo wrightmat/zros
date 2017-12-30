@@ -1,0 +1,365 @@
+properties{
+  x = 1601,
+  y = 2402,
+  width = 1600,
+  height = 1600,
+  min_layer = -2,
+  max_layer = 2,
+  world = "outside",
+  tileset = "outdoors",
+}
+
+tile{
+  layer = 0,
+  x = 0,
+  y = 0,
+  width = 1600,
+  height = 1600,
+  pattern = "grass.0",
+}
+
+tile{
+  layer = 0,
+  x = 1512,
+  y = 896,
+  width = 88,
+  height = 400,
+  pattern = "217",
+}
+
+tile{
+  layer = 0,
+  x = 480,
+  y = 1488,
+  width = 16,
+  height = 112,
+  pattern = "170",
+}
+
+tile{
+  layer = 0,
+  x = 464,
+  y = 1504,
+  width = 16,
+  height = 96,
+  pattern = "164",
+}
+
+tile{
+  layer = 0,
+  x = 496,
+  y = 1504,
+  width = 16,
+  height = 96,
+  pattern = "171",
+}
+
+tile{
+  layer = 0,
+  x = 24,
+  y = 1584,
+  width = 16,
+  height = 8,
+  pattern = "tree_1.bottom",
+}
+
+tile{
+  layer = 0,
+  x = 8,
+  y = 1536,
+  width = 48,
+  height = 32,
+  pattern = "tree_1.middle",
+}
+
+tile{
+  layer = 0,
+  x = 1536,
+  y = 1296,
+  width = 64,
+  height = 304,
+  pattern = "388",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 1344,
+  width = 128,
+  height = 208,
+  pattern = "388",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 1408,
+  width = 80,
+  height = 96,
+  pattern = "388",
+}
+
+tile{
+  layer = 0,
+  x = 1528,
+  y = 1560,
+  width = 8,
+  height = 40,
+  pattern = "777",
+}
+
+tile{
+  layer = 0,
+  x = 1528,
+  y = 1552,
+  width = 8,
+  height = 8,
+  pattern = "776",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 1552,
+  width = 120,
+  height = 8,
+  pattern = "775",
+}
+
+tile{
+  layer = 0,
+  x = 1400,
+  y = 1512,
+  width = 8,
+  height = 40,
+  pattern = "777",
+}
+
+tile{
+  layer = 0,
+  x = 1400,
+  y = 1504,
+  width = 8,
+  height = 8,
+  pattern = "776",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 1504,
+  width = 72,
+  height = 8,
+  pattern = "775",
+}
+
+tile{
+  layer = 0,
+  x = 1320,
+  y = 1408,
+  width = 8,
+  height = 96,
+  pattern = "777",
+}
+
+tile{
+  layer = 0,
+  x = 1328,
+  y = 1400,
+  width = 72,
+  height = 8,
+  pattern = "779",
+}
+
+tile{
+  layer = 0,
+  x = 1400,
+  y = 1400,
+  width = 8,
+  height = 8,
+  pattern = "778",
+}
+
+tile{
+  layer = 0,
+  x = 1400,
+  y = 1344,
+  width = 8,
+  height = 56,
+  pattern = "777",
+}
+
+tile{
+  layer = 0,
+  x = 1408,
+  y = 1336,
+  width = 120,
+  height = 8,
+  pattern = "779",
+}
+
+tile{
+  layer = 0,
+  x = 1528,
+  y = 1336,
+  width = 8,
+  height = 8,
+  pattern = "778",
+}
+
+tile{
+  layer = 0,
+  x = 1528,
+  y = 1296,
+  width = 8,
+  height = 40,
+  pattern = "777",
+}
+
+tile{
+  layer = 0,
+  x = 1520,
+  y = 1288,
+  width = 80,
+  height = 8,
+  pattern = "779",
+}
+
+tile{
+  layer = 0,
+  x = 1592,
+  y = 1288,
+  width = 8,
+  height = 16,
+  pattern = "843",
+}
+
+tile{
+  layer = 0,
+  x = 1576,
+  y = 1288,
+  width = 16,
+  height = 16,
+  pattern = "842",
+}
+
+tile{
+  layer = 0,
+  x = 1568,
+  y = 1288,
+  width = 8,
+  height = 16,
+  pattern = "841",
+}
+
+tile{
+  layer = 0,
+  x = 1512,
+  y = 1288,
+  width = 8,
+  height = 8,
+  pattern = "776",
+}
+
+tile{
+  layer = 0,
+  x = 1504,
+  y = 896,
+  width = 8,
+  height = 392,
+  pattern = "777",
+}
+
+teletransporter{
+  name = "to_B4",
+  layer = 0,
+  x = 0,
+  y = 1600,
+  width = 1600,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "B4",
+  destination = "_side",
+}
+
+teletransporter{
+  name = "to_C3",
+  layer = 0,
+  x = 1600,
+  y = 0,
+  width = 16,
+  height = 1600,
+  transition = "scrolling",
+  destination_map = "C3",
+  destination = "_side",
+}
+
+teletransporter{
+  name = "to_B2",
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1600,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "B2",
+  destination = "_side",
+}
+
+teletransporter{
+  name = "to_A3",
+  layer = 0,
+  x = -16,
+  y = 0,
+  width = 16,
+  height = 1600,
+  transition = "scrolling",
+  destination_map = "A3",
+  destination = "_side",
+}
+
+tile{
+  layer = 1,
+  x = 32,
+  y = 1576,
+  width = 64,
+  height = 24,
+  pattern = "tree_1.top",
+}
+
+tile{
+  layer = 1,
+  x = 8,
+  y = 1568,
+  width = 48,
+  height = 16,
+  pattern = "tree_1.trunk",
+}
+
+tile{
+  layer = 1,
+  x = 0,
+  y = 1512,
+  width = 64,
+  height = 24,
+  pattern = "tree_1.top",
+}
+
+tile{
+  layer = 1,
+  x = 0,
+  y = 1536,
+  width = 8,
+  height = 40,
+  pattern = "tree_1.side_left",
+}
+
+tile{
+  layer = 1,
+  x = 56,
+  y = 1536,
+  width = 8,
+  height = 40,
+  pattern = "tree_1.side_right",
+}
+
