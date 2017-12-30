@@ -1,0 +1,20 @@
+animation{
+  name = "stopped",
+  src_image = "npc/great_tree.png",
+  directions = {
+    { x = 16, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 16, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 16, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 16, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+  },
+}
+animation{
+  name = "talking",
+  src_image = "npc/great_tree.png",
+  directions = {
+    { x = 272, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 272, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 272, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+    { x = 272, y = 72, frame_width = 224, frame_height = 128, origin_x = 112, origin_y = 112 },
+  },
+}

@@ -1,0 +1,22 @@
+animation{
+  name = "stopped",
+  src_image = "npc/koroks.png",
+  directions = {
+    { x = 96, y = 128, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 160, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 192, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 224, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "npc/koroks.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 72, y = 128, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 160, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 192, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 224, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+  },
+}
