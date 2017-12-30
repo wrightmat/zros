@@ -1,0 +1,23 @@
+properties{
+  x = 6404,
+  y = 4003,
+  width = 1600,
+  height = 1200,
+  min_layer = -2,
+  max_layer = 2,
+  world = "outside",
+  tileset = "outdoors",
+}
+
+teletransporter{
+  name = "to_E3",
+  layer = 0,
+  x = 0,
+  y = -16,
+  width = 1600,
+  height = 16,
+  transition = "scrolling",
+  destination_map = "E3",
+  destination = "_side",
+}
+
