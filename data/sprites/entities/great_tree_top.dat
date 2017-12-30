@@ -1,0 +1,7 @@
+animation{
+  name = "stopped",
+  src_image = "npc/great_tree.png",
+  directions = {
+    { x = 0, y = 0, frame_width = 256, frame_height = 72, origin_x = 128, origin_y = 64 },
+  },
+}

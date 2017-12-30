@@ -75,48 +75,52 @@ animation{
     { x = 168, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
     { x = 144, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
     { x = 168, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "bottle_2",
   src_image = "entities/items.png",
   directions = {
-    { x = 96, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 112, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 128, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 144, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "bottle_3",
   src_image = "entities/items.png",
   directions = {
-    { x = 96, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 112, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 128, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 144, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "bottle_4",
   src_image = "entities/items.png",
   directions = {
-    { x = 96, y = 0, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 16, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 32, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 48, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 64, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 96, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 112, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
-    { x = 128, y = 80, frame_width = 16, frame_height = 16, origin_x = 8, origin_y = 13 },
+    { x = 144, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 72, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
@@ -125,6 +129,7 @@ animation{
   directions = {
     { x = 48, y = 0, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
     { x = 48, y = 24, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 48, y = 48, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
@@ -173,143 +178,143 @@ animation{
   },
 }
 animation{
-  name = "food_aromatics",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 144, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 144, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 144, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 144, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_beans",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 72, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 72, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 72, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 72, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_dairy",
+  name = "food_fruit_1",
   src_image = "entities/items.png",
   directions = {
     { x = 96, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_fruit_2",
+  src_image = "entities/items.png",
+  directions = {
     { x = 96, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_fruit_3",
+  src_image = "entities/items.png",
+  directions = {
     { x = 96, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_fruit_4",
+  src_image = "entities/items.png",
+  directions = {
     { x = 96, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_eggs",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 48, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 48, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 48, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 48, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_fish",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 24, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 24, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 24, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 24, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_grains",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 120, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 120, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 120, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 120, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_greens",
-  src_image = "entities/items.png",
-  directions = {
-    { x = 192, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 192, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 192, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 192, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-  },
-}
-animation{
-  name = "food_meat",
+  name = "food_meat_1",
   src_image = "entities/items.png",
   directions = {
     { x = 0, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_meat_2",
+  src_image = "entities/items.png",
+  directions = {
     { x = 0, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_meat_3",
+  src_image = "entities/items.png",
+  directions = {
     { x = 0, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_meat_4",
+  src_image = "entities/items.png",
+  directions = {
     { x = 0, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_melons",
+  name = "food_mushroom_1",
   src_image = "entities/items.png",
   directions = {
-    { x = 288, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 288, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 288, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 288, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 24, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_mushrooms",
+  name = "food_mushroom_2",
   src_image = "entities/items.png",
   directions = {
-    { x = 168, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 168, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 168, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 168, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 24, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_peppers",
+  name = "food_mushroom_3",
   src_image = "entities/items.png",
   directions = {
-    { x = 216, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 216, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 216, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 216, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 24, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_pomes",
+  name = "food_mushroom_4",
   src_image = "entities/items.png",
   directions = {
-    { x = 240, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 240, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 240, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 240, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 24, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_stone",
+  name = "food_plant_1",
   src_image = "entities/items.png",
   directions = {
-    { x = 312, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 312, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 312, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 312, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 48, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "food_tropical",
+  name = "food_plant_2",
   src_image = "entities/items.png",
   directions = {
-    { x = 264, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 264, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 264, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 264, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 48, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_plant_3",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 48, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_plant_4",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 48, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_vegetable_1",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 72, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_vegetable_2",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 72, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_vegetable_3",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 72, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "food_vegetable_4",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 72, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
@@ -365,6 +370,34 @@ animation{
   },
 }
 animation{
+  name = "insect_beetle",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 144, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "insect_butterfly",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 144, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "insect_dragonfly",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 144, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
+  name = "insect_mayfly",
+  src_image = "entities/items.png",
+  directions = {
+    { x = 144, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+  },
+}
+animation{
   name = "lamp",
   src_image = "entities/items.png",
   directions = {
@@ -402,43 +435,31 @@ animation{
   },
 }
 animation{
-  name = "monster_jelly",
+  name = "monster_guts",
   src_image = "entities/items.png",
   directions = {
-    { x = 360, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 360, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 360, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 360, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 120, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
-  name = "monster_parts",
+  name = "monster_jelly",
   src_image = "entities/items.png",
   directions = {
-    { x = 432, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 432, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 432, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 432, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 120, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "monster_tails",
   src_image = "entities/items.png",
   directions = {
-    { x = 408, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 408, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 408, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 408, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 120, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "monster_wings",
   src_image = "entities/items.png",
   directions = {
-    { x = 384, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 384, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 384, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
-    { x = 384, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 120, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
