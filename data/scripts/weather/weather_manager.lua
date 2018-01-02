@@ -10,6 +10,7 @@ local leaf_manager_enabled = true
 local sand_manager_enabled = true
 
 local game_meta = sol.main.get_metatable("game")
+game_meta.weather = nil
 
 if rain_manager_enabled then
   require("scripts/weather/rain_manager")
