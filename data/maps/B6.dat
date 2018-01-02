@@ -5239,6 +5239,33 @@ tile{
   pattern = "tree_1.trunk",
 }
 
+tile{
+  layer = 0,
+  x = 968,
+  y = 840,
+  width = 16,
+  height = 24,
+  pattern = "957",
+}
+
+tile{
+  layer = 0,
+  x = 960,
+  y = 840,
+  width = 8,
+  height = 24,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = 984,
+  y = 840,
+  width = 8,
+  height = 24,
+  pattern = "959",
+}
+
 teletransporter{
   name = "to_A6",
   layer = 0,
@@ -10258,6 +10285,15 @@ tile{
   width = 64,
   height = 24,
   pattern = "tree_1.top",
+}
+
+tile{
+  layer = 1,
+  x = 960,
+  y = 816,
+  width = 32,
+  height = 24,
+  pattern = "960",
 }
 
 custom_entity{
