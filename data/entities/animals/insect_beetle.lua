@@ -4,6 +4,7 @@ local hero = game:get_map():get_entity("hero")
 
 -- A beetle is an entity which crawls around on the ground
 -- randomly, and quickly avoids the hero.
+-- Variants: Skyloft, Horned, Pincer, Stag
 
 local function random_walk()
   local m = sol.movement.create("random_path")
@@ -21,7 +22,7 @@ local function avoid_hero()
     elseif math.random(4) == 3 then hx = hx - 100
     elseif math.random(4) == 4 then hy = hy - 100 end
     m:set_target(hx, hy)
-    m:set_ignore_obstacles(false)
+    m:set_ignore_obstacles(true)
     m:set_speed(96)
     m:start(entity)
     entity:get_sprite():set_animation("walking")
@@ -30,16 +31,12 @@ end
 
 function entity:on_created()
   self.action_effect = "grab"
-  self:set_drawn_in_y_order(true)
   sol.timer.start(entity, 500, function()
     local hx, hy, hl = hero:get_position()
     local ex, ey, el = entity:get_position()
     local distance_hero = math.abs((hx+hy)-(ex+ey))
-    if distance_hero > 50 then
-      random_walk()
-    else
-      avoid_hero()
-    end
+    if distance_hero > 50 then random_walk()
+    else avoid_hero() end
     return true
   end)
 end
@@ -49,9 +46,17 @@ function entity:on_movement_changed(movement)
   entity:get_sprite():set_direction(direction)
 end
 
--- If the hero interacts with the butterfly, he collects it.
+-- If the hero interacts with the beetle, he collects it.
 function entity:on_interaction()
   sol.audio.play_sound("picked_item")
-  game:get_item("insect_beetle"):on_obtaining(1)
+  if self:get_sprite():get_animation_set() == "npc/beetle_skyloft" then
+    game:get_item("insect_beetle"):on_obtaining(1)
+  elseif self:get_sprite():get_animation_set() == "npc/beetle_horned" then
+    game:get_item("insect_beetle"):on_obtaining(2)
+  elseif self:get_sprite():get_animation_set() == "npc/beetle_pincer" then
+    game:get_item("insect_beetle"):on_obtaining(3)
+  elseif self:get_sprite():get_animation_set() == "npc/beetle_stag" then
+    game:get_item("insect_beetle"):on_obtaining(4)
+  end
   self:remove()
 end

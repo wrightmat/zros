@@ -3,7 +3,8 @@ local game = entity:get_game()
 local hero = game:get_map():get_entity("hero")
 
 -- A mayfly is an entity which darts around randomly
--- and and quickly, while avoiding the hero.
+-- and quickly, while avoiding the hero.
+-- Variants: Lomei, Blue, Red, Yellow
 
 local function random_walk()
   local m = sol.movement.create("random_path")
@@ -52,6 +53,14 @@ end
 -- If the hero interacts with the butterfly, he collects it.
 function entity:on_interaction()
   sol.audio.play_sound("picked_item")
-  game:get_item("insect_mayfly"):on_obtaining(1)
+  if self:get_sprite():get_animation_set() == "npc/mayfly_lomei" then
+    game:get_item("insect_mayfly"):on_obtaining(1)
+  elseif self:get_sprite():get_animation_set() == "npc/mayfly_blue" then
+    game:get_item("insect_mayfly"):on_obtaining(2)
+  elseif self:get_sprite():get_animation_set() == "npc/mayfly_red" then
+    game:get_item("insect_mayfly"):on_obtaining(3)
+  elseif self:get_sprite():get_animation_set() == "npc/mayfly_yellow" then
+    game:get_item("insect_mayfly"):on_obtaining(4)
+  end
   self:remove()
 end

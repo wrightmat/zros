@@ -4,6 +4,7 @@ local hero = game:get_map():get_entity("hero")
 
 -- A butterfly is an entity which follows our hero sometimes,
 -- flies randomly sometimes, and lands on things sometimes.
+-- Variants: Blessed, Pink, Grey, Blue
 
 local function random_walk()
   local m = sol.movement.create("random_path")
@@ -35,11 +36,8 @@ function entity:on_created()
     local hx, hy, hl = hero:get_position()
     local ex, ey, el = entity:get_position()
     local distance_hero = math.abs((hx+hy)-(ex+ey))
-    if distance_hero > 50 then
-      random_walk()
-    else
-      avoid_hero()
-    end
+    if distance_hero > 50 then random_walk()
+    else avoid_hero() end
     return true
   end)
 end
@@ -52,6 +50,14 @@ end
 -- If the hero interacts with the butterfly, he collects it.
 function entity:on_interaction()
   sol.audio.play_sound("picked_item")
-  game:get_item("insect_butterfly"):on_obtaining(1)
+  if self:get_sprite():get_animation_set() == "npc/butterfly_blessed" then
+    game:get_item("insect_butterfly"):on_obtaining(1)
+  elseif self:get_sprite():get_animation_set() == "npc/butterfly_pink" then
+    game:get_item("insect_butterfly"):on_obtaining(2)
+  elseif self:get_sprite():get_animation_set() == "npc/butterfly_grey" then
+    game:get_item("insect_butterfly"):on_obtaining(3)
+  elseif self:get_sprite():get_animation_set() == "npc/butterfly_blue" then
+    game:get_item("insect_butterfly"):on_obtaining(4)
+  end
   self:remove()
 end

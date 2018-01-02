@@ -4,6 +4,7 @@ local hero = game:get_map():get_entity("hero")
 
 -- A dragonfly is an entity which darts around quickly
 -- and randomly, but generally away from the hero.
+-- Variants: Gerudo, Green, Yellow, Dark
 
 local function random_walk()
   local m = sol.movement.create("straight")
@@ -54,6 +55,14 @@ end
 -- If the hero interacts with the butterfly, he collects it.
 function entity:on_interaction()
   sol.audio.play_sound("picked_item")
-  game:get_item("insect_dragonfly"):on_obtaining(1)
+  if self:get_sprite():get_animation_set() == "npc/dragonfly_gerudo" then
+    game:get_item("insect_dragonfly"):on_obtaining(1)
+  elseif self:get_sprite():get_animation_set() == "npc/dragondly_green" then
+    game:get_item("insect_dragonfly"):on_obtaining(2)
+  elseif self:get_sprite():get_animation_set() == "npc/dragonfly_yellow" then
+    game:get_item("insect_dragonfly"):on_obtaining(3)
+  elseif self:get_sprite():get_animation_set() == "npc/dragonfly_dark" then
+    game:get_item("insect_dragonfly"):on_obtaining(4)
+  end
   self:remove()
 end
