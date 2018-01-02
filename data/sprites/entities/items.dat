@@ -373,7 +373,10 @@ animation{
   name = "insect_beetle",
   src_image = "entities/items.png",
   directions = {
-    { x = 144, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 216, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 216, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 216, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 216, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
@@ -381,20 +384,29 @@ animation{
   src_image = "entities/items.png",
   directions = {
     { x = 144, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 144, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "insect_dragonfly",
   src_image = "entities/items.png",
   directions = {
-    { x = 144, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 168, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{
   name = "insect_mayfly",
   src_image = "entities/items.png",
   directions = {
-    { x = 144, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 96, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 120, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 144, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
+    { x = 192, y = 168, frame_width = 24, frame_height = 24, origin_x = 12, origin_y = 21 },
   },
 }
 animation{

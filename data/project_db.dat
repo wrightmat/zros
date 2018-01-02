@@ -23,6 +23,7 @@ map{ id = "E2", description = "Hebra Climb" }
 map{ id = "E3", description = "Zora's Domain / Cistern Cavern" }
 map{ id = "E4", description = "Lake Floria" }
 map{ id = "Inside_B4", description = "Hylian Settlement, Inside" }
+map{ id = "Inside_C3", description = "Sheikah Village, Inside" }
 
 tileset{ id = "indoors", description = "Indoors" }
 tileset{ id = "outdoors", description = "Outdoors" }
@@ -178,6 +179,8 @@ sprite{ id = "entities/explosion", description = "Explosion" }
 sprite{ id = "entities/fire", description = "Fire" }
 sprite{ id = "entities/fire_burns", description = "Fire (burns)" }
 sprite{ id = "entities/fire_burst", description = "Fire (burst)" }
+sprite{ id = "entities/fire_campfire", description = "Campfire" }
+sprite{ id = "entities/fire_loop", description = "Fire, Loop" }
 sprite{ id = "entities/fire_small", description = "Fire (small)" }
 sprite{ id = "entities/fireworks_shell", description = "Fireworks (aerial shell)" }
 sprite{ id = "entities/fireworks_shower", description = "Fireworks (ground shower)" }
@@ -292,7 +295,7 @@ sprite{ id = "menus/selection_menu_cursor", description = "Menus: Selection menu
 sprite{ id = "menus/solarus_logo", description = "Menus: Solarus logo" }
 sprite{ id = "npc/beetle_horned", description = "Beetle, Horned" }
 sprite{ id = "npc/beetle_pincer", description = "Beetle, Pincer" }
-sprite{ id = "npc/beetle_rhino", description = "Beetle, Rhino" }
+sprite{ id = "npc/beetle_skyloft", description = "Beetle, Skyloft" }
 sprite{ id = "npc/beetle_stag", description = "Beetle, Stag" }
 sprite{ id = "npc/butterfly_blessed", description = "Butterfly, blessed" }
 sprite{ id = "npc/butterfly_blue", description = "Butterfly, blue" }
@@ -304,9 +307,15 @@ sprite{ id = "npc/dragonfly_green", description = "Dragonfly, green" }
 sprite{ id = "npc/dragonfly_yellow", description = "Dragonfly, yellow" }
 sprite{ id = "npc/gerudo_merchant", description = "Gerudo Merchant" }
 sprite{ id = "npc/goron", description = "Goron" }
+sprite{ id = "npc/goron_1", description = "Goron 1" }
+sprite{ id = "npc/goron_2", description = "Goron 2" }
+sprite{ id = "npc/goron_3", description = "Goron 3" }
+sprite{ id = "npc/goron_4", description = "Goron 4" }
+sprite{ id = "npc/goron_5", description = "Goron 5" }
+sprite{ id = "npc/goron_6", description = "Goron 6" }
+sprite{ id = "npc/goron_elder", description = "Goron Elder" }
 sprite{ id = "npc/great_fairy", description = "Great Fairy" }
 sprite{ id = "npc/great_tree", description = "Great Tree" }
-sprite{ id = "npc/guard_hylian", description = "Hylian Guard" }
 sprite{ id = "npc/hylian_apothecary", description = "Hylian Apothecary" }
 sprite{ id = "npc/hylian_baker", description = "Hylian Baker" }
 sprite{ id = "npc/hylian_child_1", description = "Hylian Child 1" }
@@ -339,7 +348,7 @@ sprite{ id = "npc/korok_7", description = "Korok 7" }
 sprite{ id = "npc/korok_8", description = "Korok 8" }
 sprite{ id = "npc/korok_9", description = "Korok 9" }
 sprite{ id = "npc/mayfly_blue", description = "Mayfly, Blue" }
-sprite{ id = "npc/mayfly_green", description = "Mayfly, Green" }
+sprite{ id = "npc/mayfly_lomei", description = "Mayfly, Lomei" }
 sprite{ id = "npc/mayfly_red", description = "Mayfly, Red" }
 sprite{ id = "npc/mayfly_yellow", description = "Mayfly, Yellow" }
 sprite{ id = "npc/rito", description = "Rito" }
@@ -692,6 +701,7 @@ entity{ id = "animals/insect_dragonfly", description = "Dragonfly" }
 entity{ id = "animals/insect_mayfly", description = "Mayfly" }
 entity{ id = "arrow", description = "Arrow" }
 entity{ id = "collectibles/steak", description = "Steak" }
+entity{ id = "cooking_manager", description = "Cooking Manager" }
 entity{ id = "fire", description = "Fire (custom)" }
 entity{ id = "generic_animal", description = "Generic Animal" }
 entity{ id = "generic_flying_pickable", description = "Generic Flying Pickable" }

@@ -6,6 +6,7 @@ local shop_manager = {}
 local getting_treasure = false
 local shopkeeper_dst
 local max_item_cursor = {}
+
 function game:start_shop()
   sol.menu.start(game, shop_manager, true)
 end
@@ -16,14 +17,10 @@ end
 
 function shop_manager:on_started()
   local font_size = 14
-
   self.game = game
 
-  --refresth the time
+  -- Slow the flow of time.
   self.game.time_flow = 1000 * 1000 * 1000 * 1000 
-  self.game:set_clock_enabled(false)
-  self.game:set_clock_enabled(true)
-
   self.game:get_hero():freeze()
   self.game:set_pause_allowed(false)
   
@@ -33,7 +30,7 @@ function shop_manager:on_started()
     max_item_cursor[#max_item_cursor + 1] = items
   end
  
-  -- avoid using default dialog (we want dialog to be dynamic), use text surface spawn the dialog
+  -- Avoid using default dialog (we want dialog to be dynamic), use text surface spawn the dialog.
   self.dialog_text_line0 = sol.text_surface.create{
     horizontal_alignment = "left",
     vertical_alignment = "middle",
@@ -67,7 +64,6 @@ end
 
 function shop_manager:on_finished()
   sol.timer.stop_all(self)
-
 end
 
 function shop_manager:on_draw(dst_surface)
@@ -75,16 +71,15 @@ function shop_manager:on_draw(dst_surface)
   local x = width / 2
   local y = height / 2
   
-  
   if not getting_treasure then
     self.dialog_box_src:draw_region(0, 0, 280, 60, dst_surface, x - 140, y + 24)
-	self.dialog_text_line0:draw(dst_surface, x - 124, 164)
-	if self.dialog_text_line1:get_text() ~= nil then
-	  self.dialog_text_line1:draw(dst_surface, x - 124, 177)
-	end
-	if self.dialog_text_line2:get_text() ~= nil then
-	  self.dialog_text_line2:draw(dst_surface, x - 124, 190)
-	end
+    self.dialog_text_line0:draw(dst_surface, x - 124, 164)
+    if self.dialog_text_line1:get_text() ~= nil then
+      self.dialog_text_line1:draw(dst_surface, x - 124, 177)
+    end
+    if self.dialog_text_line2:get_text() ~= nil then
+      self.dialog_text_line2:draw(dst_surface, x - 124, 190)
+    end
   end
 end
 

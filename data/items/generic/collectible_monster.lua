@@ -53,21 +53,19 @@ function behavior:create(item, properties)
       game:set_value(item:get_name() .. "_" .. variant .. "_counter", 1)
     end
     game:set_value(item:get_name() .. "_" .. variant .. "_obtained", true)
+
+    local item = self:get_name()
+    if variant < 1 then variant = 1 end
+    local sprite = sol.sprite.create("entities/items")
+    sprite:set_animation(item); sprite:set_direction(variant - 1)
+    local text = sol.language.get_string("inventory.caption.item." .. item ..  "." .. variant)
+    self:get_game():show_collectible(sprite, text, 100)
   end
 
   function item:on_pickable_created(pickable)
     local game = self:get_game()
     local _, variant, _ = pickable:get_treasure()
     if game:get_value(item:get_name() .. "_" .. variant .. "_obtained") then self:set_brandish_when_picked(false) end
-  end
-
-  function item:on_amount_changed(amount)
-    local item = self:get_name()
-    local variant = self:get_variant() or 1
-    local sprite = sol.sprite.create("entities/items")
-    sprite:set_animation(item); sprite:set_direction(variant - 1)
-    local text = sol.language.get_string("inventory.caption.item." .. item ..  "." .. variant)
-    self:get_game():show_collectible(sprite, text, 100)
   end
 
   function item:on_using()
