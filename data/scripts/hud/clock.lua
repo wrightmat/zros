@@ -22,19 +22,13 @@ function clock:initialize(game)
 end
 
 function clock:check()
-  local need_rebuild = false
   if self.game:get_value("current_hour") == nil then self.game:set_value("current_hour", 7) end
   local hour = tonumber(string.format("%." .. (idp or 0) .. "f", self.game:get_value("current_hour")))
   
   -- Current hour.
   if hour ~= self.hour_displayed then
-    need_rebuild = true
     self.hour_displayed = hour
     self.clock_img:set_direction(self.hour_displayed)
-  end
-  
-  -- Redraw the surface only if something has changed.
-  if need_rebuild then
     self:rebuild_surface()
   end
   

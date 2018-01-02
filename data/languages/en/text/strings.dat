@@ -6,6 +6,7 @@ text{ key = "credits.5", value = "Story -----$ZeroScore (Justin Wright)$ZeldaHis
 text{ key = "credits.6", value = "Sprites/Tiles -----$Moffett1990 - Floria Baba/Ritos$DJVenom - Beamos$ChaosMiles07 - Ordon Shield/item sprites$Leduardo - Anouki$Desgardes - Subrosians/Tokay/Zoras$Inverder - Giga base (ReDead)$Hero of Time - Big Poe$Gazamaluke7377 / msdbzamine - ReDead$TroutBoy / NewLink - Helmaroc base$TroutBoy - Zora King$Pucifur27 - Hyrule guard$Kleaver & Linkus" }
 text{ key = "credits.7", value = "Music -----$ellebirdy23 (Alisa) - Book of Mudora (Laruto's Lament)$Richard Wurth - Interloper Sanctum (Serendipity)$Laura Shigihara - Ballad of the Goddess (Marryn)$Shady Cicada - Groose Theme Rock Cover (Gruce)$Zelda Reorchestrated Team$Nintendo of America" }
 text{ key = "credits.8", value = "A very special thank you to...$ $Satoru Iwata$ $Who gave my childhood something to love." }
+text{ key = "inventory.caption.cooking", value = "Select Bottle to$start cooking" }
 text{ key = "inventory.caption.item.bomb.1", value = "Bombs" }
 text{ key = "inventory.caption.item.bomb_bag.1", value = "Bomb Bag" }
 text{ key = "inventory.caption.item.boomerang.1", value = "Boomerang" }
@@ -18,7 +19,7 @@ text{ key = "inventory.caption.item.bottle_1.4", value = "Bottle$(Green Potion)"
 text{ key = "inventory.caption.item.bottle_1.5", value = "Bottle$(Blue Potion)" }
 text{ key = "inventory.caption.item.bottle_1.6", value = "Bottle$(Revit. Potion)" }
 text{ key = "inventory.caption.item.bottle_1.7", value = "Bottle$(Fairy)" }
-text{ key = "inventory.caption.item.bottle_1.8", value = "Bottle$(Poe Soul)" }
+text{ key = "inventory.caption.item.bottle_1.8", value = "Bottle$(Cooked Food)" }
 text{ key = "inventory.caption.item.bottle_2.1", value = "Bottle$(Empty)" }
 text{ key = "inventory.caption.item.bottle_2.2", value = "Bottle$(Water)" }
 text{ key = "inventory.caption.item.bottle_2.3", value = "Bottle$(Red Potion)" }
@@ -26,7 +27,7 @@ text{ key = "inventory.caption.item.bottle_2.4", value = "Bottle$(Green Potion)"
 text{ key = "inventory.caption.item.bottle_2.5", value = "Bottle$(Blue Potion)" }
 text{ key = "inventory.caption.item.bottle_2.6", value = "Bottle$(Revit. Potion)" }
 text{ key = "inventory.caption.item.bottle_2.7", value = "Bottle$(Fairy)" }
-text{ key = "inventory.caption.item.bottle_2.8", value = "Bottle$(Poe Soul)" }
+text{ key = "inventory.caption.item.bottle_2.8", value = "Bottle$(Cooked Food)" }
 text{ key = "inventory.caption.item.bottle_3.1", value = "Bottle$(Empty)" }
 text{ key = "inventory.caption.item.bottle_3.2", value = "Bottle$(Water)" }
 text{ key = "inventory.caption.item.bottle_3.3", value = "Bottle$(Red Potion)" }
@@ -34,7 +35,7 @@ text{ key = "inventory.caption.item.bottle_3.4", value = "Bottle$(Green Potion)"
 text{ key = "inventory.caption.item.bottle_3.5", value = "Bottle$(Blue Potion)" }
 text{ key = "inventory.caption.item.bottle_3.6", value = "Bottle$(Revit. Potion)" }
 text{ key = "inventory.caption.item.bottle_3.7", value = "Bottle$(Fairy)" }
-text{ key = "inventory.caption.item.bottle_3.8", value = "Bottle$(Poe Soul)" }
+text{ key = "inventory.caption.item.bottle_3.8", value = "Bottle$(Cooked Food)" }
 text{ key = "inventory.caption.item.bottle_4.1", value = "Bottle$(Empty)" }
 text{ key = "inventory.caption.item.bottle_4.2", value = "Bottle$(Water)" }
 text{ key = "inventory.caption.item.bottle_4.3", value = "Bottle$(Red Potion)" }
@@ -42,7 +43,7 @@ text{ key = "inventory.caption.item.bottle_4.4", value = "Bottle$(Green Potion)"
 text{ key = "inventory.caption.item.bottle_4.5", value = "Bottle$(Blue Potion)" }
 text{ key = "inventory.caption.item.bottle_4.6", value = "Bottle$(Revit. Potion)" }
 text{ key = "inventory.caption.item.bottle_4.7", value = "Bottle$(Fairy)" }
-text{ key = "inventory.caption.item.bottle_4.8", value = "Bottle$(Poe Soul)" }
+text{ key = "inventory.caption.item.bottle_4.8", value = "Bottle$(Cooked Food)" }
 text{ key = "inventory.caption.item.bow.1", value = "Bow" }
 text{ key = "inventory.caption.item.bow.2", value = "Bow & Arrows" }
 text{ key = "inventory.caption.item.cane.1", value = "Hebra's Cane" }
@@ -71,10 +72,26 @@ text{ key = "inventory.caption.item.food_vegetable_4.1", value = "Wise Wildberry
 text{ key = "inventory.caption.item.glove.1", value = "Glove" }
 text{ key = "inventory.caption.item.hammer.1", value = "Goron Hammer" }
 text{ key = "inventory.caption.item.hookshot.1", value = "Hookshot" }
-text{ key = "inventory.caption.item.insect_beetle.1", value = "Beetle" }
-text{ key = "inventory.caption.item.insect_butterfly.1", value = "Butterfly" }
-text{ key = "inventory.caption.item.insect_dragonfly.1", value = "Dragonfly" }
-text{ key = "inventory.caption.item.insect_mayfly.1", value = "Mayfly" }
+text{ key = "inventory.caption.item.insect_beetle.1", value = "Skyloft Beetle" }
+text{ key = "inventory.caption.item.insect_beetle.2", value = "Horned Beetle" }
+text{ key = "inventory.caption.item.insect_beetle.3", value = "Pincer Beetle" }
+text{ key = "inventory.caption.item.insect_beetle.4", value = "Stag Beetle" }
+text{ key = "inventory.caption.item.insect_beetle.5", value = "All Beetles" }
+text{ key = "inventory.caption.item.insect_butterfly.1", value = "Blessed Butterfly" }
+text{ key = "inventory.caption.item.insect_butterfly.2", value = "Pink Butterfly" }
+text{ key = "inventory.caption.item.insect_butterfly.3", value = "Grey Butterfly" }
+text{ key = "inventory.caption.item.insect_butterfly.4", value = "Blue Butterfly" }
+text{ key = "inventory.caption.item.insect_butterfly.5", value = "All Butterflies" }
+text{ key = "inventory.caption.item.insect_dragonfly.1", value = "Gerudo Dragonfly" }
+text{ key = "inventory.caption.item.insect_dragonfly.2", value = "Green Dragonfly" }
+text{ key = "inventory.caption.item.insect_dragonfly.3", value = "Yellow Dragonfly" }
+text{ key = "inventory.caption.item.insect_dragonfly.4", value = "Dark Dragonfly" }
+text{ key = "inventory.caption.item.insect_dragonfly.5", value = "All Dragonflies" }
+text{ key = "inventory.caption.item.insect_mayfly.1", value = "Lomei Mayfly" }
+text{ key = "inventory.caption.item.insect_mayfly.2", value = "Blue Mayfly" }
+text{ key = "inventory.caption.item.insect_mayfly.3", value = "Red Mayfly" }
+text{ key = "inventory.caption.item.insect_mayfly.4", value = "Yellow Mayfly" }
+text{ key = "inventory.caption.item.insect_mayfly.5", value = "All Mayflies" }
 text{ key = "inventory.caption.item.lamp.1", value = "Lantern" }
 text{ key = "inventory.caption.item.monster_guts.1", value = "Monster Guts" }
 text{ key = "inventory.caption.item.monster_jelly.1", value = "Monster Jelly" }

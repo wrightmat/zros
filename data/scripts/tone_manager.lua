@@ -45,15 +45,16 @@ return function(game)
     self:set_value("current_hour", hour)
     self:set_value("current_minute", minute)
     self:set_value("current_day", day)
-	
-    if (hour >= 6 and hour < 18 and minute > 30) then
+    
+    if (hour > 5 and minute < 30) then
+      game:set_value("current_time_day", "dawn")
+    elseif (hour >= 6 and hour < 18 and minute > 30) then
       game:set_value("current_time_day", "day")
+    elseif hour >17 and minute > 30 then
+      game:set_value("current_time_day", "sunset")
     elseif hour > 18 or hour < 4 then
       game:set_value("current_time_day", "night")
     end
-    
-    --self:set_clock_enabled(false)
-    --self:set_clock_enabled(self.was_clock_enabled)
     
     tone_manager:get_new_tone()
     d = 1
@@ -69,7 +70,6 @@ return function(game)
   function game:set_time_flow(int)
     self.time_flow = int
     self:stop_tone_system()
-    --self:set_clock_enabled(true)
     self:start_tone_system()
   end
 
@@ -106,7 +106,8 @@ return function(game)
     cr, cg, cb = game:get_value("cr"), game:get_value("cg"), game:get_value("cb")
     tr, tg, tb = game:get_value("tr"), game:get_value("tg"), game:get_value("tb")
     
-    --self.time_system = self.map:get_tileset() == "exterior"
+    --self.time_system = self.map:get_tileset() == "outdoors"
+    self.time_system = true
     if game:get_value("current_day") == nil or game:get_value("current_hour") == nil or game:get_value("current_minute") == nil then
       game:set_time(7, 0, 1) -- Default start time: 7am on day 1
     end
@@ -116,9 +117,10 @@ return function(game)
   end
   
   function tone_manager:set_new_tone(r, g, b)
-    tr = r   
-    tg = g
-    tb = b   
+    tr = r; cr = r
+    tg = g; cg = g
+    tb = b; cb = b
+    game:restart_hud()
   end
   
   -- Checks if the tone need to be updated
@@ -126,6 +128,7 @@ return function(game)
   function tone_manager:check()
     local minute = (game:get_value("current_minute") + 1) or 0
     local hour = (game:get_value("current_hour")) or 0
+    local day = (game:get_value("current_day")) or 1
     game:set_value("current_minute", minute)
     local need_rebuild = false
     
@@ -133,13 +136,12 @@ return function(game)
       need_rebuild = true
     end
     if minute == 60 then
-      game:set_value("current_hour", hour + 1)
-      game:set_value("current_minute", 0)
+      if hour < 24 then game:set_time(hour + 1, 0, day)
+      else game:set_time(0, 0, day + 1) end
       need_rebuild = true
     end
     
     if need_rebuild then
-print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
       self:get_new_tone()
       game:perform_routines()
       need_rebuild = false
@@ -157,45 +159,41 @@ print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
     
     if hour == 4 and minute < 30 then
       self:set_new_tone(120, 120, 190)
-	elseif hour == 4 and minute >= 30 then
+    elseif hour == 4 and minute >= 30 then
      self:set_new_tone(140, 125, 170)
-	elseif hour == 5 and minute < 30 then
-	  game:set_value("current_time_day", "dawn")
+    elseif hour == 5 and minute < 30 then
       self:set_new_tone(155, 130, 140)
-	elseif hour == 5 and minute >= 30 then
+    elseif hour == 5 and minute >= 30 then
       self:set_new_tone(170, 130, 100)
-	elseif hour == 6 and minute < 30 then
+    elseif hour == 6 and minute < 30 then
       self:set_new_tone(210, 180, 150)
-	elseif hour == 6 and minute >= 30 then
+    elseif hour == 6 and minute >= 30 then
       self:set_new_tone(240, 240, 230)
-	elseif hour == 7 and minute < 30 then
+    elseif hour == 7 and minute < 30 then
       self:set_new_tone(255, 255, 255)
-	elseif hour > 7 and hour <= 9 then
-	  self:set_new_tone(255, 255, 255) 
-	elseif hour > 9 and hour < 16 then
-	  self:set_new_tone(255, 255, 225)
-	elseif hour == 16 and minute < 30 then
-	  self:set_new_tone(255, 230, 210)
-	elseif hour == 16 and minute >= 30 then
-	  self:set_new_tone(255, 210, 180)
-	elseif hour == 17 and minute < 30 then
-	  self:set_new_tone(255, 190, 160)
-	elseif hour == 17 and minute >= 30 then
-      game:set_value("current_time_day", "sunset")
-	  self:set_new_tone(225, 170, 150)
-	elseif hour == 18 and minute < 30 then
-	  self:set_new_tone(180, 140, 120)
-	elseif hour == 18 and minute >= 30 then
-	  game:set_value("current_time_day", "twilight_sunset")
-	  self:set_new_tone(150, 110, 100)
-	elseif hour == 19 and minute < 30 then
-      game:set_value("current_time_day","night")
-	  self:set_new_tone(110, 105, 190)	 
-	elseif hour == 19 and minute >= 30 then
-	  self:set_new_tone(90, 90, 225)
-	elseif hour == 3 and minute >= 30 then
-	  self:set_new_tone(80, 80, 230)
-	end
+    elseif hour > 7 and hour <= 9 then
+      self:set_new_tone(255, 255, 255) 
+    elseif hour > 9 and hour < 16 then
+      self:set_new_tone(255, 255, 225)
+    elseif hour == 16 and minute < 30 then
+      self:set_new_tone(255, 230, 210)
+    elseif hour == 16 and minute >= 30 then
+      self:set_new_tone(255, 210, 180)
+    elseif hour == 17 and minute < 30 then
+      self:set_new_tone(255, 190, 160)
+    elseif hour == 17 and minute >= 30 then
+      self:set_new_tone(225, 170, 150)
+    elseif hour == 18 and minute < 30 then
+      self:set_new_tone(180, 140, 120)
+    elseif hour == 18 and minute >= 30 then
+      self:set_new_tone(150, 110, 100)
+    elseif hour == 19 and minute < 30 then
+      self:set_new_tone(110, 105, 190)	 
+    elseif hour == 19 and minute >= 30 then
+      self:set_new_tone(90, 90, 225)
+    elseif hour == 3 and minute >= 30 then
+      self:set_new_tone(80, 80, 230)
+    end
   end
 
   function tone_manager:on_finished()
@@ -220,7 +218,7 @@ print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
     -- Fill the Tone Surface
     if mr ~= nil then
       -- We are in a map where tone are defined
-	  self.shadow:clear() 
+      self.shadow:clear() 
       self.shadow:fill_color{mr, mg, mb, ma}
     elseif self.time_system and mr == nil then
       -- We are outside
@@ -235,14 +233,12 @@ print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
     
     -- Next, this section is about entities.
     local map = game:get_map()
-    
     for e in map:get_entities("torch_") do
       if e:is_enabled() and e:get_sprite():get_animation() == "lit" and e:get_distance(hero) <= 300 then
         local xx,yy = e:get_position()
         self.torch_light:draw(self.light, xx - cam_x, yy - cam_y)
       end
     end
-		
     for e in map:get_entities("night_") do
       if e:is_enabled() and e:get_distance(hero) <= 300 then
         if e.is_street_light then
@@ -253,8 +249,7 @@ print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
           self.torch_light:draw(self.light, xx - cam_x, yy - cam_y)
         end
       end
-    end  
-    
+    end
     for e in map:get_entities("lava_") do
       if e:is_enabled() and e:get_distance(hero) <= 300 then
         local xx,yy = e:get_position()
@@ -298,7 +293,8 @@ print(game:get_value("current_hour") .. ":" .. game:get_value("current_minute"))
               -- This can be overwritten with function entity:on_movement_finished() in the NPC script.
               npc:get_sprite():set_direction(3)
             end
-          else print("Error in NPC routine: NPC or Destination is nil") end
+          else -- print("Error in NPC routine: NPC or Destination is nil")
+          end
         end
       end
     end

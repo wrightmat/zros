@@ -409,6 +409,7 @@ local function initialize_maps()
         end
       elseif properties[1] == "snow" or properties[1] == "snowstorm" then
         if math.random() <= properties[2] then
+          game.weather = "snow"
           game:set_world_snow_mode(world, properties[1])
           game:set_world_rain_mode(world, nil)
           game:set_world_leaf_mode(world, nil)
@@ -423,6 +424,7 @@ local function initialize_maps()
         end
       elseif properties[1] == "rain" or properties[1] == "storm" then
         if math.random() <= properties[2] then
+          game.weather = "rain"
           game:set_world_rain_mode(world, properties[1])
           game:set_world_snow_mode(world, nil)
           game:set_world_hail_mode(world, nil)
@@ -440,6 +442,7 @@ local function initialize_maps()
       elseif properties[1] == "fog" then
           -- fog
       else
+        game.weather = nil
         game:set_world_rain_mode(world, nil)
         game:set_world_snow_mode(world, nil)
         game:set_world_hail_mode(world, nil)
@@ -484,7 +487,7 @@ local function initialize_maps()
           if properties[3] == "cold" then
             self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_blue",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "temperate" then
-            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_green",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+            self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_lomei",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "hot" then
             self:create_custom_entity({ model="animals/insect_mayfly",sprite="npc/mayfly_red",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "warm" or "cool" then
@@ -499,7 +502,7 @@ local function initialize_maps()
           if properties[3] == "cold" then
             self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_horned",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "temperate" then
-            self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_rhino",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
+            self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_skyloft",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "hot" then
             self:create_custom_entity({ model="animals/insect_beetle",sprite="npc/beetle_pincer",x=ex,y=ey,layer=0,direction=1,width=32,height=32 })
           elseif properties[3] == "warm" or "cool" then

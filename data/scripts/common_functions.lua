@@ -16,6 +16,13 @@ function stringToTable(str)
   return fields
 end
 
+function table_has_value(tab, val)
+  for index, value in ipairs(tab) do
+    if value == val then return true end
+  end
+  return false
+end
+
 function string:split(delimiter)
   local result = { }
   local from  = 1

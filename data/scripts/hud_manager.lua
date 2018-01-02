@@ -10,12 +10,11 @@ function hud_manager:initialize(game)
     enabled = false,
     showing_dialog = false,
     top_left_opacity = 255,
-    primary = {}, -- Primary menu (Hearts, money, magic, etc)
-    secondary = {}, -- Secondary menu (clock, thigs that can run even if primary is stopped and that need check)
-    third = {}, -- Third menu (hud elements that don't need any check timer and that can be called in a simple way)
+    primary = {}, -- Primary menu (Hearts, money, magic, clock, etc - things that need a check)
+    secondary = {}, -- Secondary menu (hud elements that don't need any check timer and that can be called in a simple way)
     custom_command_effects = {},
   }
-
+  
   -- Returns the current customized effect of the action or attack command.
   -- nil means the built-in effect.
   function game:get_custom_command_effect(command)
@@ -43,16 +42,13 @@ function hud_manager:initialize(game)
   local rupees_builder 		  = require(path .. "rupees")
   local floor_builder 		  = require(path .. "floor")
   local minimap_builder 	  = require(path .. "minimap")
-  
-  -- Secondary HUD
   local clock_builder 		  = require(path .. "clock")
   
-  -- Third HUD
+  -- Secondary HUD
   local bars_builder 		    = require(path .. "cutscene_bars")
   local map_name_builder 	  = require(path .. "map_name")
   local hints_builder       = require(path .. "hints")
   local collectible_builder = require(path .. "collectibles")
-  
   -- local boss_life_builder = require("scripts/hud/boss_life")
   -- local horse_stamina = require("scripts/hud/horse_stamina")
   -- local plunging_bar_builder = require("scripts/hud/plunging_bar")
@@ -86,7 +82,7 @@ function hud_manager:initialize(game)
   hud.primary.item_icon_2 = item_2
   
   local small_keys = small_keys_builder:new(game)
-  small_keys:set_dst_position(15, -33)
+  small_keys:set_dst_position(15, -32)
   hud.primary[#hud.primary + 1] = small_keys
   
   local money = rupees_builder:new(game)
@@ -100,23 +96,23 @@ function hud_manager:initialize(game)
   local minimap = minimap_builder:new(game)
   hud.primary[#hud.primary + 1] = minimap
   
-  -- Secondary HUD
   local clock = clock_builder:new(game)
-  hud.secondary[#hud.secondary + 1] = clock
+  clock:set_dst_position(-32, -32)
+  hud.primary[#hud.primary + 1] = clock
   
-  -- Third HUD
+  -- Secondary HUD
   local bars = bars_builder:new(game)
-  hud.third[#hud.third + 1] = bars
+  hud.secondary[#hud.secondary + 1] = bars
   
   local map_name = map_name_builder:new(game)
   map_name:set_dst_position(0,0)
-  hud.third[#hud.third + 1] = map_name
+  hud.secondary[#hud.secondary + 1] = map_name
 
   local hints = hints_builder:new(game)
-  hud.third[#hud.third + 1] = hints
+  hud.secondary[#hud.secondary + 1] = hints
 
-  local collectitible = collectible_builder:new(game)
-  hud.third[#hud.third + 1] = collectible
+  local collectible = collectible_builder:new(game)
+  hud.secondary[#hud.secondary + 1] = collectible
   
   -- local menu = plunging_bar_builder:new(game)
   -- menu:set_dst_position(15,38)
@@ -176,7 +172,6 @@ function hud_manager:initialize(game)
     sol.timer.start(game, 50, check_hud)
   end
   
-
   -- Call this function to notify the HUD that the current map has changed.
   function hud:on_map_changed(map)
     if hud:is_enabled() then
@@ -185,12 +180,7 @@ function hud_manager:initialize(game)
           menu:on_map_changed(map)
         end
       end
-	  for _, menu in ipairs(hud.secondary) do
-        if menu.on_map_changed ~= nil then
-          menu:on_map_changed(map)
-        end
-      end
-	  for _, menu in ipairs(hud.third) do
+      for _, menu in ipairs(hud.secondary) do
         if menu.on_map_changed ~= nil then
           menu:on_map_changed(map)
         end
@@ -206,12 +196,7 @@ function hud_manager:initialize(game)
           menu:on_paused()
         end
       end
-	  for _, menu in ipairs(hud.secondary) do
-        if menu.on_paused ~= nil then
-          menu:on_paused()
-        end
-      end
-	  for _, menu in ipairs(hud.third) do
+      for _, menu in ipairs(hud.secondary) do
         if menu.on_paused ~= nil then
           menu:on_paused()
         end
@@ -227,12 +212,7 @@ function hud_manager:initialize(game)
           menu:on_unpaused()
         end
       end
-	  for _, menu in ipairs(hud.secondary) do
-        if menu.on_unpaused ~= nil then
-          menu:on_unpaused()
-        end
-      end
-	  for _, menu in ipairs(hud.third) do
+      for _, menu in ipairs(hud.secondary) do
         if menu.on_unpaused ~= nil then
           menu:on_unpaused()
         end
@@ -249,7 +229,7 @@ function hud_manager:initialize(game)
   function hud:set_enabled(enabled)
     if enabled ~= hud.enabled then
       hud.enabled = enabled
-
+      
       for _, menu in ipairs(hud.primary) do
         if enabled then
           -- Start each HUD element.
@@ -261,7 +241,30 @@ function hud_manager:initialize(game)
       end
     end
   end
-
+  
+  function game:restart_hud()
+    hud:set_enabled(false)
+    hud:set_enabled(true)
+  end
+  
+  function game:show_hint(key, seconds)
+    hints_builder:display_hint(key, seconds)
+  end
+  
+  function game:set_clock_enabled(enabled)
+    if enabled then
+      for _, clocks in ipairs(self.clock) do
+        sol.menu.start(self, clocks, true)
+      end
+      self.clock_was_enabled = true
+    else
+      for _, clocks in ipairs(self.clock) do
+        sol.menu.stop(clocks)
+      end
+      self.clock_was_enabled = false
+    end
+  end
+  
   -- Start the HUD.
   hud:set_enabled(true)
   game:start_tone_system()

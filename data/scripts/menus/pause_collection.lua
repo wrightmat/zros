@@ -38,13 +38,18 @@ local item_names = {
 function collection_submenu:on_started()
   submenu.on_started(self)
   self.cursor_sprite = sol.sprite.create("menus/pause_cursor")
-  self.dialog_sprite = sol.sprite.create("menus/menu_dialog")
-  self.dialog_surface = sol.surface.create(160, 48)
-  self.dialog_state = 0
+  self.collection_sprite = {}
+  self.collection = {}
   self.sprites = {}
   self.counters = {}
   self.captions = {}
-
+  
+  if self.game.cooking_enabled then
+    item_names[7] = "bottle_1"; item_names[14] = "bottle_2"; item_names[21] = "bottle_3"; item_names[28] = "bottle_4"
+  else
+    item_names[7] = "insect_butterfly"; item_names[14] = "insect_dragonfly"; item_names[21] = "insect_mayfly"; item_names[28] = "insect_beetle"
+  end
+  
   for k = 1, #item_names do
     -- Get the item, its possession state and amount.
     local item = self.game:get_item(item_names[k])
@@ -106,14 +111,16 @@ function collection_submenu:set_cursor_position(row, column)
 
   local item_icon_opacity = 128
   if variant > 0 then
+    if string.find(item_name, "insect") then variant = 5 end
     self:set_caption("inventory.caption.item." .. item_name .. "." .. variant)
     self.game:set_custom_command_effect("action", "change")
-    if item:is_assignable() then
-      item_icon_opacity = 255
-    end
+    if item:is_assignable() then item_icon_opacity = 255 end
   else
     self:set_caption(nil)
     self.game:set_custom_command_effect("action", nil)
+  end
+  if item_name ~= nil then
+    if string.find(item_name, "bottle") and self.game.cooking_enabled then self:set_caption("inventory.caption.cooking") end
   end
   self.game.hud.primary[5].surface:set_opacity(item_icon_opacity) -- item_icon_1
   self.game.hud.primary[6].surface:set_opacity(item_icon_opacity) -- item_icon_2
@@ -131,57 +138,134 @@ end
 function collection_submenu:on_command_pressed(command)
   local handled = submenu.on_command_pressed(self, command)
   local item = item_names[self:get_selected_index() + 1]
+  local item_index = 0
+  local cooking_type = ""
+  local cooking_effect = ""
 
-  if self.dialog_state == 1 then
-    if command == "left" or command == "down" then
-      self.dialog_choice = self.dialog_choice - 1
-      if self.dialog_choice < 0 then self.dialog_choice = 0 end
-      self.dialog_sprite:set_direction(self.dialog_choice)
-      if self.game:get_value(item .. "_" .. (self.dialog_choice + 1) .. "_obtained") then
-        self:set_caption("inventory.caption.item." .. item .. "." .. self.dialog_choice + 1)
-      else
-        self:set_caption(nil)
-      end
-    elseif command == "right" or command == "up" then
-      self.dialog_choice = self.dialog_choice + 1
-      if self.dialog_choice > 3 then self.dialog_choice = 3 end
-      self.dialog_sprite:set_direction(self.dialog_choice)
-      if self.game:get_value(item .. "_" .. (self.dialog_choice + 1) .. "_obtained") then
-        self:set_caption("inventory.caption.item." .. item .. "." .. self.dialog_choice + 1)
-      else
-        self:set_caption(nil)
-      end
-    elseif command == "action" or command == "attack" then
-      if self.game:get_value(item .. "_" .. (self.dialog_choice + 1) .. "_obtained") then
-        self.sprites[self:get_selected_index() + 1]:set_direction(self.dialog_choice)
-        self.game:get_item(item):set_variant(self.dialog_choice + 1)
-        self.game:set_custom_command_effect("action", nil)
-        sol.audio.play_sound("throw")
-        self.dialog_surface:clear()
-        self.dialog_state = 0
-      end
+  local function has_monster()
+    if table_has_value(self.collection, "monster_guts") or
+    table_has_value(self.collection, "monster_jelly") or
+    table_has_value(self.collection, "monster_tails") or
+    table_has_value(self.collection, "monster_wings") then return true end
+  end
+  local function has_meat()
+    if table_has_value(self.collection, "food_meat_1") or
+    table_has_value(self.collection, "food_meat_2") or
+    table_has_value(self.collection, "food_meat_3") or
+    table_has_value(self.collection, "food_meat_4") then return true end
+  end
+  local function has_fruit()
+    if table_has_value(self.collection, "food_fruit_1") or
+    table_has_value(self.collection, "food_fruit_2") or
+    table_has_value(self.collection, "food_fruit_3") or
+    table_has_value(self.collection, "food_fruit_4") then return true end
+  end
+  local function has_mushroom()
+    if table_has_value(self.collection, "food_mushroom_1") or
+    table_has_value(self.collection, "food_mushroom_2") or
+    table_has_value(self.collection, "food_mushroom_3") or
+    table_has_value(self.collection, "food_mushroom_4") then return true end
+  end
+  local function has_vegetable()
+    if table_has_value(self.collection, "food_vegetable_1") or
+    table_has_value(self.collection, "food_vegetable_2") or
+    table_has_value(self.collection, "food_vegetable_3") or
+    table_has_value(self.collection, "food_vegetable_4") then return true end
+  end
+  local function has_plant()
+    if table_has_value(self.collection, "food_plant_1") or
+    table_has_value(self.collection, "food_plant_2") or
+    table_has_value(self.collection, "food_plant_3") or
+    table_has_value(self.collection, "food_plant_4") then return true end
+  end
+  if (#self.collection > 1 and self.cursor_column == 6 and command == "action") or (#self.collection == 4 and command == "action") then
+    if has_monster() and has_monster() then
+      cooking_type = "Elixir"
+    elseif has_monster() and (has_meat() or has_fruit() or has_mushroom() or has_vegetable() or has_plant()) then
+      cooking_type = "Potion"
+    elseif has_meat() and has_meat() then
+      cooking_type = "Seared Meat"
+    elseif has_fruit() and has_fruit() then
+      cooking_type = "Simmered Fruit"
+    elseif has_mushroom() and has_mushroom() then
+      cooking_type = "Fried Mushrooms"
+    elseif has_vegetable() and has_vegetable() then
+      cooking_type = "Grilled Veggies"
+    elseif has_plant() and has_vegetable() then
+      cooking_type = "Bread"
+    elseif has_plant() and has_fruit() then
+      cooking_type = "Cake"
+    elseif has_meat() and (has_vegetable() or has_mushroom()) then
+      cooking_type = "Stew"
     end
-  elseif not handled then
-    if command == "action" then
-      self.dialog_choice = self.game:get_item(item):get_variant() - 1
-      sol.audio.play_sound("message_end")
-      self.dialog_sprite:set_direction(self.dialog_choice)
-      self.game:set_custom_command_effect("action", "validate")
-      self.dialog_state = 1
-      handled = true
+    if table_has_value(self.collection,"food_plant_3") then cooking_effect = "Powerful"
+    elseif table_has_value(self.collection,"food_plant_4") then cooking_effect = "Courageous"
+    elseif table_has_value(self.collection,"food_vegetable_4") then cooking_effect = "Wise"
+    elseif table_has_value(self.collection,"food_fruit_1") or table_has_value(self.collection, "food_mushroom_4") then cooking_effect = "Powerful"
+    elseif table_has_value(self.collection,"food_vegetable_2") or table_has_value(self.collection, "food_meat_4") then cooking_effect = "Enduring"
+    elseif table_has_value(self.collection,"food_meat_3") then cooking_effect = "Brave"
+    elseif table_has_value(self.collection,"food_mushroom_2") or table_has_value(self.collection, "food_plant_3") then cooking_effect = "Chilly"
+    elseif table_has_value(self.collection,"food_mushroom_3") or table_has_value(self.collection, "food_plant_4") then cooking_effect = "Spicy"
+    elseif table_has_value(self.collection,"food_mushroom_1") or table_has_value(self.collection, "food_plant_2") then cooking_effect = "Electric"
+    elseif table_has_value(self.collection,"food_vegetable_1") then cooking_effect = "Hasty"
+    elseif table_has_value(self.collection,"food_fruit_1") then cooking_effect = "Energizing"
+    else cooking_effect = "Hylian" end
+
+    if self.game:has_item("bottle_"..self.cursor_row+1) and self.game:get_item("bottle_"..self.cursor_row+1):get_variant() == 1 then
+      self.game:start_dialog("_info.cooking", cooking_effect.." "..cooking_type, function(answer)
+        if answer == 1 then
+          -- Fill the bottle.
+          self.game:get_item("bottle_" .. self.cursor_row+1):set_variant(8)
+          -- Remove individual ingredient amounts and empty the array.
+          for index, value in ipairs(self.collection) do
+            self.game:get_item(value):remove_amount(1)
+          end
+          self.collection = {}
+          self.game.cooking_enabled = false
+          self.game:set_paused(false)
+        end
+      end)
+    end
+    handled = true
+  else
+    if command == "action" and self.game.cooking_enabled then
+      if self:is_item_selected() and #self.collection < 4 and self.cursor_column < 6 then
+        if table_has_value(self.collection, item) then
+          sol.audio.play_sound("message_end")
+          self.game:set_custom_command_effect("action", nil)
+          for index, value in ipairs(self.collection) do
+            item_index = item_index + 1
+            if value == item then break end
+          end
+          table.remove(self.collection, item_index)
+          self.collection_sprite[item] = nil
+        else
+          sol.audio.play_sound("message_end")
+          self.game:set_custom_command_effect("action", "validate")
+          self.collection_sprite[item] = sol.sprite.create("menus/pause_cursor")
+          self.collection_sprite[item]:set_animation("locked")
+          self.collection_sprite[item]:set_xy((320/2-96)+32*self.cursor_column, (240/2-38)-5+32*self.cursor_row)
+          self.collection[#self.collection + 1] = item
+        end
+        handled = true
+      end
     elseif command == "item_1" then
-      if self:is_item_selected() then
-        self:assign_item(1)
-        handled = true
-      end
+      --if self:is_item_selected() then
+      --  self:assign_item(1)
+      --  handled = true
+      --end
     elseif command == "item_2" then
-      if self:is_item_selected() then
-        self:assign_item(2)
-        handled = true
-      end
+      --if self:is_item_selected() then
+      --  self:assign_item(2)
+      --  handled = true
+      --end
     elseif command == "left" then
       if self.cursor_column == 0 then
-        self:previous_submenu()
+        if not self.game.cooking_enabled then
+          self:previous_submenu()
+        else
+          return true
+        end
       else
         sol.audio.play_sound("cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column - 1)
@@ -189,7 +273,11 @@ function collection_submenu:on_command_pressed(command)
       handled = true
     elseif command == "right" then
       if self.cursor_column == 6 then
-        self:next_submenu()
+        if not self.game.cooking_enabled then
+          self:next_submenu()
+        else
+          return true
+        end
       else
         sol.audio.play_sound("cursor")
         self:set_cursor_position(self.cursor_row, self.cursor_column + 1)
@@ -243,30 +331,16 @@ function collection_submenu:on_draw(dst_surface)
   -- Draw the cursor.
   self.cursor_sprite:draw(dst_surface, initial_x + 32 * self.cursor_column, initial_y - 5 + 32 * self.cursor_row)
 
+  -- Draw collection selections.
+  for i = 0, #self.collection do
+    if self.collection_sprite[self.collection[i]] ~= nil then
+      self.collection_sprite[self.collection[i]]:draw(dst_surface)
+    end
+  end
+
   -- Draw the item being assigned if any.
   if self:is_assigning_item() then
     self.item_assigned_sprite:draw(dst_surface)
-  end
-
-  if self.dialog_state == 1 then
-    self.dialog_sprite:draw(self.dialog_surface, 0, 0)
-    local item_sprite = sol.sprite.create("entities/items")
-    local item = item_names[self:get_selected_index() + 1]
-    item_sprite:set_animation(item)
-    for i = 0, 3 do
-      if self.game:get_value(item .. "_" .. (i + 1) .. "_obtained") then
-        item_sprite:set_direction(i)
-        item_sprite:draw(self.dialog_surface, 23 + (i * 38), 30)
-        local counter_text = sol.text_surface.create{
-          horizontal_alignment = "center",
-          vertical_alignment = "top",
-          text = self.game:get_item(item):get_amount(),
-          font = (amount == maximum) and "green_digits" or "white_digits",
-        }
-        counter_text:draw(self.dialog_surface, 28 + (i * 38), 29)
-      end
-    end
-    self.dialog_surface:draw(dst_surface, 105, 145)
   end
 
   self:draw_save_dialog_if_any(dst_surface)

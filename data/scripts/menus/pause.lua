@@ -23,18 +23,21 @@ game_meta:register_event("start_pause_menu", function(game)
   game:set_value("pause_last_submenu", submenu_index)
    
   sol.audio.play_sound("pause_open")
+  game.time_flow = 1000*1000*1000*1000
   sol.menu.start(game, game.pause_submenus[submenu_index], true)
   game.hud:set_enabled(false)
   game.hud:set_enabled(true)  -- Refresh the HUD so it stays on top of the menu.
 end)
 
 game_meta:register_event("stop_pause_menu", function(game)
+  game.time_flow = 1000
   sol.audio.play_sound("pause_closed")
   local submenu_index = game:get_value("pause_last_submenu")
   sol.menu.stop(game.pause_submenus[submenu_index])
   game.pause_submenus = {}
   game:set_custom_command_effect("action", nil)
   game:set_custom_command_effect("attack", nil)
+  game.cooking_enabled = false
 end)
 
 return pause_menu

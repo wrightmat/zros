@@ -89,6 +89,17 @@ a thing!$0 Find more magic!
 }
 
 dialog{
+  id = "_info.cooking",
+  question = "1",
+  skip = "current",
+  text = [[
+Cook $v ?
+Yes
+No
+]]
+}
+
+dialog{
   id = "_info.crystal_switch",
   skip = "current",
   text = [[
