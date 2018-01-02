@@ -4878,6 +4878,33 @@ tile{
   pattern = "tree_1.bottom",
 }
 
+tile{
+  layer = 0,
+  x = 888,
+  y = 256,
+  width = 16,
+  height = 24,
+  pattern = "957",
+}
+
+tile{
+  layer = 0,
+  x = 880,
+  y = 256,
+  width = 8,
+  height = 24,
+  pattern = "958",
+}
+
+tile{
+  layer = 0,
+  x = 904,
+  y = 256,
+  width = 8,
+  height = 24,
+  pattern = "959",
+}
+
 teletransporter{
   name = "to_B4",
   layer = 0,
@@ -6034,5 +6061,23 @@ tile{
   width = 8,
   height = 40,
   pattern = "tree_1.side_left",
+}
+
+tile{
+  layer = 1,
+  x = 880,
+  y = 232,
+  width = 32,
+  height = 24,
+  pattern = "960",
+}
+
+tile{
+  layer = 1,
+  x = 784,
+  y = 264,
+  width = 80,
+  height = 48,
+  pattern = "2",
 }
 
