@@ -5,8 +5,8 @@ local game = map:get_game()
 function map:on_started()
   -- Desert is cool at night and warm during the day, sand kicks up during the day too.
   if game:get_time_of_day() == "night" then
-    self.properties = { "sand", 0.4, "cool", "beetle", "greens" }
+    self.properties = { "sand", 0.4, "cool", "beetle", "plants" }
   else
-    self.properties = { "sand", 0.7, "warm", "beetle", "greens" }
+    self.properties = { "sand", 0.7, "warm", "beetle", "plants" }
   end
 end
