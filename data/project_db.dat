@@ -352,6 +352,32 @@ sprite{ id = "npc/mayfly_lomei", description = "Mayfly, Lomei" }
 sprite{ id = "npc/mayfly_red", description = "Mayfly, Red" }
 sprite{ id = "npc/mayfly_yellow", description = "Mayfly, Yellow" }
 sprite{ id = "npc/rito", description = "Rito" }
+sprite{ id = "npc/sheikah_actor", description = "Sheikah Actor (Ketah)" }
+sprite{ id = "npc/sheikah_baliff", description = "Sheikah Baliff (Korbah)" }
+sprite{ id = "npc/sheikah_barber", description = "Sheikah Barber (Agana)" }
+sprite{ id = "npc/sheikah_barkeep", description = "Sheikah Barkeep (Traiven)" }
+sprite{ id = "npc/sheikah_blacksmith", description = "Sheikah Blacksmith (Jinn)" }
+sprite{ id = "npc/sheikah_carpenter", description = "Sheikah Carpenter (Jitan)" }
+sprite{ id = "npc/sheikah_chef", description = "Sheikah Chef (Dagah)" }
+sprite{ id = "npc/sheikah_child_1", description = "Sheikah Child (Kaso)" }
+sprite{ id = "npc/sheikah_child_2", description = "Sheikah Child (Rota)" }
+sprite{ id = "npc/sheikah_child_3", description = "Sheikah Child (Daka)" }
+sprite{ id = "npc/sheikah_child_4", description = "Sheikah Child (Kah)" }
+sprite{ id = "npc/sheikah_child_5", description = "Sheikah Child (Sah)" }
+sprite{ id = "npc/sheikah_child_6", description = "Sheikah Child (Joh)" }
+sprite{ id = "npc/sheikah_clerk", description = "Sheikah Clerk (Shee Mudora)" }
+sprite{ id = "npc/sheikah_clothesmaker", description = "Sheikah Clothesmaker (Monya)" }
+sprite{ id = "npc/sheikah_fisherman", description = "Sheikah Fisherman (Bosh)" }
+sprite{ id = "npc/sheikah_innkeep", description = "Sheikah Innkeep (Mijah)" }
+sprite{ id = "npc/sheikah_jeweler", description = "Sheikah Jeweler (Yota)" }
+sprite{ id = "npc/sheikah_leathermaker", description = "Sheikah Leathermaker (Korima)" }
+sprite{ id = "npc/sheikah_librarian", description = "Sheikah Librarian (Namika)" }
+sprite{ id = "npc/sheikah_poet", description = "Sheikah Poet (Venath)" }
+sprite{ id = "npc/sheikah_priest", description = "Sheikah Priest (Maz Rin)" }
+sprite{ id = "npc/sheikah_shopkeep", description = "Sheikah Shopkeep (Rohta)" }
+sprite{ id = "npc/sheikah_warrior_1", description = "Sheikah Warrior (Tawa)" }
+sprite{ id = "npc/sheikah_warrior_2", description = "Sheikah Warrior (Katosa)" }
+sprite{ id = "npc/sheikah_warrior_3", description = "Sheikah Warrior (Honica)" }
 sprite{ id = "npc/subrosian_blue", description = "Subrosian (Blue, Headband)" }
 sprite{ id = "npc/subrosian_green", description = "Subrosian (Green)" }
 sprite{ id = "npc/subrosian_orange", description = "Subrosian (Orange, Bow)" }
