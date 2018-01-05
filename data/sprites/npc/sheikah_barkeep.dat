@@ -1,0 +1,22 @@
+animation{
+  name = "stopped",
+  src_image = "npc/sheikah.png",
+  directions = {
+    { x = 96, y = 352, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 320, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 288, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+    { x = 96, y = 256, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27 },
+  },
+}
+animation{
+  name = "walking",
+  src_image = "npc/sheikah.png",
+  frame_delay = 150,
+  frame_to_loop_on = 0,
+  directions = {
+    { x = 72, y = 352, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 320, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 288, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+    { x = 72, y = 256, frame_width = 24, frame_height = 32, origin_x = 12, origin_y = 27, num_frames = 3 },
+  },
+}
